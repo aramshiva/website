@@ -21,8 +21,7 @@ export default function Blog({ allPosts }: Props) {
           <title>{`Aram - Blog`}</title>
         </Head>
         <Container>
-          <Header>
-          </Header>
+          <Header />
           {heroPost && (
             <HeroPost
               title={heroPost.title}
