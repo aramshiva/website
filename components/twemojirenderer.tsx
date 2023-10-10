@@ -21,8 +21,8 @@ const Twemoji: React.FC<TwemojiProps> = ({ text }) => {
   }, [text]);
 
   return (
-    <span
-      className="twemoji"
+    <div
+      className="twemoji inline"
       dangerouslySetInnerHTML={{ __html: emojiContent }}
     />
   );

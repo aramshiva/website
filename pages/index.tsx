@@ -14,8 +14,8 @@ export default function Index() {
           </Head>
           <Container>
             <Header />
-            <p className="font-mono text-3xl">asd</p>
-            <Twemoji text="🌎" />
+            <div className="flex text-9xl font-mono dark:text-sky-450"><Twemoji text="👋" /><div>Hello</div></div>
+            <p className="text-5xl font-mono dark:text-size-300">I'm Aram</p>
           </Container>
         </Layout>
       </>
