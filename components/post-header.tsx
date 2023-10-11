@@ -18,7 +18,7 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
-      <div className="mb-8 md:mb-16 sm:mx-0 width-1300px height-630px" style="img { height: unset; }">
+      <div className="mb-8 md:mb-16 sm:mx-0 width-1300px height-630px">
         <CoverImage title={title} src={coverImage}/>
       </div>
       <div className="max-w-2xl mx-auto">
