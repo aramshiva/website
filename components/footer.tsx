@@ -1,1 +1,0 @@
-// vercel/next.js/canary/examples/blog-starter
