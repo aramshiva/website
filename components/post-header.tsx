@@ -1,6 +1,5 @@
 import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
-import CoverImage from './cover-image'
 import PostTitle from "./post-title";
 import type Author from "../interfaces/author";
 
@@ -18,9 +17,9 @@ const PostHeader = ({ title, coverImage, date, author }: Props) => {
       <div className="hidden md:block md:mb-12">
         <Avatar name={author.name} picture={author.picture} />
       </div>
-      <div className="w-full h-full bg-gradient-to-l min-h-[600px] bg-cover"  style={{ backgroundImage: `url(${coverImage})` }} />
+      <div className="w-full h-full bg-gradient-to-l min-h-[630px] min-w[1300px] bg-cover md:mb-20 md:mt-20"  style={{ backgroundImage: `url(${coverImage})` }} />
       <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
+        <div className="block md:hidden mb-6 mt-10">
           <Avatar name={author.name} picture={author.picture} />
         </div>
         <div className="mb-6 text-lg">
