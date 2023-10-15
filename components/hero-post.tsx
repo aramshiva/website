@@ -23,9 +23,7 @@ const HeroPost = ({
 }: Props) => {
   return (
     <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
-      </div>
+      <div className="w-full h-full bg-gradient-to-l min-h-[600px] bg-cover mb-8 md:mb-16 sm:mx-08"  style={{ backgroundImage: `url(${coverImage})` }} />
       <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
         <div>
           <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
