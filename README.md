@@ -1,2 +1,2 @@
-# aram.sh(iva) public blog and website.
-Made in typescript and Next.js
+# Personl website and blog
+Made with **Next.js**
