@@ -4,7 +4,6 @@ import Container from '../components/container'
 import Header from '../components/header'
 import Twemoji from '../components/twemojirenderer'
 import Link from 'next/link'
-import { SpotifyNowPlaying } from '../components/SpotifyNowPlaying'
 
 export default function Index() {
 
@@ -19,7 +18,6 @@ export default function Index() {
             <div className="flex text-5xl font-mono"><Twemoji text="👋" /><div>Hello</div></div>
             <p className="text-4xl font-mono">I'm Aram</p>
             <p className="text-3xl font-mono">This Website is under construction right now. But visit my <Link href="/blog" className="hover:underline underline decoration-slate-700">Blog (click here)</Link></p>
-            <div><SpotifyNowPlaying /></div>
           </Container>
         </Layout>
       </>
