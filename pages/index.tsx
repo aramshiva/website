@@ -27,6 +27,7 @@ export default function Index() {
                     "Bonjour!",
                     "Salut!",
                     "Hallo",
+                    "Bienvenue",
                   ],
                   autoStart: true,
                   loop: true,
