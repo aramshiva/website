@@ -12,7 +12,7 @@ export default function Index() {
             <Layout>
                 <Container>
                     <div className="font-mono link:font-black">
-                        <div className="font-black pt-20">
+                        <div className="font-black pt-20 text-5xl">
                             <p>CREDITS</p>
                         </div>
                         <div>
