@@ -2,8 +2,7 @@ import Layout from "../components/layout";
 import Head from "next/head";
 import Container from "../components/container";
 import Twemoji from "../components/twemojirenderer";
-import Link from "next/link";
-import Typewriter from "typewriter-effect";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Index() {
   return (
@@ -15,9 +14,9 @@ export default function Index() {
               <div className="blog-title-emoji">
                 <Twemoji text="👋" />
               </div>
-              <Typewriter
-                options={{
-                  strings: [
+              <div className="text-7xl font-black bg-gradient-to-r from-yellow-100 via-yellow-150 to-yellow-200 text-transparent bg-clip-text animate-gradient">
+                <Typewriter
+                  words={[
                     "Hello!",
                     "Aloha!",
                     "Howdy!",
@@ -28,16 +27,28 @@ export default function Index() {
                     "Salut!",
                     "Hallo",
                     "Bienvenue",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+                  ]}
+                  loop={5}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </div>
               <hr className="w-12 h-1 border-0 md:my-10 bg-gray-400"></hr>
             </div>
-            <div className="font-serif text-3xl">
-              <p className="text-6xl pb-4">🏗️</p>
-              <p>This website is under construction!</p>
+            <div className="text-3xl">
+              <span>Hi, I'm Aram! I am a </span>
+              <Typewriter
+                words={["Developer", "Student", "Nerd", "Hack Clubber"]}
+                loop={5}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
             </div>
           </Container>
         </Layout>
