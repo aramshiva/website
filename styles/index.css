@@ -45,7 +45,7 @@
   -moz-animation: animatedgradient 6s ease infinite alternate;
   animation: animatedgradient 6s ease infinite alternate;
 }
-  
+
 @keyframes animatedgradient {
   0% {
     background-position: 0% 50%;
