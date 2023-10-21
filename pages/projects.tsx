@@ -10,34 +10,15 @@ export default function Index() {
       <div>
         <Layout>
           <Container>
-            <div className="text-7xl pt-12 font-worksans font-bold ">
-              <div className="blog-title-emoji">
-                <Twemoji text="👋" />
+            <div className="text-7xl pt-12 font-worksans font-bold">
+              <div className="animate-bounce origin-top-left">
+                <Twemoji text="📽️" />
               </div>
               <div className="text-7xl font-black bg-gradient-to-r from-yellow-100 via-yellow-150 to-yellow-200 text-transparent bg-clip-text animate-gradient">
-                <Typewriter
-                  words={[
-                    "Hello!",
-                    "Aloha!",
-                    "Howdy!",
-                    "Ahoy!",
-                    "Hey!",
-                    "Heya!",
-                    "Bonjour!",
-                    "Salut!",
-                    "Hallo",
-                    "Bienvenue",
-                  ]}
-                  loop={5}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={3000}
-                />
+                <p>PROJECTS</p>
               </div>
               <hr className="w-12 h-1 border-0 md:my-10 bg-gray-400"></hr>
-            </div>                                              
+            </div>
             <div className="text-3xl">
               <span>Hi, I'm Aram! I am a </span>
               <Link href="https://hackclub.com/">
