@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "../components/container";
 import Twemoji from "../components/twemojirenderer";
 import { Typewriter } from "react-simple-typewriter";
+import Image from "next/image";
 
 export default function Index() {
   return (
@@ -37,7 +38,7 @@ export default function Index() {
                 />
               </div>
               <hr className="w-12 h-1 border-0 md:my-10 bg-gray-400"></hr>
-            </div>                                              
+            </div>
             <div className="text-3xl">
               <span>Hi, I'm Aram! I am a </span>
               <Link href="https://hackclub.com/">
