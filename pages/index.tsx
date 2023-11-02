@@ -4,6 +4,7 @@ import Container from "../components/container";
 import Twemoji from "../components/twemojirenderer";
 import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 export default function Index() {
   return (
@@ -11,60 +12,40 @@ export default function Index() {
       <div>
         <Layout>
           <Container>
-            <div className="text-7xl pt-12 font-worksans font-bold ">
-              <div className="blog-title-emoji">
+            <div className="bg-white justify-left pl-5 text-black text-3xl font-semibold pt-9">
+              <div className="h-60"/>
+              <div className="blog-title-emoji pr-2 text-5xl">
                 <Twemoji text="👋" />
-              </div>
-              <div className="text-7xl font-black bg-gradient-to-r from-yellow-100 via-yellow-150 to-yellow-200 text-transparent bg-clip-text animate-gradient">
+              </div><br/>
+              <span> Oh, Hello There! I'm Aram. A Young</span>
+              <br />
+              <span>
+                person who loves to{" "}
                 <Typewriter
                   words={[
-                    "Hello!",
-                    "Aloha!",
-                    "Howdy!",
-                    "Ahoy!",
-                    "Hey!",
-                    "Heya!",
-                    "Bonjour!",
-                    "Salut!",
-                    "Hallo",
-                    "Bienvenue",
+                    "Develop",
+                    "Inspire",
+                    "Create",
+                    "Amaze",
+                    "Develop",
                   ]}
-                  loop={5}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={3000}
-                />
-              </div>
-              <hr className="w-12 h-1 border-0 md:my-10 bg-gray-400"></hr>
-            </div>
-            <div className="text-3xl">
-              <span>Hi, I'm Aram! I am a </span>
-              <Link href="https://hackclub.com/">
+                ></Typewriter>
+                {" "}<br/>
+                I'm
+                currently working on <Link href="https://hackthesound.net" className="underline">Hack The Sound</Link><br/>a teenage hackathon in PNW.<br/>
+              </span>
+              <br />
+              {/* <span className="font-mono font-semibold bg-slate-900 rounded pr-3 pl-3 pt-1 pb-1 text-white">
+                <span>> </span>
                 <Typewriter
-                  words={["Developer", "Student", "Nerd", "Hack Clubber"]}
-                  loop={5}
+                  cursorBlinking
+                  words={["Develop", "Imagine", "Create", "Inspire", "Learn"]}
                   cursor
-                  cursorStyle="_"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
+                  loop
+                  cursorStyle="|"
+                  typeSpeed={125}
                 />
-                <br />
-              </Link>
-              <span>I run a </span>
-              <Link
-                href="/blog"
-                className="underline decoration-auto decoration-indigo-500"
-              >
-                blog
-              </Link>
-              <span> and </span>
-              <Link href="/projects">projects</Link>
-              <span> page, and I'm currently working on a </span>
-              <Link href="/portfolio">portfolio</Link>
-              <span> page.</span>
+              </span><br /> */}
             </div>
           </Container>
         </Layout>

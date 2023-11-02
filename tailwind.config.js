@@ -30,12 +30,12 @@ module.exports = {
         md: '0 8px 30px rgba(0, 0, 0, 0.12)',
       },
     },
-  fontFamily: {
-    'sans': ['ui-sans-serif', 'system-ui'],
-    'serif': ['ui-serif', 'Georgia'],
-    'mono': ['ui-monospace', 'SFMono-Regular'],
-    'worksans': ['Work Sans']
-  }
+    fontFamily: {
+      'sans': ['ui-sans-serif', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'worksans': ['Work Sans']
+    }
   },
   plugins: [],
 }
