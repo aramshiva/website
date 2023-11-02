@@ -1,9 +1,6 @@
 import Layout from "../components/layout";
-import Head from "next/head";
 import Container from "../components/container";
-import Twemoji from "../components/twemojirenderer";
 import Link from "next/link";
-import Footer from "../components/footer";
 
 export default function Index() {
   return (
@@ -63,7 +60,6 @@ export default function Index() {
                     </div>
                     </div>
                 </Container>
-                <Footer />
             </Layout>
         </div>
     </>

@@ -1,10 +1,8 @@
-import Layout from "../components/layout";
 import Link from "next/link";
 import Container from "../components/container";
 import Twemoji from "../components/twemojirenderer";
 import { Typewriter } from "react-simple-typewriter";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import Layout from "../components/layout";
 
 export default function Index() {
   return (
