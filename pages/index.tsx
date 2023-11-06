@@ -7,11 +7,12 @@ import Layout from "../components/layout";
 export default function Index() {
   return (
     <>
-      <div>
+      <div className="blur-3xl invisible dark:visible" id="blob"/>
+      <div className="dark:bg-slate-900 selection:bg-yellow-500">
         <Layout>
           <Container>
-            <div className="bg-white justify-left pl-5 text-black text-3xl font-semibold pt-9">
-              <div className="h-60"/>
+            <div className="bg-white dark:bg-slate-900 justify-left pl-5 text-black dark:text-slate-200 text-3xl font-semibold pt-9 h-screen">
+              <div className="lg:h-60 md:h-40 sm:h-20"/>
               <div className="blog-title-emoji pr-2 text-5xl">
                 <Twemoji text="👋" />
               </div><br/>
@@ -32,18 +33,9 @@ export default function Index() {
                 I'm
                 currently working on <Link href="https://hackthesound.net" className="underline">Hack The Sound</Link><br/>a teenage hackathon in PNW.<br/>
               </span>
+              <span className="font-mono text-gray-500 dark:text-gray-400 text-lg font-normal">© Copyright Aram Shiva 2023</span><br/>
+              <span className="font-mono text-gray-500 dark:text-gray-400 text-lg font-normal">This site does not contain any <Link className="underline" href="https://www.cookiesandyou.com/">Cookies</Link>.</span>
               <br />
-              {/* <span className="font-mono font-semibold bg-slate-900 rounded pr-3 pl-3 pt-1 pb-1 text-white">
-                <span>> </span>
-                <Typewriter
-                  cursorBlinking
-                  words={["Develop", "Imagine", "Create", "Inspire", "Learn"]}
-                  cursor
-                  loop
-                  cursorStyle="|"
-                  typeSpeed={125}
-                />
-              </span><br /> */}
             </div>
           </Container>
         </Layout>
