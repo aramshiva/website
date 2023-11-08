@@ -81,7 +81,7 @@
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to purple, blue, navy);
+  background: animatedgradient(to purple, blue, navy);
   animation: rotate 20s infinite;
   opacity: 0.5;
 }
