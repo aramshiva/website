@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const {nextui} = require("@nextui-org/react");
 module.exports = {
-  content: ['./components/**/*.tsx', './pages/**/*.tsx'],
+  content: ['./components/**/*.tsx', './pages/**/*.tsx', "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {
       colors: {
@@ -37,5 +38,6 @@ module.exports = {
       'worksans': ['Work Sans']
     }
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [nextui()],
 }

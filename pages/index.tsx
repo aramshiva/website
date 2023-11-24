@@ -7,38 +7,37 @@ import Layout from "../components/layout";
 export default function Index() {
   return (
     <>
-      <div className="blur-3xl invisible dark:visible" id="blob"/>
-      <div className="dark:bg-slate-900 selection:bg-yellow-500">
+
+      <div className="selection:bg-yellow-500 h-screen">
         <Layout>
           <Container>
-            <div className="bg-white dark:bg-slate-900 justify-left pl-5 text-black dark:text-slate-200 text-3xl font-semibold pt-9 h-screen">
-              <div className="lg:h-60 md:h-40 sm:h-20"/>
-              <div className="blog-title-emoji pr-2 text-5xl">
+            <div className="bg-white justify-left pl-5 text-black text-3xl font-semibold pt-9">
+              <div className="flex space-x-5 pt-9 text-xl font-normal text-center justify-items-center place-items-center">
+                <Link href="/">home</Link>
+                <Link href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%6D%65%40%61%72%61%6D%2E%73%68">email</Link>
+                <Link href="https://github.com/aramshiva" target="_blank">github</Link>
+              </div>
+              <div className="h-9" />
+              <div className="blog-title-emoji pr-2 text-5xl sm:pt-9 md:pt-9 lg:pt-9">
                 <Twemoji text="👋" />
-              </div><br/>
-              <span> Oh, Hello There! I'm Aram. A Young</span>
+              </div>
+              <br />
+              <span> I'm Aram </span>
               <br />
               <span>
-                person who loves to{" "}
-                <Typewriter
-                  words={[
-                    "Develop",
-                    "Inspire",
-                    "Create",
-                    "Amaze",
-                    "Develop",
-                  ]}
-                ></Typewriter>
-                {" "}<br/>
-                I'm
-                currently working on <Link href="https://hackthesound.net" className="underline">Hack The Sound</Link><br/>a teenage hackathon in PNW.<br/>
+                I make reallly dumb things on the interwebs<br />
+                I'm currently working on{" "}
+                <Link href="https://hackthesound.net" className="underline">
+                  Hack The Sound
+                </Link>
+                <br />a hackathon in Washington.
+                <br />
               </span>
-              <span className="font-mono text-gray-500 dark:text-gray-400 text-lg font-normal">© Copyright Aram Shiva 2023</span><br/>
-              <span className="font-mono text-gray-500 dark:text-gray-400 text-lg font-normal">This site does not contain any <Link className="underline" href="https://www.cookiesandyou.com/">Cookies</Link>.</span>
               <br />
             </div>
           </Container>
         </Layout>
+        <div className="rainbow h-9 sticky bottom-0"/>
       </div>
     </>
   );
