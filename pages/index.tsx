@@ -28,6 +28,13 @@ export default function Index() {
                 >
                   github
                 </Link>
+                <Link
+                  className="hover:font-bold"
+                  href="/credits"
+                  target="_blank"
+                >
+                  credits
+                </Link>
               </div>
               <div className="h-9" />
               <div className="blog-title-emoji pr-2 text-6xl sm:pt-9 md:pt-9 lg:pt-9">
@@ -38,7 +45,7 @@ export default function Index() {
               <span className="text-5xl">
                 <span className="font-bold text-gradient-to-r from-blue-500 to-blue-500">Aram Shiva</span> is a{" "}
                 <Typewriter
-                  words={["Developer", "Designer", "Creator", "Hacker"]}
+                  words={["", "Developer", "Designer", "Creator", "Hacker"]}
                   cursor
                   cursorStyle="|"
                   typeSpeed={100}
@@ -52,8 +59,8 @@ export default function Index() {
             </div>
           </Container>
         </Layout>
-        <div className="rainbow h-6 sticky bottom-0" />
       </div>
+      <div className="rainbow h-6 sticky bottom-0" />
     </>
   );
 }
