@@ -1,11 +1,8 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import Container from '../../../components/container';
 import Layout from '../../../components/layout';
 import {Button} from "@nextui-org/react";
 import Link from 'next/link';
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
