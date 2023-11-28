@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 export default function Index() {
   return (
     <>
-      <div>
+      <div className="bg-black text-white">
         <Layout>
           <Container>
             <div className="font-mono whitespace-pre-wrap pt-20">

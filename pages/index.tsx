@@ -7,7 +7,7 @@ import Layout from "../components/layout";
 export default function Index() {
   return (
     <>
-      <div className="selection:bg-yellow-500 h-screen selection:text-white">
+      <div className="selection:bg-yellow-500 h-screen selection:text-white bg-black text-white">
         <Layout>
           <Container>
             <div className="justify-left pl-5 text-3xl font-semibold pt-9">
@@ -43,9 +43,9 @@ export default function Index() {
               <br />
               <br />
               <span className="text-5xl">
-                <span className="font-bold text-gradient-to-r from-blue-500 to-blue-500">Aram Shiva</span> is a{" "}
+                <span className="font-bold ">Aram Shiva</span> is a{" "}
                 <Typewriter
-                  words={["", "Developer", "Designer", "Creator", "Hacker"]}
+                  words={["", "developer", "designer", "creator", "builder"]}
                   cursor
                   cursorStyle="|"
                   typeSpeed={100}
@@ -53,7 +53,7 @@ export default function Index() {
                   delaySpeed={1000}
                 />
                 {" "}based in Seattle.<br/>
-                Currently, He is working on<br/> <Link className="underline" href="https://hackthesound.net" target="_blank">Hack The Sound</Link>. A event for teens<br/> in washington to find Makers like<br/>them.
+                Currently, He is working on<br/> <Link className="underline" href="https://hackthesound.net" target="_blank">Hack The Sound</Link>. A event for teens<br/> in Washington to find makers like<br/>them.
               </span>
               <br />
             </div>
