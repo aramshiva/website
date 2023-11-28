@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <Layout>
         <Container>
-          <Image className="pt-10" src="/nitrogencycle.svg" alt='logo' width={200} height={200}/>
+          <Image className="pt-10" src="/projects/nitrogencycle/nitrogencycle.svg" alt='logo' width={200} height={200}/>
           <div className='pb-20'/>
-          <Link href="/no3-"><Button className="pr-5 pb-5 pl-5 pt-5 text-2xl bg-indigo-600 text-white">
+          <Link href="/p/nitrogencycle"><Button className="pr-5 pb-5 pl-5 pt-5 text-2xl bg-indigo-600 text-white">
           Decompose
           </Button></Link>
           <div className='pb-10 text-large'/>

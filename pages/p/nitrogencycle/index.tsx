@@ -12,11 +12,11 @@ export default function Home() {
     <>
       <Layout>
         <Container>
-          <Image className="pt-10" src="/p/assets" alt='logo' width={200} height={200}/>
+          <Image className="pt-10" src="/projects/nitrogencycle/nitrogencycle.svg" alt='logo' width={200} height={200}/>
           <div className='pb-5'/>
           <p className='font-bold text-9xl'>N₂</p>
           <div className='pb-20'/>
-          <Link href="no3"><Button className="pr-7 pb-8 pl-7 pt-8 text-lg bg-indigo-600 text-white">
+          <Link href="/p/nitrogencycle/no3"><Button className="pr-7 pb-8 pl-7 pt-8 text-lg bg-indigo-600 text-white">
           Nitrogen Fixation
           </Button></Link>
           <div className='pb-10 text-large'/>
