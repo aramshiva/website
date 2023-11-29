@@ -42,7 +42,7 @@ export default function Index() {
                 <br />
                 CREDITS
                 <br />
-                It{"'"}s important to credit your sources.
+                Its important to credit your sources.
                 <br />
                 <br />
                 <br />
