@@ -45,15 +45,16 @@ export default function Index() {
               <span className="text-5xl">
                 <span className="font-bold ">Aram Shiva</span> is a{" "}
                 <Typewriter
-                  words={["", "developer", "designer", "creator", "builder"]}
+                  words={["developer", "designer", "creator", "builder"]}
                   cursor
                   cursorStyle="|"
                   typeSpeed={100}
                   deleteSpeed={100}
-                  delaySpeed={1000}
+                  delaySpeed={2000}
+                  loop={false}
                 />
                 {" "}based in Seattle.<br/>
-                Currently, He is working on<br/> <Link className="underline" href="https://hackthesound.net" target="_blank">Hack The Sound</Link>. A event for teens<br/> in Washington to find makers like<br/>them.
+                Currently, he is working on<br/> <Link className="underline" href="https://hackthesound.net" target="_blank">Hack The Sound</Link>. An event for teens<br/> in Washington to find makers like<br/>them.
               </span>
               <br />
             </div>

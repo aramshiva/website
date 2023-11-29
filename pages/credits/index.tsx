@@ -1,23 +1,42 @@
-import Layout from "../components/layout";
-import Container from "../components/container";
+import Layout from "../../components/layout";
+import Container from "../../components/container";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Index() {
+  // Define the handleType function
+  const handleType = (count: number) => {
+    // JavaScript Function
+    function toggleVisibility() {
+      var credits = document.getElementById('credits');
+      var consoleCommand = document.getElementById('console-command');
+
+      // Check if elements exist
+      if (credits && consoleCommand) {
+        // Make the credits span visible
+        credits.style.display = 'block';
+
+        // Hide the console-command div
+        consoleCommand.style.display = 'none';
+      } else {
+        console.error("Elements not found");
+      }
+    }
+
+  };
   return (
     <>
       <div className="bg-black text-white">
         <Layout>
           <Container>
-            <div className="font-mono whitespace-pre-wrap pt-20">
+            <div className="font-mono whitespace-pre-wrap pt-20" id="console-command">
               ${" "}
               <Typewriter
                 words={["cat aram.sh/public/credits.txt"]}
-                loop={1}
                 typeSpeed={100}
                 deleteSpeed={100}
                 delaySpeed={1000}
-                // onLoopDone={}
+                onLoopDone={() => handleType(42)}
               />
               <span className="invisible" id="credits">
                 <br />
