@@ -31,7 +31,7 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.2",
     "react-simple-typewriter": "^5.0.1",
-    "remark": "^14.0.2",
+    "remark": "^15.0.1",
     "remark-html": "^16.0.1",
     "styled-components": "^6.0.9",
     "swr": "^2.2.4",
