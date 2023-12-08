@@ -33,7 +33,7 @@
     "react-simple-typewriter": "^5.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
-    "styled-components": "^6.0.9",
+    "styled-components": "^6.1.1",
     "swr": "^2.2.4",
     "twemoji": "^14.0.2",
     "typeit-react": "^2.6.4",
