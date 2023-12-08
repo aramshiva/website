@@ -21,7 +21,7 @@
     "giscus": "^1.3.0",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
-    "lucide-react": "^0.287.0",
+    "lucide-react": "^0.294.0",
     "mysql": "^2.18.1",
     "mysql2": "^3.6.5",
     "next": "^14.0.3",
