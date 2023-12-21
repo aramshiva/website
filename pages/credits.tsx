@@ -9,7 +9,14 @@ export default function Index() {
       <div>
         <Layout>
           <Container>
+<<<<<<< Updated upstream:pages/credits.tsx
             <div className="font-mono whitespace-pre-wrap pt-20">
+=======
+            <div
+              className="font-mono whitespace-pre-wrap pt-20"
+              id="console-command"
+            >
+>>>>>>> Stashed changes:pages/credits/index.tsx
               ${" "}
               <Typewriter
                 words={["cat aram.sh/public/credits.txt"]}
@@ -17,6 +24,7 @@ export default function Index() {
                 typeSpeed={100}
                 deleteSpeed={100}
                 delaySpeed={1000}
+<<<<<<< Updated upstream:pages/credits.tsx
                 // onLoopDone={}
               />
               <span className="invisible" id="credits">
@@ -35,6 +43,10 @@ export default function Index() {
                 <Link href="https://arashshiva.com">Arash Shiva</Link>
                 <br />
                 <br />
+=======
+              />
+              <span id="credits">
+>>>>>>> Stashed changes:pages/credits/index.tsx
                 <br />
                 INSPIRATION
                 <br />
@@ -62,7 +74,7 @@ export default function Index() {
                 <Link href="https://chronark.com/">chonark.com</Link>
                 <br />
                 <Link href="https://github.com/itsmingjie/monolith/tree/main">
-                    itsmingjie/monolith
+                  itsmingjie/monolith
                 </Link>
                 <br />
                 <Link href="https://tr.af">tr.af</Link>

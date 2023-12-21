@@ -58,6 +58,7 @@
   }
 }
 
+<<<<<<< Updated upstream
 .rainbow { 
 background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
 /* background-size: 1800% 1%; */
@@ -86,6 +87,11 @@ background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
+=======
+.bg-rainbow {
+  background: linear-gradient(90deg, #FF0000 0%, #FF7A00 18.75%, #FFD600 33.83%, #00FF19 46.35%, #00FFFF 59.2%, #2400FF 71.89%, #9E00FF 82.81%, #FF00B8 94.79%),
+linear-gradient(0deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35));
+>>>>>>> Stashed changes
 }
 
 body {
