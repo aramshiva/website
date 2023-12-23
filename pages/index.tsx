@@ -43,6 +43,9 @@ export default function Index() {
             <div className="text-white justify-left pl-5 flex-wrap text-xl">
               This website is currently<span className="text-yellow font-bold text-2xl">{" "}WIP{" "}</span>. Come back later.
             </div>
+            <div className="grid text-white">
+              <div className="h-[30vh] w-[30vh] bg-gray-500 rounded-xl"><span>test</span></div>
+            </div>
           </Container>
         </Layout>
       </div>
