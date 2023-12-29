@@ -63,42 +63,6 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.56.0.tgz"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@floating-ui/core@^1.4.2":
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.5.2.tgz#53a0f7a98c550e63134d504f26804f6b83dbc071"
-  integrity sha512-Ii3MrfY/GAIN3OhXNzpCKaLxHQfJF9qvwq/kEJYdqDxeIHa01K8sldugal6TmeeXl+WMvhv9cnVzUTaFFJF09A==
-  dependencies:
-    "@floating-ui/utils" "^0.1.3"
-
-"@floating-ui/dom@^1.5.1":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.5.3.tgz#54e50efcb432c06c23cd33de2b575102005436fa"
-  integrity sha512-ClAbQnEqJAKCJOEbbLo5IUlZHkNszqhuxS4fHAVxRPXPya6Ysf2G8KypnYcOTpx6I8xcgF9bbHb6g/2KpbV8qA==
-  dependencies:
-    "@floating-ui/core" "^1.4.2"
-    "@floating-ui/utils" "^0.1.3"
-
-"@floating-ui/react-dom@^2.0.3":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react-dom/-/react-dom-2.0.4.tgz#b076fafbdfeb881e1d86ae748b7ff95150e9f3ec"
-  integrity sha512-CF8k2rgKeh/49UrnIBs4BdxPUV6vize/Db1d/YbCLyp9GiVZ0BEwf5AiDSxJRCr6yOkGqTFHtmrULxkEfYZ7dQ==
-  dependencies:
-    "@floating-ui/dom" "^1.5.1"
-
-"@floating-ui/react@^0.26.2":
-  version "0.26.4"
-  resolved "https://registry.yarnpkg.com/@floating-ui/react/-/react-0.26.4.tgz#7626667d2dabc80e2696b500df7f1a348d7ec7a8"
-  integrity sha512-pRiEz+SiPyfTcckAtLkEf3KJ/sUbB4X4fWMcDm27HT2kfAq+dH+hMc2VoOkNaGpDE35a2PKo688ugWeHaToL3g==
-  dependencies:
-    "@floating-ui/react-dom" "^2.0.3"
-    "@floating-ui/utils" "^0.1.5"
-    tabbable "^6.0.1"
-
-"@floating-ui/utils@^0.1.3", "@floating-ui/utils@^0.1.5":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.6.tgz#22958c042e10b67463997bd6ea7115fe28cbcaf9"
-  integrity sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==
-
 "@formatjs/ecma402-abstract@1.18.0":
   version "1.18.0"
   resolved "https://registry.npmjs.org/@formatjs/ecma402-abstract/-/ecma402-abstract-1.18.0.tgz"
@@ -137,16 +101,6 @@
   integrity sha512-txaaE2fiBMagLrR4jYhxzFO6wEdEG4TPMqrzBAcbr4HFUYzH/YC+lg6OIzKCHm8WgDdyQevxbAAV1OgcXctuGw==
   dependencies:
     tslib "^2.4.0"
-
-"@headlessui/react@^2.0.0-alpha.3":
-  version "2.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-2.0.0-alpha.3.tgz#f8134c8763c0bc5a72acbaa1faf64dbb01ee5305"
-  integrity sha512-UeMlEVkpdHDp7/RdOoita34rFNwWTgDsbldKC4qUsJMnnHcvsQNia0+Re4L8UP7NUmrwRnWobMt/ZES5Xw/aAg==
-  dependencies:
-    "@floating-ui/react" "^0.26.2"
-    "@react-aria/focus" "^3.14.3"
-    "@react-aria/interactions" "3.0.0-nightly.2584"
-    "@tanstack/react-virtual" "3.0.0-beta.60"
 
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.13"
@@ -195,11 +149,6 @@
   integrity sha512-fvSr6YRoVPgONiVIUhgCmIAlifMVCeej/snPZVzbzRPxGpHl3o1GRe+d/qh92D8KhgOciruDUH8I5mjdfdjzfA==
   dependencies:
     "@swc/helpers" "^0.5.0"
-
-"@jdion/tilt-react@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@jdion/tilt-react/-/tilt-react-1.0.0.tgz#00a12be65a725239ac532f845248b78d356d0dd7"
-  integrity sha512-Qvr0iwxoYc4BAxZzCkrCEF7Vk0DauFIY7eehKU6dCwdil6gj2tlYOOXkMDHMIrdcO6yYDL/yqLI4bNZr4F2swA==
 
 "@jridgewell/gen-mapping@^0.3.2":
   version "0.3.3"
@@ -1275,16 +1224,6 @@
     "@react-types/shared" "^3.22.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/interactions@3.0.0-nightly.2584":
-  version "3.0.0-nightly.2584"
-  resolved "https://registry.yarnpkg.com/@react-aria/interactions/-/interactions-3.0.0-nightly.2584.tgz#d348f61be22f541d9fd88a1e3b05ddcebace5d39"
-  integrity sha512-6DqYQx8XnbCfIen33uLz4kdgevrXLW6aoxsBOTY/Mzq9n0LHzbG/5H87obrOxRNVYh62RcQolo/qfqEpXZ7bVA==
-  dependencies:
-    "@react-aria/ssr" "3.9.1-nightly.4295+f600fdfa2"
-    "@react-aria/utils" "3.0.0-nightly.2584+f600fdfa2"
-    "@react-types/shared" "3.0.0-nightly.2584+f600fdfa2"
-    "@swc/helpers" "^0.5.0"
-
 "@react-aria/interactions@^3.19.1", "@react-aria/interactions@^3.20.0":
   version "3.20.0"
   resolved "https://registry.npmjs.org/@react-aria/interactions/-/interactions-3.20.0.tgz"
@@ -1430,13 +1369,6 @@
     "@react-types/slider" "^3.7.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-aria/ssr@3.9.1-nightly.4295+f600fdfa2":
-  version "3.9.1-nightly.4295"
-  resolved "https://registry.yarnpkg.com/@react-aria/ssr/-/ssr-3.9.1-nightly.4295.tgz#1b33c7b7df5649e300ee81023d6b733e3f1831f5"
-  integrity sha512-cv0+RaS3LJeZiSJ4pVGqSAyiyL+rieLiR3ctyoU7EwkArY1W7fI3NSkMEbNhHe4YoqqjPy1ZzAcpSA11EceiBg==
-  dependencies:
-    "@swc/helpers" "^0.5.0"
-
 "@react-aria/ssr@^3.8.0", "@react-aria/ssr@^3.9.0":
   version "3.9.0"
   resolved "https://registry.npmjs.org/@react-aria/ssr/-/ssr-3.9.0.tgz"
@@ -1529,17 +1461,6 @@
     "@react-types/shared" "^3.22.0"
     "@react-types/tooltip" "^3.4.6"
     "@swc/helpers" "^0.5.0"
-
-"@react-aria/utils@3.0.0-nightly.2584+f600fdfa2":
-  version "3.0.0-nightly.2584"
-  resolved "https://registry.yarnpkg.com/@react-aria/utils/-/utils-3.0.0-nightly.2584.tgz#cabbba8cb1f30dc586c35fd34f4d2be7df9bb997"
-  integrity sha512-A6NP3Yc9MMA+PiRBMTpMlx5plaiK7ejl3cppdkKiNPHtFmZrzxn6o9WHth4NToqIUkJRWHIrpTK8a/gBgVFPOg==
-  dependencies:
-    "@react-aria/ssr" "3.9.1-nightly.4295+f600fdfa2"
-    "@react-stately/utils" "3.0.0-nightly.2584+f600fdfa2"
-    "@react-types/shared" "3.0.0-nightly.2584+f600fdfa2"
-    "@swc/helpers" "^0.5.0"
-    clsx "^1.1.1"
 
 "@react-aria/utils@^3.21.1", "@react-aria/utils@^3.22.0":
   version "3.22.0"
@@ -1749,13 +1670,6 @@
     "@react-types/shared" "^3.22.0"
     "@swc/helpers" "^0.5.0"
 
-"@react-stately/utils@3.0.0-nightly.2584+f600fdfa2":
-  version "3.0.0-nightly.2584"
-  resolved "https://registry.yarnpkg.com/@react-stately/utils/-/utils-3.0.0-nightly.2584.tgz#b6f04ce0eed9e8bad47d2423d8efbeb2627936a8"
-  integrity sha512-UOW2P+H3O7goB1mNEIwUdxr28CVHrKKvi+N1CQ0TGDwr+Bp6oIZK2aXE6aQluzgwZ36aRvLPW5dAoovpzTTcQQ==
-  dependencies:
-    "@swc/helpers" "^0.5.0"
-
 "@react-stately/utils@^3.8.0", "@react-stately/utils@^3.9.0":
   version "3.9.0"
   resolved "https://registry.npmjs.org/@react-stately/utils/-/utils-3.9.0.tgz"
@@ -1873,11 +1787,6 @@
   dependencies:
     "@react-types/shared" "^3.22.0"
 
-"@react-types/shared@3.0.0-nightly.2584+f600fdfa2":
-  version "3.0.0-nightly.2584"
-  resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.0.0-nightly.2584.tgz#6711d7bd91e87901dd89baea045ed0034b9526df"
-  integrity sha512-SVqvg7B3rtzN1ypQni5g6sfpUNf4wODRDtiOalBFSJ02YuaUIr7gXVjafPYIXOC1BkJbZtPun/Pv4mCwNHFNbA==
-
 "@react-types/shared@^3.21.0", "@react-types/shared@^3.22.0":
   version "3.22.0"
   resolved "https://registry.npmjs.org/@react-types/shared/-/shared-3.22.0.tgz"
@@ -1946,18 +1855,6 @@
   dependencies:
     legacy-swc-helpers "npm:@swc/helpers@=0.4.14"
     tslib "^2.4.0"
-
-"@tanstack/react-virtual@3.0.0-beta.60":
-  version "3.0.0-beta.60"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.0.0-beta.60.tgz#2b37c0d72997a54f7927f6b159a77311429fec1e"
-  integrity sha512-F0wL9+byp7lf/tH6U5LW0ZjBqs+hrMXJrj5xcIGcklI0pggvjzMNW9DdIBcyltPNr6hmHQ0wt8FDGe1n1ZAThA==
-  dependencies:
-    "@tanstack/virtual-core" "3.0.0-beta.60"
-
-"@tanstack/virtual-core@3.0.0-beta.60":
-  version "3.0.0-beta.60"
-  resolved "https://registry.yarnpkg.com/@tanstack/virtual-core/-/virtual-core-3.0.0-beta.60.tgz#fcac07cb182d41929208899062de8c9510cf42ed"
-  integrity sha512-QlCdhsV1+JIf0c0U6ge6SQmpwsyAT0oQaOSZk50AtEeAyQl9tQrd6qCHAslxQpgphrfe945abvKG8uYvw3hIGA==
 
 "@types/json5@^0.0.29":
   version "0.0.29"
@@ -2339,11 +2236,6 @@ clsx@^1.1.1, clsx@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
-
-clsx@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-2.0.0.tgz#12658f3fd98fafe62075595a5c30e43d18f3d00b"
-  integrity sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==
 
 color-convert@^2.0.1:
   version "2.0.1"
@@ -3374,11 +3266,6 @@ jiti@^1.19.1:
   resolved "https://registry.npmjs.org/jiti/-/jiti-1.20.0.tgz"
   integrity sha512-3TV69ZbrvV6U5DfQimop50jE9Dl6J8O1ja1dvBbMba/sZ3YBEQqJ2VZRoQPVnhlzjNtU1vaXRZVrVjU4qtm8yA==
 
-jquery@^3.1.1:
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
-  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
-
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -4243,11 +4130,6 @@ swr@^2.2.4:
     client-only "^0.0.1"
     use-sync-external-store "^1.2.0"
 
-tabbable@^6.0.1:
-  version "6.2.0"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.2.0.tgz#732fb62bc0175cfcec257330be187dcfba1f3b97"
-  integrity sha512-Cat63mxsVJlzYvN51JmVXIgNoUokrIaT2zLclCXjRd8boZ0004U4KCs/sToJ75C6sdlByWxpYnb5Boif1VSFew==
-
 tailwind-merge@^1.14.0:
   version "1.14.0"
   resolved "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-1.14.0.tgz"
@@ -4311,13 +4193,6 @@ thenify-all@^1.0.0:
   integrity sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==
   dependencies:
     any-promise "^1.0.0"
-
-tilt.js@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/tilt.js/-/tilt.js-1.2.1.tgz#7d140ecb06744192815735e538b02739fe24d92f"
-  integrity sha512-IGRh3FJbq6BRH2ETb2KxDWont2k740oR+0QMs39QVkjnr7QmA6L1VzSKsOLgFXg5QNtHyRKp7vzFoJCYxgzsJA==
-  dependencies:
-    jquery "^3.1.1"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
