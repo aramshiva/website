@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.0.0-alpha.3",
+    "@jdion/tilt-react": "^1.0.0",
     "@nextui-org/react": "^2.2.9",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
@@ -19,8 +20,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
+    "react-parallax-tilt": "^1.7.179",
     "react-simple-typewriter": "^5.0.1",
     "swr": "^2.2.4",
+    "tilt.js": "^1.2.1",
     "twemoji": "^14.0.2",
     "typescript": "^5.3.3"
   },
