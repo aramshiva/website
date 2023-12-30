@@ -10,6 +10,7 @@
     "@nextui-org/react": "^2.2.9",
     "autoprefixer": "^10.4.16",
     "depcheck": "^1.4.7",
+    "animate.css": "^4.1.1",
     "eslint-config-next": "^14.0.3",
     "framer-motion": "^10.16.5",
     "next": "^14.0.3",
