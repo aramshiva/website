@@ -46,7 +46,13 @@ export default function Index() {
               {"  "}
               <p></p>
             </div>
-            <SpotifyWidget/>
+            <div className="text-lg font-normal">
+              <span className="text-xl decoration-dotted underline decoration-red-500 hover:text-9xl">
+                Aram
+              </span>{" "}
+              is a student building remarkable things
+            </div>
+            <SpotifyWidget />
           </Container>
         </Layout>
       </div>
