@@ -18,7 +18,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-parallax-tilt": "^1.7.179",
+    "react-parallax-tilt": "^1.7.180",
     "react-simple-typewriter": "^5.0.1",
     "swr": "^2.2.4",
     "twemoji": "^14.0.2",
