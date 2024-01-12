@@ -44,8 +44,7 @@ export default function Index() {
               {"  "}
               <p></p>
             </div>
-            <div className="text-lg font-normal">
-              Aram is a student building remarkable things
+            <div className="text-xl font-normal">
             </div>
             <SpotifyWidget />
           </Container>
