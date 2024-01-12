@@ -12,25 +12,25 @@
     "@vercel/speed-insights": "^1.0.2",
     "animate.css": "^4.1.1",
     "eslint-config-next": "^14.0.4",
-    "framer-motion": "^10.17.0",
+    "framer-motion": "^10.17.6",
     "next": "^14.0.4",
     "querystring": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-parallax-tilt": "^1.7.179",
+    "react-parallax-tilt": "^1.7.180",
     "react-simple-typewriter": "^5.0.1",
     "swr": "^2.2.4",
     "twemoji": "^14.0.2",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
-    "@types/node": "^20.10.5",
+    "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.7",
     "eslint": "8.56.0",
-    "postcss": "^8.4.32",
+    "postcss": "^8.4.33",
     "tailwindcss": "^3.4.0"
   }
 }
