@@ -1,5 +1,6 @@
 ![image](https://github.com/aramshiva/website/assets/79479940/5d77a27a-82ba-4a98-a00f-1438ef18a962)
 # aramshiva/website
+[![CodeQL](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql)
 
 Welcome! This is my corner of the internet. It is published on [aram.sh](https://aram.sh) and [aramshiva.com](https://aramshiva.com).
 
