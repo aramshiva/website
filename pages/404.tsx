@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function Example() {
+export default function Error() {
   return (
     <>
       <main className="grid min-h-full place-items-center px-6 py-9 sm:py-20 lg:px-5 h-screen">

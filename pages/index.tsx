@@ -2,24 +2,20 @@ import Container from "../components/container";
 import { Typewriter } from "react-simple-typewriter";
 import Layout from "../components/layout";
 import { Inter } from "next/font/google";
-import useSWR from "swr";
-import Link from "next/link";
 import SpotifyWidget from "../components/spotifynowplaying";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Index() {
-  const fetcher = (url) => fetch(url).then((r) => r.json());
-  const { data } = useSWR("/api/spotify", fetcher);
   return (
     <>
       <div>
         <Layout>
           <Container>
             <div className="h-20" />
-            <div className="text-7xl font-semibold">
+            <div className="text-5xl font-semibold">
               <span>
-                Aram is a{" "}
+                I am a{" "}
                 <span>
                   <Typewriter
                     words={[
@@ -44,8 +40,12 @@ export default function Index() {
               {"  "}
               <p></p>
             </div>
-            <div className="text-lg font-normal">
-              Aram is a student building remarkable things
+            <div className="textl-xl">
+              <div>
+                <span className="wave">👋</span> I create remarkable experiences
+                for the web.
+              </div>
+
             </div>
             <SpotifyWidget />
           </Container>
