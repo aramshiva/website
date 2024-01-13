@@ -1,5 +1,3 @@
-import querystring from "querystring";
-
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
@@ -17,7 +15,7 @@ const getAccessToken = async () => {
       Authorization: `Basic ${basic}`,
       "Content-Type": "application/x-www-form-urlencoded",
     },
-    body: querystring.stringify({
+    body: new URLSearchParams({
       grant_type: "refresh_token",
       refresh_token,
     }),
