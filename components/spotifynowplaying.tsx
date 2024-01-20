@@ -2,7 +2,8 @@ import useSWR from "swr";
 import { SiSpotify } from "react-icons/si";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
-import 'animate.css';
+import "animate.css";
+import Image from "next/image";
 
 const SpotifyWidget: React.FC = () => {
   const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -38,10 +39,12 @@ const SpotifyWidget: React.FC = () => {
             >
               <div className="w-16">
                 {data?.isPlaying && (
-                  <img
+                  <Image
                     src={data?.albumImageUrl}
                     alt={data?.album}
                     className="rounded-lg"
+                    width={64}
+                    height={64}
                   />
                 )}
               </div>

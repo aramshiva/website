@@ -3,7 +3,7 @@ import Head from "next/head";
 const Meta = () => {
   return (
     <Head>
-      <meta property="og:type" content="profile" />
+      <meta property="og:type" content="website" />
       <meta property="og:title" content="Aram Shiva" />
       <meta property="og:url" content="https://aram.sh" />
       <meta
@@ -12,7 +12,7 @@ const Meta = () => {
       />
       <meta
         property="og:description"
-        content="Aram is a student based in Seattle, Washington. He likes to develop, create and inspire."
+        content="Aram Shiva is a teenager in Seattle who is crafting internet experiences."
       />
       <meta property="profile:first_name" content="Aram" />
       <meta property="profile:last_name" content="Shiva" />
