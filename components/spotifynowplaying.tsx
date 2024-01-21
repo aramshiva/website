@@ -1,7 +1,7 @@
 import useSWR from "swr";
 import { SiSpotify } from "react-icons/si";
 import Link from "next/link";
-import Tilt from "react-parallax-tilt";
+// import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 
 const SpotifyWidget: React.FC = () => {
@@ -22,7 +22,7 @@ const SpotifyWidget: React.FC = () => {
           <div className="pb-3">
             {data?.isPlaying && <p>Currently Listening to:</p>}
           </div>
-          <Tilt glareEnable gyroscope>
+          {/* <Tilt glareEnable gyroscope> */}
             <Link
               target="_blank"
               rel="noopener noreferer"
@@ -60,7 +60,7 @@ const SpotifyWidget: React.FC = () => {
                 <SiSpotify size={20} color={"#000000"} />
               </div>
             </Link>
-          </Tilt>
+          {/* </Tilt> */}
         </div>
       </div>
     </>
