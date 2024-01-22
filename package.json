@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
-    "@vercel/analytics": "^1.1.1",
+    "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.4",
     "animate.css": "^4.1.1",
     "eslint-config-next": "^14.0.4",
