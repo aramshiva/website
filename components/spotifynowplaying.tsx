@@ -13,16 +13,16 @@ const SpotifyWidget: React.FC = () => {
       <div
         className={
           data?.isPlaying
-            ? "fixed bottom-0 text-black h-30 pb-9 align-middle flex flex-col animate__animated animate__slideInUp"
+            ? "h-30 animate__animated animate__slideInUp fixed bottom-0 flex flex-col pb-9 align-middle text-black"
             : "invisible"
         }
       >
         {" "}
-        <div className="border p-5 rounded-xl">
+        <div className="rounded-xl border p-5">
           <div className="pb-3">
             {data?.isPlaying && <p>Currently Listening to:</p>}
           </div>
-          <Tilt glareEnable gyroscope> 
+          <Tilt glareEnable gyroscope>
             <Link
               target="_blank"
               rel="noopener noreferer"
@@ -33,7 +33,7 @@ const SpotifyWidget: React.FC = () => {
               }
               className={
                 data?.isPlaying &&
-                "relative flex items-center p-6 space-x-4 transition-shadow rounded-2xl hover:shadow-md w-72"
+                "relative flex w-72 items-center space-x-4 rounded-2xl p-6 transition-shadow hover:shadow-md"
               }
             >
               <div className="w-16">
@@ -49,10 +49,10 @@ const SpotifyWidget: React.FC = () => {
               </div>
 
               <div className="flex-1">
-                <p className="font-bold component">
+                <p className="component font-bold">
                   {data?.isPlaying && data.title}
                 </p>
-                <p className="text-xs font-dark">
+                <p className="font-dark text-xs">
                   {data?.isPlaying && data.artist}
                 </p>
               </div>

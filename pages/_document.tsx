@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import Meta from "../components/meta";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Document() {
   return (

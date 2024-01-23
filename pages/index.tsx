@@ -14,43 +14,45 @@ export default function Index() {
         <Layout>
           <Container>
             <div className="h-20" />
-            <div className="text-7xl font-semibold">
-              <span>
-                I am a{" "}
+            <div>
+              <div className="pb-20 text-7xl font-semibold">
                 <span>
-                  <Typewriter
-                    words={[
-                      "dreamer",
-                      "developer",
-                      "designer",
-                      "builder",
-                      "maker",
-                      "photographer",
-                      "student",
-                    ]}
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={75}
-                    deleteSpeed={75}
-                    delaySpeed={2500}
-                    loop={true}
-                  />
-                </span>{" "}
-                in Seattle.
-              </span>
-              {"  "}
-              <p></p>
-            </div>
-            <div className="text-2xl">
-              <div>
-                <span className="wave">👋</span> I create remarkable experiences
-                for the web. <br />I am currently a mentee at{" "}
-                <Link href="https://hackclub.com/hcb" className="underline">
-                  HCB
-                </Link>
-                , a tool for students to run their own non-profits.
-                <br />
-                <br />
+                  I am a{" "}
+                  <span>
+                    <Typewriter
+                      words={[
+                        "dreamer",
+                        "developer",
+                        "designer",
+                        "builder",
+                        "maker",
+                        "photographer",
+                        "student",
+                      ]}
+                      cursor
+                      cursorStyle="|"
+                      typeSpeed={75}
+                      deleteSpeed={75}
+                      delaySpeed={2500}
+                      loop={true}
+                    />
+                  </span>{" "}
+                  in Seattle.
+                </span>
+                {"  "}
+                <p></p>
+              </div>
+              <div className="text-2xl">
+                <div>
+                  <span className="wave">👋</span> I create remarkable
+                  experiences for the web. <br />I am currently a mentee at{" "}
+                  <Link href="https://hackclub.com/hcb" className="underline">
+                    HCB
+                  </Link>
+                  , a tool for students to run their own non-profits.
+                  <br />
+                  <br />
+                </div>
               </div>
             </div>
             <SpotifyWidget />

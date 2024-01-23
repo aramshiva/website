@@ -19,10 +19,10 @@ export default function Home() {
                 height={200}
               />
               <div className="pb-5" />
-              <p className="font-bold text-9xl">N₂</p>
+              <p className="text-9xl font-bold">N₂</p>
               <div className="pb-20" />
               <Link href="/p/nitrogencycle/nh3">
-                <Button className="pr-7 pb-8 pl-7 pt-8 text-lg bg-indigo-600 text-white">
+                <Button className="bg-indigo-600 pb-8 pl-7 pr-7 pt-8 text-lg text-white">
                   Nitrogen Fixation
                 </Button>
               </Link>

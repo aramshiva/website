@@ -19,7 +19,7 @@ export default function Home() {
                 height={200}
               />
               <Link href="/p/nitrogencycle/nh4">
-                <Button className="pr-7 pb-8 pl-7 pt-8 text-lg bg-indigo-600 text-white">
+                <Button className="bg-indigo-600 pb-8 pl-7 pr-7 pt-8 text-lg text-white">
                   Decompose
                 </Button>
               </Link>
