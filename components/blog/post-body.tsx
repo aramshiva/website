@@ -6,6 +6,7 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
+    // <Balancer>
     <div className="max-w-2xl mx-auto">
       <article className="prose lg:prose-xl">
       <div
@@ -14,6 +15,7 @@ const PostBody = ({ content }: Props) => {
       />
       </article>
     </div>
+    // </Balancer>
   );
 };
 

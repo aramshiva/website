@@ -8,7 +8,6 @@ import Layout from "../../../components/blog/layout";
 import Head from "next/head";
 import PostTitle from "../../../components/blog/post-title";
 import { getPostBySlug, getAllPosts } from "../../../blog/lib/api";
-import { CMS_NAME } from "../../../blog/lib/constants";
 import markdownToHtml from "../../../blog/lib/markdownToHtml";
 import type PostType from "../../../blog/interfaces/post";
 
@@ -20,7 +19,7 @@ type Props = {
 
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Aram's Blog`;
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
