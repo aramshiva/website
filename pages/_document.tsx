@@ -7,20 +7,21 @@ import Nav from "../components/nav";
 export default function Document() {
   return (
     <Html lang="en">
-      <Head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        />
-        <Meta />
-      </Head>
-      <body>
-        <Nav />
-        <Main />
-        <Analytics />
-        <NextScript />
-        <SpeedInsights />
-      </body>
+      <Meta>
+        <Head>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+          />
+        </Head>
+        <body>
+          <Nav />
+          <Main />
+          <Analytics />
+          <NextScript />
+          <SpeedInsights />
+        </body>
+      </Meta>
     </Html>
   );
 }

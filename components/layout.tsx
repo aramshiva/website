@@ -1,5 +1,3 @@
-import Meta from "./meta";
-
 type Props = {
   preview?: boolean;
   children: React.ReactNode;
@@ -8,7 +6,6 @@ type Props = {
 const Layout = ({ preview, children }: Props) => {
   return (
     <>
-      <Meta />
       <div className="min-h-screen">
         <main>{children}</main>
       </div>
