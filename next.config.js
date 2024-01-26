@@ -18,7 +18,7 @@ const nextConfig = {
   },
   env: {
     // add the package.json version and git hash to the environment
-    APP_VERSION: pkg.version,
-    COMMIT_HASH: commitHash,
+    NEXT_PUBLIC_APP_VERSION: pkg.version,
+    NEXT_PUBLIC_COMMIT_HASH: commitHash,
   },
 };
