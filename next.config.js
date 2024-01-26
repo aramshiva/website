@@ -7,6 +7,15 @@ const commitHash = require("child_process")
   .toString()
   .trim();
 
+const fullcommitHash = require("child_process")
+  .execSync('git log --pretty=format:"%H" -n1')
+  .toString()
+  .trim();
+
+const commitDate = require("child_process")
+  .execSync("git log -1 --format=%cd")
+  .toString()
+  .trim();
 const nextConfig = {
   images: {
     remotePatterns: [
@@ -20,7 +29,9 @@ const nextConfig = {
     // add the package.json version and git hash to the environment
     APP_VERSION: pkg.version,
     COMMIT_HASH: commitHash,
+    FULL_COMMIT_HASH: fullcommitHash,
+    COMMIT_DATE: commitDate,
   },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;

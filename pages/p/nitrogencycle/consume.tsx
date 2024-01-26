@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Container from "../../../components/container";
-import Layout from "../../../components/layout";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <Layout>
         <Container>
           <div className="flex flex-row justify-center align-middle">
             <div>
@@ -39,7 +37,6 @@ export default function Home() {
             </div>
           </div>
         </Container>
-      </Layout>
     </>
   );
 }

@@ -6,16 +6,14 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    // <Balancer>
-    <div className="max-w-2xl mx-auto">
+    <div className="mx-auto max-w-2xl">
       <article className="prose lg:prose-xl">
-      <div
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+        <div
+          className={markdownStyles["markdown"]}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
       </article>
     </div>
-    // </Balancer>
   );
 };
 
