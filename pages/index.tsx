@@ -46,16 +46,27 @@ export default function Index() {
                 <p></p>
               </div>
               <div className="text-xl">
-                  <Balancer>
-                    <span className="wave">👋</span> I create remarkable
-                    experiences for the web. <br />I am currently a mentee at{" "}
-                    <Link href="https://hackclub.com/hcb" className="underline">
-                      HCB
-                    </Link>
-                    , a tool for students to run their own non-profits.
-                    <br />
-                    <br />
-                  </Balancer>
+                <Balancer>
+                  <span className="wave">👋</span> I create remarkable
+                  experiences for the web. <br />I am currently a mentee at{" "}
+                  <Link href="https://hackclub.com/hcb" className="underline">
+                    HCB
+                  </Link>
+                  , a tool for students to run their own non-profits.
+                  <br />
+                  <br />
+                </Balancer>
+              </div>
+              <div>
+                <span className="my-4 text-right text-xs text-gray-500">
+                  v. {process.env.APP_VERSION} |{" "}
+                  <a
+                    className="underline"
+                    href={`https://github.com/aramshiva/website/tree/${process.env.COMMIT_HASH}`}
+                  >
+                    {process.env.COMMIT_HASH}
+                  </a>
+                </span>
               </div>
             </div>
             <SpotifyWidget />
