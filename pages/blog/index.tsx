@@ -1,11 +1,11 @@
 import Container from "../../components/blog/container";
 import MoreStories from "../../components/blog/more-stories";
 import HeroPost from "../../components/blog/hero-post";
-import Intro from "../../components/blog/intro";
 import Layout from "../../components/blog/layout";
 import { getAllPosts } from "../../blog/lib/api";
 import Head from "next/head";
 import Post from "../../blog/interfaces/post";
+import Alert from "../../components/alert";
 
 type Props = {
   allPosts: Post[];
@@ -21,7 +21,7 @@ export default function Index({ allPosts }: Props) {
           <title>{`Aram's Blog`}</title>
         </Head>
         <Container>
-          <Intro />
+        <Alert>This blog is in <span className="font-medium">beta</span>. It is coming soon and posts may not be visible at the moment.</Alert>
           {heroPost && (
             <HeroPost
               title={heroPost.title}

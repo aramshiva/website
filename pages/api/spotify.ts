@@ -48,6 +48,7 @@ export default async (_, res) => {
   const album = song.item.album.name;
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
+  const device = song.device;
 
   return res.status(200).json({
     album,
@@ -56,5 +57,6 @@ export default async (_, res) => {
     isPlaying,
     songUrl,
     title,
+    device,
   });
 };
