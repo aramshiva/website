@@ -46,16 +46,16 @@ export default function Index() {
                 <p></p>
               </div>
               <div className="text-xl">
-                  <Balancer>
-                    <span className="wave">👋</span> I create remarkable
-                    experiences for the web. <br />I am currently a mentee at{" "}
-                    <Link href="https://hackclub.com/hcb" className="underline">
-                      HCB
-                    </Link>
-                    , a tool for students to run their own non-profits.
-                    <br />
-                    <br />
-                  </Balancer>
+                <Balancer>
+                  <span className="wave">👋</span> I create remarkable
+                  experiences for the web. <br />I am currently a mentee at{" "}
+                  <Link href="https://hackclub.com/hcb" className="underline">
+                    HCB
+                  </Link>
+                  , a tool for students to run their own non-profits.
+                  <br />
+                  <br />
+                </Balancer>
               </div>
             </div>
             <SpotifyWidget />
