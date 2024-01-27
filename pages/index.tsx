@@ -35,7 +35,7 @@ export default function Index() {
             {"  "}
           </div> */}
           <div className="block text-sm sm:text-lg">
-            <span className="text-xl block font-semibold italic sm:text-3xl">
+            <span className="block text-xl font-semibold italic sm:text-3xl">
               When did the internet get so{" "}
               <span className="font-black">busy?</span>
             </span>
