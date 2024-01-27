@@ -1,4 +1,5 @@
-![image](https://github.com/aramshiva/website/assets/79479940/0c706edb-ad1c-4c8c-bda1-d1c2a0263242)
+![image](https://github.com/aramshiva/website/assets/79479940/49dff2fd-771d-4ade-bc0c-02d9b7d235af)
+
 
 # 🏠 Website 🏠
 
