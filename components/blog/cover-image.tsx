@@ -29,7 +29,6 @@ const CoverImage = ({ title, src, slug }: Props) => {
             query: { slug },
           }}
           as="/blog/posts/[slug]"
-          aria-label={title}
         >
           {image}
         </Link>
