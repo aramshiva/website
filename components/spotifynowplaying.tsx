@@ -18,11 +18,11 @@ const SpotifyWidget: React.FC = () => {
         }
       >
         {" "}
-        <div className="rounded-xl border p-4 bg-white">
+        <div className="rounded-xl border p-4 xw">
           <div className="pb-3">
             {data?.isPlaying && <p>Currently Listening to:</p>}
           </div>
-          <Tilt glareEnable gyroscope>
+          <Tilt glareEnable>
             <Link
               target="_blank"
               rel="noopener noreferer"

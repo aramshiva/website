@@ -1,4 +1,3 @@
-import { Typewriter } from "react-simple-typewriter";
 import SpotifyWidget from "../components/spotifynowplaying";
 import Link from "next/link";
 import Nav from "../components/nav";
@@ -28,6 +27,7 @@ export default function Index() {
                   breakLines: false,
                   lifeLike: true,
                   waitUntilVisible: true,
+                  nextStringDelay: 3000,
                 }}
               />
             </span>

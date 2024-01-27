@@ -9,6 +9,7 @@ import PostTitle from "../../../components/blog/post-title";
 import { getPostBySlug, getAllPosts } from "../../../lib/api";
 import markdownToHtml from "../../../lib/markdownToHtml";
 import type PostType from "../../../blog/interfaces/post";
+import Navbar from "../../../components/nav";
 
 type Props = {
   post: PostType;
@@ -23,29 +24,32 @@ export default function Post({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout preview={preview}>
-      <Container>
-        {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
-            <article className="mb-32">
-              <Head>
-                <title>{title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
-              </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <PostBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
-    </Layout>
+    <>
+      <Navbar />
+      <Layout preview={preview}>
+        <Container>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+            <>
+              <article className="mb-32">
+                <Head>
+                  <title>{title}</title>
+                  <meta property="og:image" content={post.ogImage.url} />
+                </Head>
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                />
+                <PostBody content={post.content} />
+              </article>
+            </>
+          )}
+        </Container>
+      </Layout>
+    </>
   );
 }
 
