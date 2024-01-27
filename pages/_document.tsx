@@ -16,7 +16,6 @@ export default function Document() {
         </Meta>
       </Head>
       <body>
-        <Nav />
         <Main />
         <Analytics />
         <SpeedInsights />

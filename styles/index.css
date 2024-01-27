@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-.blog-title-emoji {
+.wave {
     animation-name: wave-animation;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;

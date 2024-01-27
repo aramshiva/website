@@ -67,7 +67,7 @@ export default function Index() {
                   {process.env.COMMIT_HASH}
                 </Tooltip>
               </a>{" "}
-              from {isitweekend ? "a weekend" : formattedCommitDate}
+              from {formattedCommitDate} {isitweekend ? "on a weekend" : ""}
             </span>
           </div>
         </div>

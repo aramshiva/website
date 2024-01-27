@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function Error() {
   return (
     <>
-      <div className="grid h-screen min-h-full w-screen place-items-center bg-black px-6 py-24 font-mono text-white sm:py-32 lg:px-8">
+      <div className="grid min-h-full place-items-center px-6 py-24 font-mono sm:py-32 lg:px-8">
         <div>
             <pre>██╗  ██╗ ███████╗██╗  ██╗</pre>
             <pre>██║  ██║██╔═████╗██║  ██║</pre>

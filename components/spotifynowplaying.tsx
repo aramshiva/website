@@ -13,12 +13,12 @@ const SpotifyWidget: React.FC = () => {
       <div
         className={
           data?.isPlaying
-            ? "h-30 animate__animated animate__slideInUp fixed bottom-0 flex flex-col pb-9 align-middle text-black"
+            ? "bg-white p-30 animate__animated animate__slideInUp fixed bottom-0 flex flex-col pb-5 align-middle text-black"
             : "invisible"
         }
       >
         {" "}
-        <div className="rounded-xl border p-5">
+        <div className="rounded-xl border p-4">
           <div className="pb-3">
             {data?.isPlaying && <p>Currently Listening to:</p>}
           </div>
@@ -33,7 +33,7 @@ const SpotifyWidget: React.FC = () => {
               }
               className={
                 data?.isPlaying &&
-                "relative flex w-72 items-center space-x-4 rounded-2xl p-6 transition-shadow hover:shadow-md"
+                "relative flex w-72 items-center space-x-4 rounded-2xl p-5 transition-shadow hover:shadow-md"
               }
             >
               <div className="w-16">

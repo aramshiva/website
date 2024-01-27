@@ -4,6 +4,9 @@ const {nextui} = require("@nextui-org/react");
 module.exports = withMT({
   content: ['./components/**/*.tsx', './pages/**/*.tsx', "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+    },
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
