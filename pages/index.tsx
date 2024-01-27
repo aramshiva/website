@@ -10,9 +10,9 @@ export default function Index() {
       <Nav />
       <div>
         <div>
-          <div className="pb-5 text-3xl font-semibold">
+          {/*<div className="pb-5 text-3xl font-semibold">
             👋 Hello!
-            {/* <span className="wave">👋</span>{" "}
+            <span className="wave">👋</span>{" "}
             <span>
               <TypeIt
                 options={{
@@ -31,14 +31,15 @@ export default function Index() {
                   nextStringDelay: 3000,
                 }}
               />
-            </span>*/}
+            </span>
             {"  "}
-          </div>
+          </div> */}
           <div className="block text-sm sm:text-lg">
-            <span className="text-md block font-semibold italic sm:text-xl">
+            <span className="text-xl block font-semibold italic sm:text-3xl">
               When did the internet get so{" "}
               <span className="font-black">busy?</span>
             </span>
+            Advertisements, pop-ups, notifications, trackers, spam. <br />
             <br />I{"'"}m{" "}
             <Link
               className="underline decoration-blue-500"
@@ -52,7 +53,7 @@ export default function Index() {
             <span className="italic">little things.</span>
             <br />
             The world is changing so <span className="font-bold">fast</span>,
-            let{"'"}s take a moment to slow down. <br />
+            let{"'"}s take a moment to take a breather. <br />
             This is my home on the interwebs, where I share my thoughts and
             creations.
             <br />

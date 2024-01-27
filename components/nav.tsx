@@ -7,9 +7,9 @@ const navItems = {
   "mailto:me@aram.sh": {
     name: "email",
   },
-  "/blog": {
-    name: "blog",
-  },
+  // "/blog": {
+  //   name: "blog",
+  // },
 };
 
 export function Navbar() {

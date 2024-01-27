@@ -24,8 +24,11 @@ const CoverImage = ({ title, src, slug }: Props) => {
     <div className="sm:mx-0">
       {slug ? (
         <Link
+          href={{
+            pathname: "/blog/posts/[slug]",
+            query: { slug },
+          }}
           as={`/blog/posts/${slug}`}
-          href="/blog/posts/[slug]"
           aria-label={title}
         >
           {image}
