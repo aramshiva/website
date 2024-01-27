@@ -1,6 +1,5 @@
 ![image](https://github.com/aramshiva/website/assets/79479940/49dff2fd-771d-4ade-bc0c-02d9b7d235af)
 
-
 # 🏠 Website 🏠
 
 [![CodeQL](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql)
