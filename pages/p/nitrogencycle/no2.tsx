@@ -26,7 +26,7 @@ export default function Home() {
                   Continue
                 </Button>
               </Link>
-              <div className="text-large pb-10" />
+              <div className="pb-10 text-large" />
               <p>
                 You are a <strong>NO₂</strong> atom. You have been nitrified.
                 Press the button to become a NO₃ atom again!

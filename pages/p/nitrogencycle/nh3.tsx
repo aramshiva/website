@@ -26,7 +26,7 @@ export default function Home() {
                   Nitrification
                 </Button>
               </Link>
-              <div className="text-large pb-10" />
+              <div className="pb-10 text-large" />
               <p>
                 You are a <strong>NH₃</strong> atom. You have been through the
                 process of nitrogen fixation

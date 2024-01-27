@@ -24,7 +24,7 @@ export default function Home() {
                 Nitrogen Fixation
               </Button>
             </Link>
-            <div className="text-large pb-10" />
+            <div className="pb-10 text-large" />
             <p>
               You are a <strong>N₂</strong> atom. This is where everyone starts.
             </p>

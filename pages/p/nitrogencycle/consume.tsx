@@ -21,7 +21,7 @@ export default function Home() {
                 Decompose
               </Button>
             </Link>
-            <div className="text-large pb-10" />
+            <div className="pb-10 text-large" />
             <p className="contain break-normal">
               You have been consumed! Press the next button to continue!
             </p>
