@@ -1,31 +1,41 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-export default function Nav() {
+const navItems = {
+    '/': {
+        name: 'home',
+    },
+    'mailto:me@aram.sh': {
+        name: 'email',
+    },
+    '/blog': {
+        name: 'blog',
+    },
+};
 
-    const links = [
-        { href: '/', label: 'home' },
-        { href: '/blog', label: 'blog'},
-        { href: 'https://github.com/aramshiva', label: 'github'},
-        { href: 'https://read.cv/aramsh', label: 'cv'},
-        { href: 'mailto:me@aram.sh', label: 'email'},
-    ]
-
+export function Navbar() {
     return (
-        <nav className="grow-0 text-black"> {/* Added text-white class */}
-            <ul
-                className="flex flex-wrap lg:flex-row gap-x-5 gap-y-1 lg:gap-x-2 px-10 lg:px-0 mt-3 text-3xl md:text-base font-medium justify-around mx-auto lg:w-8/12 xl:w-5/12"
-            >
-                {links.map(({ href, label }) => (
-                    <li
-                        key={`${href}${label}`}
-                        className="list-none pointer-events-auto p-0 m-0"
-                    >
-                        <Link href={href} className="hover:text-grey">
-                            {label.toLowerCase()}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </nav>
-    )
+        <aside className="-ml-[8px] mb-16 tracking-tight pt-9">
+            <div className="lg:sticky lg:top-20">
+                <nav
+                    className="flex flex-row items-start relative fade md:overflow-auto scroll-pr-6 md:relative"
+                    id="nav"
+                >
+                    <div className="flex flex-row space-x-0 pr-10">
+                        {Object.entries(navItems).map(([path, { name }]) => {
+                            return (
+                                <Link
+                                    key={path}
+                                    href={path}
+                                    className="transition-all flex align-middle relative py-1 px-2"
+                                >
+                                    {name}
+                                </Link>
+                            );
+                        })}
+                    </div>
+                </nav>
+            </div>
+        </aside>
+    );
 }
+export default Navbar;

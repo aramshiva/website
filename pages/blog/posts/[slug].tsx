@@ -6,8 +6,8 @@ import PostHeader from "../../../components/blog/post-header";
 import Layout from "../../../components/blog/layout";
 import Head from "next/head";
 import PostTitle from "../../../components/blog/post-title";
-import { getPostBySlug, getAllPosts } from "../../../blog/lib/api";
-import markdownToHtml from "../../../blog/lib/markdownToHtml";
+import { getPostBySlug, getAllPosts } from "../../../lib/api";
+import markdownToHtml from "../../../lib/markdownToHtml";
 import type PostType from "../../../blog/interfaces/post";
 
 type Props = {

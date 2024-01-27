@@ -1,78 +1,75 @@
-import { formatDistanceToNow, isWeekend } from "date-fns";
 import { Typewriter } from "react-simple-typewriter";
 import SpotifyWidget from "../components/spotifynowplaying";
 import Link from "next/link";
-import { Tooltip } from "@material-tailwind/react";
+import Nav from "../components/nav";
+import TypeIt from "typeit-react";
+import Image from "next/image";
 
 export default function Index() {
-  const commitDate = new Date(process.env.COMMIT_DATE);
-  const isitweekend = isWeekend(commitDate)
-  const formattedCommitDate = formatDistanceToNow(commitDate, {
-    addSuffix: true,
-  });
-
   return (
     <>
+      <Nav />
       <div>
-        <div className="h-20" />
         <div>
-          <div className="pb-8 text-7xl font-semibold">
+          <div className="pb-5 text-3xl font-semibold">
+            <span className="wave">👋</span>{" "}
             <span>
-              I am a{" "}
-              <span>
-                <Typewriter
-                  words={[
-                    "dreamer",
-                    "developer",
-                    "designer",
-                    "builder",
-                    "maker",
-                    "photographer",
-                    "student",
-                  ]}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={75}
-                  deleteSpeed={75}
-                  delaySpeed={2500}
-                  loop={true}
-                />
-              </span>{" "}
-              in Seattle.
+              <TypeIt
+                options={{
+                  strings: [
+                    "Hey!",
+                    "Hello!",
+                    "Welcome",
+                    "Howdy!",
+                    "Heya!",
+                    "Hi!",
+                  ],
+                  loop: true,
+                  breakLines: false,
+                  lifeLike: true,
+                  waitUntilVisible: true,
+                }}
+              />
             </span>
             {"  "}
-            <p></p>
           </div>
-          <div className="text-xl">
-            <span className="wave">👋</span> I create remarkable experiences for
-            the web. <br />I am currently a mentee at{" "}
-            <Link href="https://hackclub.com/hcb" className="underline">
-              HCB
-            </Link>
-            , a tool for students to run their own non-profits.
-            <br />
-            <br />
-          </div>
-          <div className="font-mono">
-            <span className="my-4 text-right sticky text-xs text-gray-500">
-              v. {process.env.APP_VERSION} |{" "}
-              <a
-                className="underline"
-                href={`https://github.com/aramshiva/website/tree/${process.env.COMMIT_HASH}`}
-              >
-                <Tooltip
-                  content={process.env.FULL_COMMIT_HASH}
-                  className="rounded-xl bg-white p-2 font-sans text-black shadow-lg "
-                >
-                  {process.env.COMMIT_HASH}
-                </Tooltip>
-              </a>{" "}
-              from {formattedCommitDate} {isitweekend ? "on a weekend" : ""}
+          <div className="block text-sm sm:text-lg">
+            <span className="font-semibold italic block text-md sm:text-xl">
+              When did the internet get so{" "}
+              <span className="font-black">busy?</span>
             </span>
+            <br />I{"'"}m{" "}
+            <Link
+              className="underline decoration-blue-500"
+              href="https://github.com/aramshiva"
+            >
+              Aram
+            </Link>
+            , I don{"'"}t believe we{"'"}ve met.
+            <br />I craft web experiences to help us{" "}
+            <span className="font-bold">slow down</span> and appericate the{" "}
+            <span className="italic">little things.</span>
+            <br />
+            The world is changing so <span className="font-bold">fast</span>,
+            let{"'"}s take a moment to slow down. <br />
+            This is my home on the interwebs, where I share my thoughts and
+            creations.
+            <br />
+            <br />
+            Sincerely, <br />
+            <br />
+            <Image
+              src="/signature.svg"
+              className="p-1"
+              alt="Aram Shiva"
+              width={100}
+              height={100}
+            />
           </div>
         </div>
         <SpotifyWidget />
       </div>
+      {/* <CommitHash /> */}
     </>
   );
 }

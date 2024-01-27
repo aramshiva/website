@@ -2,7 +2,7 @@ import Container from "../../components/blog/container";
 import MoreStories from "../../components/blog/more-stories";
 import HeroPost from "../../components/blog/hero-post";
 import Layout from "../../components/blog/layout";
-import { getAllPosts } from "../../blog/lib/api";
+import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../blog/interfaces/post";
 import Alert from "../../components/alert";
