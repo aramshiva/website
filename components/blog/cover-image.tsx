@@ -1,6 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
+import DOMPurify from "dompurify";
 
 type Props = {
   title: string;
@@ -9,6 +10,8 @@ type Props = {
 };
 
 const CoverImage = ({ title, src, slug }: Props) => {
+  const sanitizedTitle = DOMPurify.sanitize(title); // Sanitize the title prop
+
   const image = (
     <Image
       src={src}
@@ -24,9 +27,9 @@ const CoverImage = ({ title, src, slug }: Props) => {
     <div className="sm:mx-0">
       {slug ? (
         <Link
-          as={`/blog/posts/${slug}`}
+          as={`/blog/posts/${DOMPurify.sanitize(slug)}`}
           href="/blog/posts/[slug]"
-          aria-label={title}
+          aria-label={sanitizedTitle} // Use the sanitized title prop
         >
           {image}
         </Link>

@@ -24,6 +24,7 @@
     "clsx": "^2.1.0",
     "date-fns": "^3.3.1",
     "devtools-detect": "^4.0.1",
+    "dompurify": "^3.0.8",
     "eslint-config-next": "^14.1.0",
     "framer-motion": "^11.0.3",
     "gray-matter": "^4.0.3",
