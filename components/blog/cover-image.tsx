@@ -28,7 +28,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
             pathname: "/blog/posts/[slug]",
             query: { slug },
           }}
-          as={`/blog/posts/${slug}`}
+          as="/blog/posts/[slug]"
           aria-label={title}
         >
           {image}
