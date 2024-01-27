@@ -1,4 +1,4 @@
-import { formatDistanceToNow, isFriday } from "date-fns";
+import { formatDistanceToNow, isWeekend } from "date-fns";
 import { Typewriter } from "react-simple-typewriter";
 import SpotifyWidget from "../components/spotifynowplaying";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import { Tooltip } from "@material-tailwind/react";
 
 export default function Index() {
   const commitDate = new Date(process.env.COMMIT_DATE);
-  const isitweekend = isFriday(commitDate)
+  const isitweekend = isWeekend(commitDate)
   const formattedCommitDate = formatDistanceToNow(commitDate, {
     addSuffix: true,
   });
@@ -67,7 +67,7 @@ export default function Index() {
                   {process.env.COMMIT_HASH}
                 </Tooltip>
               </a>{" "}
-              from {isitweekend ? "on a weekend" : formattedCommitDate}
+              from {isitweekend ? "a weekend" : formattedCommitDate}
             </span>
           </div>
         </div>
