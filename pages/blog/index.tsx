@@ -23,7 +23,10 @@ export default function Index({ allPosts }: Props) {
           <title>{`Aram's Blog`}</title>
         </Head>
         <Container>
-        <Alert>This blog is in <span className="font-medium">beta</span>. It is coming soon and posts may not be visible at the moment.</Alert>
+          <Alert>
+            This blog is in <span className="font-medium">beta</span>. It is
+            coming soon and posts may not be visible at the moment.
+          </Alert>
           {heroPost && (
             <HeroPost
               title={heroPost.title}

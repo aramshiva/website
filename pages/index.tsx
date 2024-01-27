@@ -11,7 +11,8 @@ export default function Index() {
       <div>
         <div>
           <div className="pb-5 text-3xl font-semibold">
-            <span className="wave">👋</span>{" "}
+            👋 Hello!
+            {/* <span className="wave">👋</span>{" "}
             <span>
               <TypeIt
                 options={{
@@ -30,11 +31,11 @@ export default function Index() {
                   nextStringDelay: 3000,
                 }}
               />
-            </span>
+            </span>*/}
             {"  "}
           </div>
           <div className="block text-sm sm:text-lg">
-            <span className="font-semibold italic block text-md sm:text-xl">
+            <span className="text-md block font-semibold italic sm:text-xl">
               When did the internet get so{" "}
               <span className="font-black">busy?</span>
             </span>

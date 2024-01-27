@@ -31,7 +31,7 @@ export default function Home() {
                   Denitrification
                 </Button>
               </Link>
-              <div className="pb-10 text-large" />
+              <div className="text-large pb-10" />
               <p className="contain break-normal">
                 You are a <strong>NO₃</strong> atom. You have been through{" "}
                 <br />
