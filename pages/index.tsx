@@ -1,7 +1,6 @@
 import SpotifyWidget from "../components/spotifynowplaying";
 import Link from "next/link";
 import Nav from "../components/nav";
-import TypeIt from "typeit-react";
 import Image from "next/image";
 
 export default function Index() {
@@ -10,30 +9,6 @@ export default function Index() {
       <Nav />
       <div>
         <div>
-          {/*<div className="pb-5 text-3xl font-semibold">
-            👋 Hello!
-            <span className="wave">👋</span>{" "}
-            <span>
-              <TypeIt
-                options={{
-                  strings: [
-                    "Hey!",
-                    "Hello!",
-                    "Welcome",
-                    "Howdy!",
-                    "Heya!",
-                    "Hi!",
-                  ],
-                  loop: true,
-                  breakLines: false,
-                  lifeLike: true,
-                  waitUntilVisible: true,
-                  nextStringDelay: 3000,
-                }}
-              />
-            </span>
-            {"  "}
-          </div> */}
           <div className="block text-sm sm:text-lg">
             <span className="block text-xl font-semibold italic sm:text-3xl">
               When did the internet get so{" "}
@@ -42,7 +17,7 @@ export default function Index() {
             Advertisements, pop-ups, notifications, trackers, spam. <br />
             <br />I{"'"}m{" "}
             <Link
-              className="underline decoration-blue-500"
+              className="underline decoration-blue-300 decoration-4 underline-offset-0"
               href="https://github.com/aramshiva"
             >
               Aram
