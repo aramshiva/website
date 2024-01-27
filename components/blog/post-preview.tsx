@@ -28,8 +28,11 @@ const PostPreview = ({
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
         <Link
-          as={`/blog/posts/${slug}`}
-          href="/blog/posts/[slug]"
+          href={{
+            pathname: "/blog/posts/[slug]",
+            query: { slug },
+          }}
+          as="/blog/posts/[slug]"
           className="hover:underline"
         >
           {title}
