@@ -9,7 +9,7 @@ on:
 jobs:
   prettier:
     runs-on: ubuntu-latest
-    name: Prettier Check
+    name: Prettier
     steps:
       - name: Check out code
         uses: actions/checkout@v2
