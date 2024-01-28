@@ -35,7 +35,7 @@ export default function Work() {
       <h1 className="text-xl font-bold underline decoration-yellow-300 decoration-8 underline-offset-1 sm:text-3xl">
         Skills
       </h1>
-      <Marquee className="no-scrollbar">
+      <Marquee className="no-scrollbar h-20">
         <div className="flex flex-grow space-x-6">
           <Badge
             className="origin-center -rotate-2"
