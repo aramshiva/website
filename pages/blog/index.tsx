@@ -6,7 +6,6 @@ import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../blog/interfaces/post";
 import Alert from "../../components/alert";
-import Navbar from "../../components/nav";
 
 type Props = {
   allPosts: Post[];
@@ -17,7 +16,6 @@ export default function Index({ allPosts }: Props) {
   const morePosts = allPosts.slice(1);
   return (
     <>
-      <Navbar />
       <Layout>
         <Head>
           <title>{`Aram's Blog`}</title>
@@ -30,9 +28,7 @@ export default function Index({ allPosts }: Props) {
           {heroPost && (
             <HeroPost
               title={heroPost.title}
-              coverImage={heroPost.coverImage}
               date={heroPost.date}
-              author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
             />
