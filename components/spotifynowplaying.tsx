@@ -34,7 +34,7 @@ const SpotifyWidget: React.FC = () => {
               }
               className={
                 data?.isPlaying &&
-                "relative flex w-72 items-center space-x-4 rounded-2xl p-4 transition-shadow hover:shadow-md sm:p-6"
+                "relative flex w-72 items-center space-x-4 rounded-2xl p-4 transition-shadow hover:shadow-2xl sm:p-6"
               }
             >
               <div className="w-16">

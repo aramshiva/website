@@ -4,12 +4,12 @@ const navItems = {
   "/": {
     name: "home",
   },
+  "/work": {
+    name: "work",
+  },
   "mailto:me@aram.sh": {
     name: "email",
   },
-  // "/blog": {
-  //   name: "blog",
-  // },
 };
 
 export function Navbar() {

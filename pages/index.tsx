@@ -1,12 +1,9 @@
-import SpotifyWidget from "../components/spotifynowplaying";
 import Link from "next/link";
-import Nav from "../components/nav";
 import Image from "next/image";
 
 export default function Index() {
   return (
     <>
-      <Nav />
       <div>
         <div className="block text-sm sm:text-lg">
           <span className="block text-xl font-semibold italic sm:text-3xl">
@@ -16,7 +13,7 @@ export default function Index() {
           Advertisements, pop-ups, notifications, trackers, spam. <br />
           <br />I{"'"}m{" "}
           <Link
-            className="underline decoration-blue-300 decoration-4 underline-offset-0"
+            className="underline decoration-yellow-300 decoration-4 underline-offset-0"
             href="https://github.com/aramshiva"
           >
             Aram
@@ -43,7 +40,6 @@ export default function Index() {
           />
         </div>
       </div>
-      <SpotifyWidget />
       {/* <CommitHash /> */}
     </>
   );
