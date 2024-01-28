@@ -9,7 +9,7 @@ on:
 jobs:
   prettier:
     runs-on: ubuntu-latest
-    name: Prettier Check
+    name: Prettier
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18.x"
+          node-version: "20.x"
           cache: "yarn"
 
       - name: Install Dependencies
@@ -25,24 +25,3 @@ jobs:
 
       - name: Run Prettier
         run: npx prettier --check .
-
-  build:
-    runs-on: ubuntu-latest
-    needs: prettier
-    name: Build Next.js App
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-
-      - name: Use Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "18.x"
-          cache: "yarn"
-
-      - name: Install Dependencies
-        run: yarn install
-
-      - name: Build Next.js App
-        run: yarn build
-# You can add more jobs for other checks like tests, linting, etc.

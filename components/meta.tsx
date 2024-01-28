@@ -1,24 +1,28 @@
 import Head from "next/head";
 
-const Meta = () => {
+export default function HeadObject({ children }) {
+  const title = "👋 Aram Shiva";
+  const description = "student. developer. designer.";
+  const keywords =
+    "aram, shiva, aram shiva, seattle, washington, kenmore, design, designer, developer, programmer, html, css, js, node, express, react, next, javascript, student, nextjs, vercel";
+  const author = "Aram Shiva";
+  const image =
+    "https://cloud-3ri5zqk55-hack-club-bot.vercel.app/0aramshiva.png";
   return (
     <Head>
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Aram Shiva" />
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
       <meta property="og:url" content="https://aram.sh" />
-      <meta
-        property="og:image"
-        content="https://cloud-3ri5zqk55-hack-club-bot.vercel.app/0aramshiva.png"
-      />
-      <meta
-        property="og:description"
-        content="Aram Shiva is a teenager in Seattle who is crafting internet experiences."
-      />
-      <meta property="profile:first_name" content="Aram" />
-      <meta property="profile:last_name" content="Shiva" />
-      <meta property="profile:username" content="aramshiva" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta name="twitter:card" content="summary_large_image" />
+      {children}
     </Head>
   );
-};
-
-export default Meta;
+}

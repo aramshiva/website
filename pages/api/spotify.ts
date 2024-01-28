@@ -34,7 +34,7 @@ export const getNowPlaying = async () => {
   });
 };
 
-export default async (_, res) => {
+const spotifyHandler = async (_, res) => {
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
@@ -48,6 +48,7 @@ export default async (_, res) => {
   const album = song.item.album.name;
   const albumImageUrl = song.item.album.images[0].url;
   const songUrl = song.item.external_urls.spotify;
+  const deviceName = song; // Added device check
 
   return res.status(200).json({
     album,
@@ -56,5 +57,8 @@ export default async (_, res) => {
     isPlaying,
     songUrl,
     title,
+    deviceName,
   });
 };
+
+export default spotifyHandler;

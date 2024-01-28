@@ -7,6 +7,13 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
         "accent-1": "#FAFAFA",
@@ -21,8 +28,10 @@ module.exports = {
       letterSpacing: {
         tighter: "-.04em",
       },
-      lineHeight: {
-        tight: 1.2,
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       fontSize: {
         "5xl": "2.5rem",

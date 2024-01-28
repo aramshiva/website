@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -7,6 +8,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
+    "@material-tailwind/react": "^2.1.8",
     "@mdx-js/loader": "^3.0.0",
     "@mdx-js/react": "^3.0.0",
     "@next/mdx": "^14.1.0",
@@ -16,17 +19,32 @@
     "@vercel/analytics": "^1.1.2",
     "@vercel/speed-insights": "^1.0.8",
     "animate.css": "^4.1.1",
+    "class-variance-authority": "^0.7.0",
+    "classnames": "^2.5.1",
+    "clsx": "^2.1.0",
+    "date-fns": "^3.3.1",
+    "devtools-detect": "^4.0.1",
+    "dompurify": "^3.0.8",
     "eslint-config-next": "^14.1.0",
     "framer-motion": "^11.0.3",
+    "gray-matter": "^4.0.3",
+    "lucide-react": "^0.316.0",
     "next": "^14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.3",
     "react-icons": "^5.0.1",
     "react-parallax-tilt": "^1.7.201",
     "react-simple-typewriter": "^5.0.1",
     "react-wrap-balancer": "^1.1.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
     "swr": "^2.2.4",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
     "twemoji": "^14.0.2",
+    "typeit": "^8.8.3",
+    "typeit-react": "^2.7.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

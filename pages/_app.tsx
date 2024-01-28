@@ -1,15 +1,18 @@
 import { AppProps } from "next/app";
 import "../styles/index.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Provider } from "react-wrap-balancer";
+import SpotifyWidget from "../components/spotifynowplaying";
+import Navbar from "../components/nav";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div>
-      <SpeedInsights />
-      <Provider>
+    <>
+      <div className="px-20">
+        <Navbar />
+      </div>
+      <div className="container mx-auto px-20">
         <Component {...pageProps} />
-      </Provider>
-    </div>
+        <SpotifyWidget />
+      </div>
+    </>
   );
 }

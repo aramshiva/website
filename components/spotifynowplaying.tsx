@@ -3,6 +3,7 @@ import { SiSpotify } from "react-icons/si";
 import Link from "next/link";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
+import "animate.css";
 
 const SpotifyWidget: React.FC = () => {
   const fetcher = (url: string) => fetch(url).then((r) => r.json());
@@ -13,16 +14,16 @@ const SpotifyWidget: React.FC = () => {
       <div
         className={
           data?.isPlaying
-            ? "h-30 animate__animated animate__slideInUp fixed bottom-0 flex flex-col pb-9 align-middle text-black"
+            ? "animate__animated animate__slideInUp fixed bottom-3 right-0 flex flex-col p-5 align-middle text-black"
             : "invisible"
         }
       >
         {" "}
-        <div className="rounded-xl border p-5">
+        <div className="rounded-xl border bg-white p-4">
           <div className="pb-3">
             {data?.isPlaying && <p>Currently Listening to:</p>}
           </div>
-          <Tilt glareEnable gyroscope>
+          <Tilt glareEnable>
             <Link
               target="_blank"
               rel="noopener noreferer"
@@ -33,7 +34,7 @@ const SpotifyWidget: React.FC = () => {
               }
               className={
                 data?.isPlaying &&
-                "relative flex w-72 items-center space-x-4 rounded-2xl p-6 transition-shadow hover:shadow-md"
+                "relative flex w-72 items-center space-x-4 rounded-2xl p-4 transition-shadow hover:shadow-2xl sm:p-6"
               }
             >
               <div className="w-16">
@@ -41,7 +42,7 @@ const SpotifyWidget: React.FC = () => {
                   <Image
                     src={data?.albumImageUrl}
                     alt={data?.album}
-                    className="rounded-lg"
+                    className="rounded-xl"
                     width={64}
                     height={64}
                   />
