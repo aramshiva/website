@@ -5,16 +5,17 @@ import Marquee from "react-fast-marquee";
 export default function Work() {
   return (
     <div className="prose lg:prose-xl">
-      <h1 className="mb-4 block text-xl font-bold underline decoration-yellow-300 decoration-8 underline-offset-1 sm:text-3xl">
-        Work
-      </h1>
+      <h1 className="mb-4 block text-xl font-bold sm:text-3xl">Work</h1>
       <div className="mb-4">
         <h3 className="text-md mb-4 block font-semibold sm:text-lg">
           Mentee at HCB
         </h3>
-        <p className="sm:text-md text-sm text-gray-500">
+        <p className="sm:text-md text-sm text-black">
           I am currently a mentee at{" "}
-          <Link href="https://hackclub.com/hcb" className="text-blue-500">
+          <Link
+            href="https://hackclub.com/hcb"
+            className="underline decoration-yellow-300 decoration-4 underline-offset-1"
+          >
             HCB
           </Link>
           . HCB is a tool for students to make their own non-profits.
@@ -24,17 +25,18 @@ export default function Work() {
         <h3 className="text-md mb-4 block font-semibold sm:text-lg">
           Hackathon Organizer
         </h3>
-        <p className="sm:text-md text-sm text-gray-500">
+        <p className="sm:text-md text-sm text-black">
           I have previously helped organize{" "}
-          <Link href="https://hackthesound.net" className="text-blue-500">
+          <Link
+            href="https://hackthesound.net"
+            className="underline decoration-yellow-300 decoration-4 underline-offset-1"
+          >
             Hack The Sound
           </Link>
           , a 13-hour hackathon in the Puget Sound.
         </p>
       </div>
-      <h1 className="text-xl font-bold underline decoration-yellow-300 decoration-8 underline-offset-1 sm:text-3xl">
-        Skills
-      </h1>
+      <h2 className="text-lg font-bold sm:text-2xl">Skills</h2>
       <Marquee className="no-scrollbar h-20">
         <div className="flex flex-grow space-x-6">
           <Badge
