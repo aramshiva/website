@@ -1,8 +1,19 @@
 import Link from "next/link";
 import Badge from "../components/badge";
 import Marquee from "react-fast-marquee";
+import { useState } from "react";
 
 export default function Work() {
+  const [isSongPlaying, setIsSongPlaying] = useState(false);
+
+  const playSong = () => {
+    if (!isSongPlaying) {
+      const audio = new Audio("/song.mp3");
+      audio.play();
+      setIsSongPlaying(true);
+    }
+  };
+
   return (
     <div className="prose lg:prose-xl">
       <h1 className="mb-4 block text-xl font-bold sm:text-3xl">Work</h1>
@@ -19,6 +30,22 @@ export default function Work() {
             HCB
           </Link>
           . HCB is a tool for students to make their own non-profits.
+        </p>
+      </div>
+      <div className="mb-4">
+        <h3 className="text-md mb-4 block font-semibold sm:text-lg">
+          State Awarded Composer
+        </h3>
+        <p className="sm:text-md text-sm text-black">
+          My composition, {'"'}
+          <button
+            onClick={playSong}
+            className="underline decoration-yellow-300 decoration-4 underline-offset-4"
+          >
+            Clairvoyant
+          </button>
+          ,{'"'} has been selected for the Washington State Level PTA
+          Reflections Program.
         </p>
       </div>
       <div className="mb-4">

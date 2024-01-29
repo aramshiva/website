@@ -21,19 +21,17 @@ export default function Index({ allPosts }: Props) {
           <title>{`Aram's Blog`}</title>
         </Head>
         <Container>
-          <Alert>
-            This blog is in <span className="font-medium">beta</span>. It is
-            coming soon and posts may not be visible at the moment.
-          </Alert>
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              date={heroPost.date}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <div className="prose prose-a:no-underline">
+            <h1>Blog</h1>
+            {heroPost && (
+              <HeroPost
+                title={heroPost.title}
+                slug={heroPost.slug}
+                excerpt={heroPost.excerpt}
+              />
+            )}
+            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          </div>
         </Container>
       </Layout>
     </>
