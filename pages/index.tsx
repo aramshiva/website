@@ -20,7 +20,7 @@ export default function Index() {
           </Link>
           , I don{"'"}t believe we{"'"}ve met.
           <br />I craft web experiences to help us{" "}
-          <span className="font-bold">slow down</span> and appericate the{" "}
+          <span className="font-bold">slow down</span> and appreciate the{" "}
           <span className="italic">little things.</span>
           <br />
           The world is changing so <span className="font-bold">fast</span>, let
