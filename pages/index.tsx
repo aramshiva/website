@@ -13,7 +13,7 @@ export default function Index() {
           Advertisements, pop-ups, notifications, trackers, spam. <br />
           <br />I{"'"}m{" "}
           <Link
-            className="underline decoration-yellow-300 decoration-4 underline-offset-0"
+            className="underline decoration-yellow-300 decoration-4 underline-offset-1"
             href="https://github.com/aramshiva"
           >
             Aram
