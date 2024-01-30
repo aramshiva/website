@@ -6,44 +6,32 @@ import type Author from "../../blog/interfaces/author";
 
 type Props = {
   title: string;
-  coverImage: string;
-  date: string;
   excerpt: string;
-  author: Author;
   slug: string;
 };
 
-const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+const PostPreview = ({ title, excerpt, slug }: Props) => {
+  const encodedSlug = encodeURIComponent(slug);
+
   return (
-    <div>
-      <div className="mb-5">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div>
-      <h3 className="mb-3 text-3xl leading-snug">
-        <Link
-          href={{
-            pathname: "/blog/posts/[slug]",
-            query: { slug },
-          }}
-          as="/blog/posts/[slug]"
-          className="hover:underline"
-        >
-          {title}
-        </Link>
-      </h3>
-      <div className="mb-4 text-lg">
-        <DateFormatter dateString={date} />
-      </div>
-      <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-      <Avatar name={author.name} picture={author.picture} />
-    </div>
+    <section>
+      <Link
+        key={slug}
+        className="flex flex-col"
+        href={{
+          pathname: "/blog/posts/[slug]",
+          query: { slug },
+        }}
+        as={{
+          pathname: `/blog/posts/${encodedSlug}`,
+        }}
+      >
+        <div className="flex w-full flex-col">
+          <p className="tracking-tight text-neutral-900">{title}</p>
+          <p className="text-sm tracking-tight text-neutral-900">{excerpt}</p>
+        </div>
+      </Link>
+    </section>
   );
 };
 
