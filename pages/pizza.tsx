@@ -1,4 +1,4 @@
-// pages/pizza-calculator.tsx
+// pages/pizza.tsx
 
 import { useState } from "react";
 

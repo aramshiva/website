@@ -1,15 +1,43 @@
-// pages/api/calculate.js
+// pages/api/pizza.ts
 
-export default function handler(req, res) {
-  if (req.method === "POST") {
-    const { pizzaSize, pizzaCost } = req.body;
-    const radius = pizzaSize / 2;
-    const area = Math.PI * radius * radius;
-    const costPerSquareInch = pizzaCost / area;
-    const price = Math.round(costPerSquareInch * 100) / 100;
+interface RequestBody {
+  pizzaSize?: number;
+  pizzaCost?: number;
+  crustSize?: number;
+}
 
-    res.status(200).json({ pricePerSquareInch: price });
-  } else {
+export default function handler(req: any, res: any) {
+  if (req.method !== "POST") {
     res.status(405).end(`Method ${req.method} Not Allowed`);
+    return;
   }
+
+  const { pizzaSize, pizzaCost, crustSize } = req.body as RequestBody;
+
+  if (!pizzaSize || !pizzaCost) {
+    res.status(400).end("Missing required parameters");
+    return;
+  }
+
+  const radius = pizzaSize / 2;
+  const area = Math.PI * radius * radius;
+  const pricePerSquareInch = pizzaCost / area;
+
+  let pricePerSquareInchWithoutCrust;
+  let percentOfPizzaIsCrust;
+  let payForCrust;
+  if (crustSize) {
+    const radiusWithoutCrust = (pizzaSize - crustSize) / 2;
+    const areaWithoutCrust = Math.PI * radiusWithoutCrust * radiusWithoutCrust;
+    pricePerSquareInchWithoutCrust = pizzaCost / areaWithoutCrust;
+    percentOfPizzaIsCrust = 1 - areaWithoutCrust / area;
+    payForCrust = pizzaCost * percentOfPizzaIsCrust;
+  }
+
+  res.status(200).json({
+    pricePerSquareInch,
+    pricePerSquareInchWithoutCrust,
+    percentOfPizzaIsCrust,
+    payForCrust,
+  });
 }
