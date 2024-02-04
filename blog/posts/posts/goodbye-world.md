@@ -1,6 +1,6 @@
 ---
-title: "Hello World"
-excerpt: "The Blog is Live!"
+title: "Goodbye World"
+excerpt: "The Blog is not Live!"
 coverImage: "/assets/blog/covers/live/cover.jpg"
 date: "2023-01-24"
 author:

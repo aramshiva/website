@@ -1,16 +1,14 @@
-import Avatar from "./avatar";
 import DateFormatter from "./date-formatter";
-import CoverImage from "./cover-image";
 import Link from "next/link";
-import type Author from "../../blog/interfaces/author";
 
 type Props = {
   title: string;
   excerpt: string;
   slug: string;
+  date: string;
 };
 
-const PostPreview = ({ title, excerpt, slug }: Props) => {
+const PostPreview = ({ title, excerpt, slug, date }: Props) => {
   const encodedSlug = encodeURIComponent(slug);
 
   return (
@@ -23,12 +21,16 @@ const PostPreview = ({ title, excerpt, slug }: Props) => {
           query: { slug },
         }}
         as={{
-          pathname: `/blog/posts/${encodedSlug}`,
+          pathname: "/blog/posts/[slug]",
+          query: { slug },
         }}
       >
-        <div className="flex w-full flex-col">
-          <p className="tracking-tight text-neutral-900">{title}</p>
-          <p className="text-sm tracking-tight text-neutral-900">{excerpt}</p>
+        <div className="flex-wrap">
+          <div className="flex flex-col">
+            <p className="tracking-tight text-neutral-900">{title}</p>
+            <p className="text-sm tracking-tight text-neutral-900">{excerpt}</p>
+            <p className="text-sm tracking-tight text-neutral-900">{date}</p>
+          </div>
         </div>
       </Link>
     </section>

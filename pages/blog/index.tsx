@@ -12,8 +12,6 @@ type Props = {
 };
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
@@ -21,17 +19,10 @@ export default function Index({ allPosts }: Props) {
           <title>{`Aram's Blog`}</title>
         </Head>
         <Container>
-          <div className="prose prose-a:no-underline">
-            <h1>Blog</h1>
-            {heroPost && (
-              <HeroPost
-                title={heroPost.title}
-                slug={heroPost.slug}
-                excerpt={heroPost.excerpt}
-              />
-            )}
-            {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <div className="prose pb-9">
+          <h1>Blog</h1>
           </div>
+            <MoreStories posts={allPosts} />
         </Container>
       </Layout>
     </>
