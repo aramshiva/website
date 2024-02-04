@@ -20,9 +20,9 @@ export default function Index({ allPosts }: Props) {
         </Head>
         <Container>
           <div className="prose pb-9">
-          <h1>Blog</h1>
+            <h1>Blog</h1>
           </div>
-            <MoreStories posts={allPosts} />
+          <MoreStories posts={allPosts} />
         </Container>
       </Layout>
     </>
