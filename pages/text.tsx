@@ -3,9 +3,23 @@ import React, { useState, useEffect } from "react";
 type MessagePageProps = {
    error?: string;
 };
-
 const MessagePage: React.FC<MessagePageProps> = ({ error }) => {
    const [displayedMessage, setDisplayedMessage] = useState("");
+   const fetchGreeting = async () => {
+      try {
+         const response = await fetch("/greeting.txt");
+         const greetings = await response.text();
+         const lines = greetings.split("\n");
+         const randomLine = lines[Math.floor(Math.random() * lines.length)];
+         const updatedMessage = displayedMessage.replace(
+            "{greeting}",
+            randomLine,
+         );
+         setDisplayedMessage(updatedMessage);
+      } catch (error) {
+         console.error("Failed to fetch greetings:", error);
+      }
+   };
 
    useEffect(() => {
       let timeoutId: NodeJS.Timeout;
@@ -45,22 +59,6 @@ const MessagePage: React.FC<MessagePageProps> = ({ error }) => {
 
    useEffect(() => {
       if (!error && displayedMessage.includes("{greeting}")) {
-         const fetchGreeting = async () => {
-            try {
-               const response = await fetch("/greeting.txt");
-               const greetings = await response.text();
-               const lines = greetings.split("\n");
-               const randomLine = lines[Math.floor(Math.random() * lines.length)];
-               const updatedMessage = displayedMessage.replace(
-                  "{greeting}",
-                  randomLine,
-               );
-               setDisplayedMessage(updatedMessage);
-            } catch (error) {
-               console.error("Failed to fetch greetings:", error);
-            }
-         };
-
          fetchGreeting();
       }
    }, [error, displayedMessage]);
