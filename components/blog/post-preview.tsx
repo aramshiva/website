@@ -1,4 +1,3 @@
-import DateFormatter from "./date-formatter";
 import Link from "next/link";
 
 type Props = {
@@ -14,7 +13,7 @@ const PostPreview = ({ title, excerpt, slug, date }: Props) => {
    return (
       <section>
          <Link
-            key={slug}
+            key={encodedSlug}
             className="flex flex-col"
             href={{
                pathname: "/blog/posts/[slug]",
