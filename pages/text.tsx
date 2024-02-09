@@ -5,7 +5,6 @@ type MessagePageProps = {
 };
 
 const MessagePage: React.FC<MessagePageProps> = ({ error }) => {
-   // State to hold the current text to display
    const [displayedMessage, setDisplayedMessage] = useState("");
 
    useEffect(() => {
@@ -16,58 +15,45 @@ const MessagePage: React.FC<MessagePageProps> = ({ error }) => {
          return;
       }
 
-      // Fetch the message from /message.txt
       fetch("/message.txt")
          .then((response) => response.text())
          .then((message) => {
             let index = 0;
 
-            // Function to "type" out the message
             const typeLetter = () => {
                if (message && index < message.length) {
                   setDisplayedMessage(
                      (current) => current + message.charAt(index),
                   );
                   index++;
-                  timeoutId = setTimeout(typeLetter, 5); // Assign the timeoutId
+                  timeoutId = setTimeout(typeLetter, 5);
                }
             };
 
-            typeLetter(); // Start the typing effect when the component mounts
+            typeLetter();
          })
          .catch((error) => {
             console.error("Failed to fetch message:", error);
             setDisplayedMessage("Failed to fetch message");
          });
 
-      // Cleanup function to prevent memory leaks in case the component unmounts
-      // before the typing is finished
       return () => clearTimeout(timeoutId);
-   }, [error]); // Effect dependencies
+   }, [error]);
 
    if (error) {
       return <div>{displayedMessage}</div>;
    }
 
-   // Check if the displayedMessage contains "{greeting}"
    if (displayedMessage.includes("{greeting}")) {
-      // Fetch the greetings from /greeting.txt
       fetch("/greeting.txt")
          .then((response) => response.text())
          .then((greetings) => {
-            // Split the greetings into an array of lines
             const lines = greetings.split("\n");
-
-            // Get a random line from the greetings
             const randomLine = lines[Math.floor(Math.random() * lines.length)];
-
-            // Replace "{greeting}" with the random line
             const updatedMessage = displayedMessage.replace(
                "{greeting}",
                randomLine,
             );
-
-            // Update the displayed message with the updated message
             setDisplayedMessage(updatedMessage);
          })
          .catch((error) => {
