@@ -1,0 +1,44 @@
+---------------------
+START OF TRANSMISSION
+type: text/plain-text
+---------------------
+
+type Person = {
+  name: string;
+  nomeDeGuerra: string;
+  age: number;
+  roles: string[];
+  hobbies: string[];
+  isAlive: boolean;
+};
+
+let usr: Person = {
+  name: "Kieran",
+  nomeDeGuerra: "Kieran",
+  age: 15.834,
+  roles: [
+    "student",
+    "developer",
+    "robotiscist",
+    "treasurer/steering committee member of Purple Bubble",
+  ],
+  hobbies: [
+    "programming",
+    "robotics",
+    "reading",
+    "writing",
+    "listening to music",
+    "video editing",
+  ],
+  isAlive: true,
+};
+
+console.log(usr);
+
+console.log("{greeting} This is my plain text site inspired by @Malted's https://malted.dev");
+
+-------------------
+END OF TRANSMISSION
+status: 200
+payload: OK
+-------------------
