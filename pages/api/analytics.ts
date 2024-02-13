@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from "next";
 import { kv } from "@vercel/kv";
 import { getDate } from "../../utils/index";
 import { parse } from "date-fns";
@@ -11,34 +11,43 @@ type TrackOptions = {
     persist?: boolean;
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+    req: NextApiRequest,
+    res: NextApiResponse,
+) {
     const { namespace, event, date, nDays } = req.query;
 
-    if (req.method === 'POST') {
+    if (req.method === "POST") {
         try {
             const analytics = new Analytics();
             await analytics.track(namespace as string, {}, { persist: true });
-            res.status(200).json({ message: 'Event tracked successfully' });
+            res.status(200).json({ message: "Event tracked successfully" });
         } catch (error) {
-            res.status(500).json({ error: 'Failed to track event' });
+            res.status(500).json({ error: "Failed to track event" });
         }
-    } else if (req.method === 'GET') {
+    } else if (req.method === "GET") {
         try {
             const analytics = new Analytics();
             if (date) {
-                const data = await analytics.retrieve(namespace as string, date as string);
+                const data = await analytics.retrieve(
+                    namespace as string,
+                    date as string,
+                );
                 res.status(200).json(data);
             } else if (nDays) {
-                const data = await analytics.retrieveDays(namespace as string, parseInt(nDays as string));
+                const data = await analytics.retrieveDays(
+                    namespace as string,
+                    parseInt(nDays as string),
+                );
                 res.status(200).json(data);
             } else {
-                res.status(400).json({ error: 'Invalid request' });
+                res.status(400).json({ error: "Invalid request" });
             }
         } catch (error) {
-            res.status(500).json({ error: 'Failed to retrieve data' });
+            res.status(500).json({ error: "Failed to retrieve data" });
         }
     } else {
-        res.status(405).json({ error: 'Method not allowed' });
+        res.status(405).json({ error: "Method not allowed" });
     }
 }
 
@@ -57,7 +66,9 @@ class Analytics {
         }
 
         // db call to persist this event
-        await (kv as any).put(key, JSON.stringify(event), { expirationTtl: this.retention });
+        await (kv as any).put(key, JSON.stringify(event), {
+            expirationTtl: this.retention,
+        });
     }
 
     async retrieveDays(namespace: string, nDays: number) {

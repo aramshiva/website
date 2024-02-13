@@ -25,7 +25,9 @@ export class Analytics {
         }
 
         // db call to persist this event
-        await (kv as any).put(key, JSON.stringify(event), { expirationTtl: this.retention });
+        await (kv as any).put(key, JSON.stringify(event), {
+            expirationTtl: this.retention,
+        });
     }
 
     async retrieveDays(namespace: string, nDays: number) {
