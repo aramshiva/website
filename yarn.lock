@@ -4564,6 +4564,10 @@ lucide-react@^0.323.0:
   version "0.323.0"
   resolved "https://registry.npmjs.org/lucide-react/-/lucide-react-0.323.0.tgz"
   integrity sha512-rTXZFILl2Y4d1SG9p1Mdcf17AcPvPvpc/egFIzUrp7IUy60MUQo3Oi1mu8LGYXUVwuRZYsSMt3csHRW5mAovJg==
+lucide-react@^0.325.0:
+  version "0.325.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.325.0.tgz#5da166770554e4f4360e0dad0c8fb0b79d31048b"
+  integrity sha512-/H6IPtPMQUwXjHTFylCYBq/j8J3AJKG5Uil3mcm1E58wKkCfoKVzJH7toZU3U20wJrL7dP51dNX3yLgAPod+qQ==
 
 markdown-extensions@^2.0.0:
   version "2.0.0"
@@ -5459,10 +5463,10 @@ react-is@^16.10.2, react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-parallax-tilt@^1.7.209:
-  version "1.7.209"
-  resolved "https://registry.npmjs.org/react-parallax-tilt/-/react-parallax-tilt-1.7.209.tgz"
-  integrity sha512-S1obOJvDp+YCipZjd/iVCbPoQTiQZ3cPrqkFHzoJMDOQT2LSdIQHSYwJNXbZDlgdsK2N1Hr/9VnhKWK5qMNzAA==
+react-parallax-tilt@^1.7.210:
+  version "1.7.210"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.210.tgz#2868cbe33d6b3bf0f209fcf5fcb17f8386c697b1"
+  integrity sha512-eckhjD50K9PV8bAc0llo2dRpGoWAtihPkCGQoi7T+ciLYXfxzUFOPmfE7/OOycXAHssHGT68yc2E9lE5tocGag==
 
 react-remove-scroll-bar@^2.3.4:
   version "2.3.4"
