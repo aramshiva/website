@@ -1,5 +1,6 @@
+import { NextApiRequest, NextApiResponse } from 'next';
 import { kv } from "@vercel/kv";
-import { getDate } from "./index";
+import { getDate } from "../../utils/index";
 import { parse } from "date-fns";
 
 type AnalyticsArgs = {
@@ -10,7 +11,38 @@ type TrackOptions = {
     persist?: boolean;
 };
 
-export class Analytics {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    const { namespace, event, date, nDays } = req.query;
+
+    if (req.method === 'POST') {
+        try {
+            const analytics = new Analytics();
+            await analytics.track(namespace as string, {}, { persist: true });
+            res.status(200).json({ message: 'Event tracked successfully' });
+        } catch (error) {
+            res.status(500).json({ error: 'Failed to track event' });
+        }
+    } else if (req.method === 'GET') {
+        try {
+            const analytics = new Analytics();
+            if (date) {
+                const data = await analytics.retrieve(namespace as string, date as string);
+                res.status(200).json(data);
+            } else if (nDays) {
+                const data = await analytics.retrieveDays(namespace as string, parseInt(nDays as string));
+                res.status(200).json(data);
+            } else {
+                res.status(400).json({ error: 'Invalid request' });
+            }
+        } catch (error) {
+            res.status(500).json({ error: 'Failed to retrieve data' });
+        }
+    } else {
+        res.status(405).json({ error: 'Method not allowed' });
+    }
+}
+
+class Analytics {
     private retention: number = 60 * 60 * 24 * 7;
 
     constructor(opts?: AnalyticsArgs) {
@@ -29,12 +61,12 @@ export class Analytics {
     }
 
     async retrieveDays(namespace: string, nDays: number) {
-        type AnalyticsPromise = ReturnType<typeof analytics.retrieve>;
+        type AnalyticsPromise = ReturnType<typeof this.retrieve>;
         const promises: AnalyticsPromise[] = [];
 
         for (let i = 0; i < nDays; i++) {
             const formattedDate = getDate(i);
-            const promise = analytics.retrieve(namespace, formattedDate);
+            const promise = this.retrieve(namespace, formattedDate);
             promises.push(promise);
         }
 
@@ -67,5 +99,3 @@ export class Analytics {
         };
     }
 }
-
-export const analytics = new Analytics();

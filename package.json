@@ -19,6 +19,7 @@
       "@types/mdx": "^2.0.11",
       "@upstash/redis": "^1.28.3",
       "@vercel/analytics": "^1.1.3",
+      "@vercel/kv": "^1.0.1",
       "@vercel/speed-insights": "^1.0.9",
       "animate.css": "^4.1.1",
       "class-variance-authority": "^0.7.0",
@@ -51,7 +52,8 @@
       "twemoji": "^14.0.2",
       "typeit": "^8.8.3",
       "typeit-react": "^2.7.1",
-      "typescript": "^5.3.3"
+      "typescript": "^5.3.3",
+      "upstash": "^0.0.1"
    },
    "devDependencies": {
       "@types/node": "^20.11.17",
