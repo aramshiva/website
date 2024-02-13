@@ -7,16 +7,16 @@ const Page = () => {
     const [pageviews, setPageviews] = useState([]);
     const [topCountries, setTopCountries] = useState([]);
     const [amtVisitorsToday, setAmtVisitorsToday] = useState(0);
-    const [avgVisitorsPerDay, setAvgVisitorsPerDay] = useState('');
+    const [avgVisitorsPerDay, setAvgVisitorsPerDay] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 // Assuming '/api/analytics/retrieveDays' accepts POST requests with parameters for namespace and nDays
-                const response = await fetch('/api/analytics/retrieve', {
-                    method: 'POST',
+                const response = await fetch("/api/analytics/retrieve", {
+                    method: "POST",
                     headers: {
-                        'Content-Type': 'application/json',
+                        "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
                         namespace: "pageview",
@@ -39,19 +39,25 @@ const Page = () => {
                     const countriesMap = new Map();
 
                     if (data.length > 0) {
-                        data.forEach(day => {
-                            const dayVisitors = day.events.reduce((acc, curr) => acc + Object.values(curr)[0], 0);
+                        data.forEach((day) => {
+                            const dayVisitors = day.events.reduce(
+                                (acc, curr) => acc + Object.values(curr)[0],
+                                0,
+                            );
                             total += dayVisitors;
 
                             if (day.date === getDate()) {
                                 todayVisitors = dayVisitors;
                             }
 
-                            day.events.forEach(event => {
+                            day.events.forEach((event) => {
                                 const country = Object.keys(event)[0];
                                 const visitors = Object.values(event)[0];
                                 if (countriesMap.has(country)) {
-                                    countriesMap.set(country, countriesMap.get(country) + visitors);
+                                    countriesMap.set(
+                                        country,
+                                        countriesMap.get(country) + visitors,
+                                    );
                                 } else {
                                     countriesMap.set(country, visitors);
                                 }
@@ -59,7 +65,9 @@ const Page = () => {
                         });
                     }
 
-                    const topCountriesArray = Array.from(countriesMap.entries()).sort((a, b) => b[1] - a[1]).slice(0, 5);
+                    const topCountriesArray = Array.from(countriesMap.entries())
+                        .sort((a, b) => b[1] - a[1])
+                        .slice(0, 5);
                     setPageviews(total);
                     setAmtVisitorsToday(todayVisitors);
                     setAvgVisitorsPerDay((total / TRACKING_DAYS).toFixed(1));

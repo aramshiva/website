@@ -8,7 +8,7 @@ export default async function middleware(req: NextRequest) {
         const key = `analytics::pageview::${getDate()}`;
         const event = JSON.stringify({
             page: "/",
-            country: req.geo?.country || 'Unknown',
+            country: req.geo?.country || "Unknown",
         });
 
         try {
