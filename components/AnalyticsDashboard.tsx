@@ -1,16 +1,7 @@
-"use client";
-
-import { analytics } from "../utils/analytics";
+import React, { useEffect, useState } from "react";
 import { BarChart, Card } from "@tremor/react";
 import { ArrowDownRight, ArrowRight, ArrowUpRight } from "lucide-react";
 import ReactCountryFlag from "react-country-flag";
-
-interface AnalyticsDashboardProps {
-    avgVisitorsPerDay: string;
-    amtVisitorsToday: number;
-    timeseriesPageviews: Awaited<ReturnType<typeof analytics.retrieveDays>>;
-    topCountries: [string, number][];
-}
 
 const Badge = ({ percentage }: { percentage: number }) => {
     const isPositive = percentage > 0;
@@ -45,9 +36,36 @@ const Badge = ({ percentage }: { percentage: number }) => {
 const AnalyticsDashboard = ({
     avgVisitorsPerDay,
     amtVisitorsToday,
-    timeseriesPageviews,
     topCountries,
-}: AnalyticsDashboardProps) => {
+}) => {
+    const [timeseriesPageviews, setTimeseriesPageviews] = useState(null);
+
+    // Fetch timeseries data on component mount
+    useEffect(() => {
+        const fetchTimeseriesPageviews = async () => {
+            // Adjust the request as necessary based on your API structure
+            // For simplicity, assuming namespace and dates are predefined or obtained from elsewhere in your component
+            const namespace = "yourNamespace"; // Define appropriately
+            const date = "yourDate"; // Define appropriately or iterate for multiple days
+
+            const response = await fetch("/api/analytics/retrieve", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    namespace,
+                    date,
+                }),
+            });
+
+            const data = await response.json();
+            setTimeseriesPageviews(data); // Adjust according to how you want to use the data
+        };
+
+        fetchTimeseriesPageviews();
+    }, []); // Empty dependency array means this effect runs once on mount
+
     return (
         <div className="flex flex-col gap-6">
             <div className="mx-auto grid w-full grid-cols-1 gap-6 sm:grid-cols-2">
