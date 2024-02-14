@@ -11,7 +11,7 @@
       "@heroicons/react": "^2.1.1",
       "@material-tailwind/react": "^2.1.9",
       "@mdx-js/loader": "^3.0.0",
-      "@mdx-js/react": "^3.0.0",
+      "@mdx-js/react": "^3.0.1",
       "@next/mdx": "^14.1.0",
       "@nextui-org/react": "^2.2.9",
       "@tailwindcss/typography": "^0.5.10",
