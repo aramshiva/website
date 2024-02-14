@@ -14,12 +14,10 @@ export default async function post(
 
       // Reject requests from origins other than your site
       if (!origin || origin !== allowedOrigin) {
-         return response
-            .status(403)
-            .json({
-               message:
-                  "Access denied. Requests are only allowed from the same site.",
-            });
+         return response.status(403).json({
+            message:
+               "Access denied. Requests are only allowed from the same site.",
+         });
       }
 
       if (!request.body) {

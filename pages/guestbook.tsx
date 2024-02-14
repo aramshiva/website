@@ -31,7 +31,7 @@ export default function Guestbook() {
          },
          body: JSON.stringify({ ...newEntry, timestamp }),
       });
-      
+
       if (!response.ok) {
          fetchEntries(); // Refresh entries to include the new submission
          setNewEntry({ name: "", content: "" }); // Reset form fields
@@ -46,18 +46,7 @@ export default function Guestbook() {
          <div className="flex p-5">
             <div>
                <h1 className="mb-4 text-2xl font-bold">Guestbook</h1>
-               <ul>
-                  {entries.map((entry, index) => (
-                     <li key={index} className="mb-4">
-                        <p>
-                           <strong>{entry.name}</strong> (
-                           {new Date(entry.timestamp).toLocaleDateString()}):
-                        </p>
-                        <p>{entry.content}</p>
-                     </li>
-                  ))}
-               </ul>
-               <h2 className="mt-4 text-xl font-bold">Sign the Guestbook</h2>
+               <h2 className="mt-4 text-lg font-bold">Sign the Guestbook</h2>
                <form onSubmit={handleSubmit} className="mt-4">
                   <Input
                      type="text"
@@ -85,6 +74,17 @@ export default function Guestbook() {
                      Submit
                   </Button>
                </form>
+               <ul className="pt-20">
+                  {entries.map((entry, index) => (
+                     <li key={index} className="mb-4">
+                        <p>
+                           <strong>{entry.name}</strong> (
+                           {new Date(entry.timestamp).toLocaleDateString()}):
+                        </p>
+                        <p>{entry.content}</p>
+                     </li>
+                  ))}
+               </ul>
             </div>
          </div>
       </Wrapper>
