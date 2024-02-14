@@ -6,7 +6,7 @@ export default async function retrieve(
    response: NextApiResponse,
 ) {
    try {
-      const keys = await kv.keys("guestbookEntry:*");
+      const keys = await kv.keys("*");
       const entries = [];
 
       for (const key of keys) {
@@ -20,3 +20,4 @@ export default async function retrieve(
       response.status(500).json({ error: "Failed to list entries" });
    }
 }
+``
