@@ -17,7 +17,7 @@ export default async function retrieve(
       response.status(200).json(entries);
    } catch (error) {
       console.error("Failed to list entries:", error);
-      response.status(500).json({ error: "Failed to list entries" });
+      response.status(500).json(`Failed to list entries, Error ${error}` );
    }
 }
 ``
