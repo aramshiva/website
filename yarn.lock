@@ -307,10 +307,10 @@
     react-dom "18.2.0"
     tailwind-merge "1.8.1"
 
-"@mdx-js/loader@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@mdx-js/loader/-/loader-3.0.0.tgz"
-  integrity sha512-9kLv83YtgxpoXVYHaf0ygx1dmhCffo0MQCv6KtNG67jy/JlBK/2Q0dSWfuuyStP3jnZKABHfbjv8zsiT1buu6A==
+"@mdx-js/loader@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-3.0.1.tgz#d21e5bd50b38a4713559586dcdaa987ef9dc02c9"
+  integrity sha512-YbYUt7YyEOdFxhyuCWmLKf5vKhID/hJAojEUnheJk4D8iYVLFQw+BAoBWru/dHGch1omtmZOPstsmKPyBF68Tw==
   dependencies:
     "@mdx-js/mdx" "^3.0.0"
     source-map "^0.7.0"
@@ -343,11 +343,11 @@
     unist-util-stringify-position "^4.0.0"
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
-
-"@mdx-js/react@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@mdx-js/react/-/react-3.0.0.tgz"
-  integrity sha512-nDctevR9KyYFyV+m+/+S4cpzCWHqj+iHDHq3QrsWezcC+B17uZdIWgCguESUkwFhM3n/56KxWVE3V6EokrmONQ==
+    
+"@mdx-js/react@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.0.1.tgz#997a19b3a5b783d936c75ae7c47cfe62f967f746"
+  integrity sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==
   dependencies:
     "@types/mdx" "^2.0.0"
 
@@ -3415,10 +3415,10 @@ framer-motion@6.5.1:
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
 
-framer-motion@^11.0.3:
-  version "11.0.3"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-11.0.3.tgz"
-  integrity sha512-6x2poQpIWBdbZwLd73w6cKZ1I9IEPIU94C6/Swp1Zt3LJ+sB5bPe1E2wC6EH5hSISXNkMJ4afH7AdwS7MrtkWw==
+framer-motion@^11.0.5:
+  version "11.0.5"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.0.5.tgz#2ae1341d8605a01c50009d3bb195a67e4e2bfc69"
+  integrity sha512-Lb0EYbQcSK/pgyQUJm+KzsQrKrJRX9sFRyzl9hSr9gFG4Mk8yP7BjhuxvRXzblOM/+JxycrJdCDVmOQBsjpYlw==
   dependencies:
     tslib "^2.4.0"
   optionalDependencies:
@@ -4305,7 +4305,7 @@ lru-cache@^6.0.0:
 
 lucide-react@^0.330.0:
   version "0.330.0"
-  resolved "https://registry.npmjs.org/lucide-react/-/lucide-react-0.330.0.tgz"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.330.0.tgz#6e17ade4953ac3ca322f9564f2fd900f21829244"
   integrity sha512-CQwY+Fpbt2kxCoVhuN0RCZDCYlbYnqB870Bl/vIQf3ER/cnDDQ6moLmEkguRyruAUGd4j3Lc4mtnJosXnqHheA==
 
 markdown-extensions@^2.0.0:
