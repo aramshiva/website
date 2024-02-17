@@ -46,7 +46,7 @@
       "remark": "^15.0.1",
       "remark-html": "^16.0.1",
       "sonner": "^1.4.0",
-      "swr": "^2.2.4",
+      "swr": "^2.2.5",
       "tailwind-merge": "^2.2.1",
       "tailwindcss-animate": "^1.0.7",
       "twemoji": "^14.0.2",
