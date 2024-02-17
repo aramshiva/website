@@ -2283,10 +2283,10 @@
   dependencies:
     crypto-js "^4.2.0"
 
-"@vercel/analytics@^1.1.3":
-  version "1.1.3"
-  resolved "https://registry.npmjs.org/@vercel/analytics/-/analytics-1.1.3.tgz"
-  integrity sha512-Z0l0y8TnUnnxr+on7oIMB9qQOoSJIniYMzUng6+NU8VVDkZ+kt2QGD5hzODwsuiRJAsjW528iUEtbWCEGkSCCg==
+"@vercel/analytics@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-1.2.0.tgz#d0c9983e52dd4cb86c0d975b1432ba31df5cd0a5"
+  integrity sha512-Q9hduY6+i73Is1m57Y3OlawleeYVi4cvuh/0j6IwmSndMOE4+BKkMwjnwz+7xnqfZCanipIG6+q+zHalH9X0Zg==
   dependencies:
     server-only "^0.0.1"
 
