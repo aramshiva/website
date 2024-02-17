@@ -4,6 +4,7 @@ import { Button } from "../components/ui/button";
 import { toast } from "sonner";
 import Wrapper from "../components/page";
 import { useSession, signIn } from "next-auth/react";
+import Filter from "bad-words";
 
 export default function Guestbook() {
    const [entries, setEntries] = useState([]);
@@ -25,6 +26,14 @@ export default function Guestbook() {
       e.preventDefault();
 
       const timestamp = new Date().toISOString().split("T")[0];
+      const filter = new Filter();
+      const isProfane = filter.isProfane(newEntry.content);
+
+      if (isProfane) {
+         toast("Please refrain from using inappropriate language.");
+         return;
+      }
+
       const response = await fetch("/api/guestbook/post", {
          method: "POST",
          headers: {

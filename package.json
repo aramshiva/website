@@ -22,6 +22,7 @@
       "@vercel/kv": "^1.0.1",
       "@vercel/speed-insights": "^1.0.9",
       "animate.css": "^4.1.1",
+      "bad-words": "^3.0.4",
       "checkboxland": "^1.5.0",
       "class-variance-authority": "^0.7.0",
       "classnames": "^2.5.1",
