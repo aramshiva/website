@@ -2,7 +2,7 @@ import Wrapper from "../components/page";
 export default function Uses() {
    return (
       <Wrapper>
-         <div className="container prose mx-auto py-8 lg:prose-xl">
+         <div className="prose lg:prose-xl container mx-auto py-8">
             <h2 className="mb-4 font-bold">My Setup</h2>
             <h4 className="mb-4 font-bold">Office</h4>
             <ul>
