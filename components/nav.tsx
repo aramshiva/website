@@ -7,9 +7,9 @@ const navItems = {
    "/work": {
       name: "work",
    },
-   "/guestbook": {
-      name: "guestbook",
-   },
+   // "/guestbook": {
+   //    name: "guestbook",
+   // },
    "mailto:me@aram.sh": {
       name: "email",
    },
