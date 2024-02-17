@@ -31,11 +31,12 @@ body:
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
+      description: What version of our software are you running? (You can check by seeing the bottom of home!)
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-      default: 0
+        - v10 (pre-release)
+        - v9 (release)
+        - v8
+      default: v9
     validations:
       required: true
   - type: dropdown
