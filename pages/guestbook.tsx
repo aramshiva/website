@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { toast } from "sonner";
-import Wrapper from "../components/page";
+import Wrapper from "../components/wrapper";
 import { useSession, signIn } from "next-auth/react";
 import Filter from "bad-words";
 
@@ -95,7 +95,7 @@ export default function Guestbook() {
                      </Button>
                   </div>
                )}
-               <ul className="pt-20">
+               {/* <ul className="pt-20">
                   {entries
                      .sort(
                         (a, b) =>
@@ -111,7 +111,7 @@ export default function Guestbook() {
                            <p>{entry.content}</p>
                         </li>
                      ))}
-               </ul>
+               </ul> */}
             </div>
          </div>
       </Wrapper>

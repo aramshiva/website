@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import CommitHash from "../components/commitHash";
-import Wrapper from "../components/page";
+import Wrapper from "../components/wrapper";
 
 export default function Index() {
    return (

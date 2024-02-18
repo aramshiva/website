@@ -2,7 +2,7 @@ import Link from "next/link";
 import Badge from "../components/badge";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
-import Wrapper from "../components/page";
+import Wrapper from "../components/wrapper";
 
 export default function Work() {
    const [isSongPlaying, setIsSongPlaying] = useState(false);
