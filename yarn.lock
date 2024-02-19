@@ -5245,10 +5245,10 @@ react-is@^16.13.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-parallax-tilt@^1.7.210:
-  version "1.7.211"
-  resolved "https://registry.npmjs.org/react-parallax-tilt/-/react-parallax-tilt-1.7.211.tgz"
-  integrity sha512-qLDx/gibaMKVMDaNWv5BFvdB51HKdcMnXk4oqsdqCF7q44KNv1rhsrKJScgBUzIZbz3IhD1iPn5+8s0Uv04i9g==
+react-parallax-tilt@^1.7.212:
+  version "1.7.212"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.212.tgz#acaa2f5bebb6b81706822e0e0a2016b54531ae96"
+  integrity sha512-UCsJ6GUSaEMbpEr+NhAFD5SNv+iEzIqsEFdVokV348QgRSktFNJoqYvQSnGj+OwZNaby3P2bnD/+Or5263k8UQ==
 
 react-remove-scroll-bar@^2.3.4:
   version "2.3.4"
