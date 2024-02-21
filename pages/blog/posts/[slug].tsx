@@ -8,6 +8,7 @@ import Head from "next/head";
 import PostTitle from "../../../components/blog/post-title";
 import { getPostBySlug, getAllPosts } from "../../../lib/api";
 import markdownToHtml from "../../../lib/markdownToHtml";
+import Wrapper from "../../../components/wrapper";
 import type PostType from "../../../blog/interfaces/post";
 
 type Props = {
@@ -24,32 +25,34 @@ export default function Post({ post, morePosts, preview }: Props) {
    }
    return (
       <>
-         <Layout preview={preview}>
-            <Container>
-               {router.isFallback ? (
-                  <PostTitle>Loading…</PostTitle>
-               ) : (
-                  <>
-                     <article className="mb-32">
-                        <Head>
-                           <title>{title}</title>
-                           <meta
-                              property="og:image"
-                              content={post.ogImage.url}
+         <Wrapper>
+            <Layout preview={preview}>
+               <Container>
+                  {router.isFallback ? (
+                     <PostTitle>Loading…</PostTitle>
+                  ) : (
+                     <>
+                        <article className="mb-32">
+                           <Head>
+                              <title>{title}</title>
+                              <meta
+                                 property="og:image"
+                                 content={post.ogImage.url}
+                              />
+                           </Head>
+                           <PostHeader
+                              title={post.title}
+                              coverImage={post.coverImage}
+                              date={post.date}
+                              author={post.author}
                            />
-                        </Head>
-                        <PostHeader
-                           title={post.title}
-                           coverImage={post.coverImage}
-                           date={post.date}
-                           author={post.author}
-                        />
-                        <PostBody content={post.content} />
-                     </article>
-                  </>
-               )}
-            </Container>
-         </Layout>
+                           <PostBody content={post.content} />
+                        </article>
+                     </>
+                  )}
+               </Container>
+            </Layout>
+         </Wrapper>
       </>
    );
 }

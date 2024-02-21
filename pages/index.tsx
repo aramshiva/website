@@ -11,7 +11,10 @@ export default function Index() {
                <div className="block text-sm sm:text-lg">
                   <span className="block text-xl font-semibold italic sm:text-3xl">
                      When did the internet get so{" "}
-                     <span className="font-black">busy?</span>
+                     <span className="font-black relative">
+                        busy?
+                        <div className="absolute -bottom-1 right-0 w-20 sm:-bottom-1 sm:w-[168px]"></div>
+                     </span>
                   </span>
                   Advertisements, pop-ups, notifications, trackers, spam. <br />
                   <br />I{"'"}m{" "}
