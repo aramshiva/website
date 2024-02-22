@@ -1,43 +1,17 @@
-import Redis from "ioredis";
 import { NextApiRequest, NextApiResponse } from "next";
-
-const redis = new Redis({
-   host: "your-upstash-redis-host",
-   port: 6379,
-   password: "your-upstash-redis-password",
-});
-
-export default async function retrieve(
+import { kv } from "@vercel/kv";
+export default async function post(
    request: NextApiRequest,
    response: NextApiResponse,
 ) {
    try {
-      const entries = [];
-
-      // Retrieve all keys from the database
-      const keys = await getAllKeys();
-
-      for (const key of keys) {
-         const entry = await redis.get(key);
-         entries.push(entry);
+      if (!request.body) {
+         return response
+            .status(400)
+            .json({ message: "Error: Request body is empty." });
       }
 
-      response.status(200).json(entries);
+      await kv.set(`${request.body.email}`, JSON.stringify(request.body));
+      response.status(200).json({ message: "Entry added" });
    } catch (error) {
-      console.error("Failed to list entries:", error);
-      response.status(500).json(`Failed to list entries, ${error}`);
-   }
-}
-
-async function getAllKeys() {
-   const keys = [];
-   let cursor = "0";
-
-   do {
-      const [nextCursor, fetchedKeys] = await redis.scan(cursor);
-      keys.push(...fetchedKeys);
-      cursor = nextCursor;
-   } while (cursor !== "0");
-
-   return keys;
-}
+      console.error("Failed to add entry:", error);
