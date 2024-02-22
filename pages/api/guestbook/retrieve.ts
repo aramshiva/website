@@ -1,17 +1,23 @@
-import { NextApiRequest, NextApiResponse } from "next";
 import { kv } from "@vercel/kv";
-export default async function post(
+import { NextApiRequest, NextApiResponse } from "next";
+
+export default async function retrieve(
    request: NextApiRequest,
    response: NextApiResponse,
 ) {
    try {
-      if (!request.body) {
-         return response
-            .status(400)
-            .json({ message: "Error: Request body is empty." });
+      const keys = await kv.keys("*");
+      const entries = [];
+
+      for (const key of keys) {
+         const entry = await kv.get(key);
+         entries.push(entry);
       }
 
-      await kv.set(`${request.body.email}`, JSON.stringify(request.body));
-      response.status(200).json({ message: "Entry added" });
+      response.status(200).json(entries);
    } catch (error) {
-      console.error("Failed to add entry:", error);
+      console.error("Failed to list entries:", error);
+      response.status(500).json(`Failed to list entries, ${error}`);
+   }
+}
+``;
