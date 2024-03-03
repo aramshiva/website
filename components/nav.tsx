@@ -5,7 +5,7 @@ const navItems = [
    { path: "/work", name: "work" },
    { path: "/guestbook", name: "guestbook" },
    { path: "/photos", name: "photos" },
-   { path: "/blog", name: "blog" }, 
+   { path: "/blog", name: "blog" },
    { path: "mailto:me@aram.sh", name: "email" },
 ];
 

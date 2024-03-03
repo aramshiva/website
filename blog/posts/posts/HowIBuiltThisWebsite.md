@@ -31,9 +31,10 @@ This one was complex. This blog is a heavily edited version of the [Vercel Next.
 ## Inspiration
 
 I got inspiration from alot of websites, way too many to count. Here are some of the coolest:
-- arashshiva.com
-- https://www.eliasruiz.com
-- tobyb.dev
-- mingjie.dev
-- malted.dev
-- sarthakmohanty.me
+
+-  arashshiva.com
+-  https://www.eliasruiz.com
+-  tobyb.dev
+-  mingjie.dev
+-  malted.dev
+-  sarthakmohanty.me
