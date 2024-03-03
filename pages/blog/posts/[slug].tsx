@@ -17,15 +17,16 @@ type Props = {
    preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post, preview }: Props) {
    const router = useRouter();
-   const title = `${post.title} | Aram's Blog`;
+   const title = `${post?.title ?? "Loading..."} | Aram's Blog`; // Add nullish coalescing operator
+
    if (!router.isFallback && !post?.slug) {
       return <ErrorPage statusCode={404} />;
    }
    return (
       <>
-         <Wrapper>
+         <Wrapper key={post?.slug}>
             <Layout preview={preview}>
                <Container>
                   {router.isFallback ? (
@@ -37,16 +38,16 @@ export default function Post({ post, morePosts, preview }: Props) {
                               <title>{title}</title>
                               <meta
                                  property="og:image"
-                                 content={post.ogImage.url}
+                                 content={post?.ogImage?.url}
                               />
                            </Head>
                            <PostHeader
-                              title={post.title}
-                              coverImage={post.coverImage}
-                              date={post.date}
-                              author={post.author}
+                              title={post?.title}
+                              coverImage={post?.coverImage}
+                              date={post?.date}
+                              author={post?.author}
                            />
-                           <PostBody content={post.content} />
+                           <PostBody content={post?.content} />
                         </article>
                      </>
                   )}
@@ -73,7 +74,7 @@ export async function getStaticProps({ params }: Params) {
       "ogImage",
       "coverImage",
    ]);
-   const content = await markdownToHtml(post.content || "");
+   const content = await markdownToHtml(post?.content || "Error! Looks like the content couldn't load!"); // Add nullish coalescing operator
 
    return {
       props: {
@@ -96,6 +97,6 @@ export async function getStaticPaths() {
             },
          };
       }),
-      fallback: false,
+      fallback: true,
    };
 }

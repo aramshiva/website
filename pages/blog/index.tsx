@@ -1,5 +1,5 @@
 import Container from "../../components/blog/container";
-import MoreStories from "../../components/blog/more-stories";
+import Posts from "../../components/blog/posts";
 import Layout from "../../components/blog/layout";
 import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
@@ -22,7 +22,7 @@ export default function Index({ allPosts }: Props) {
                   <div className="block pb-20 text-xl font-semibold sm:text-3xl">
                      <h1>Blog</h1>
                   </div>
-                  <MoreStories posts={allPosts} />
+                  <Posts posts={allPosts} />
                </Container>
             </Layout>
          </Wrapper>

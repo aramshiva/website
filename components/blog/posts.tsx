@@ -5,7 +5,7 @@ type Props = {
    posts: Post[];
 };
 
-const MoreStories = ({ posts }: Props) => {
+const Posts = ({ posts }: Props) => {
    return (
       <section>
          <div className="mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 md:gap-x-16 md:gap-y-32 lg:gap-x-32">
@@ -23,4 +23,4 @@ const MoreStories = ({ posts }: Props) => {
    );
 };
 
-export default MoreStories;
+export default Posts;

@@ -21,6 +21,7 @@ export default function Photos() {
 
    return (
       <Wrapper>
+         <p className="pl-9 lg:pl-20 font-bold text-4xl">Photos</p>
          <ParallaxScroll images={images} />
       </Wrapper>
    );
