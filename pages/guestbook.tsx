@@ -95,7 +95,7 @@ export default function Guestbook() {
                      </Button>
                   </div>
                )}
-               {/* <ul className="pt-20">
+               <ul className="pt-20">
                   {entries
                      .sort(
                         (a, b) =>
@@ -111,7 +111,7 @@ export default function Guestbook() {
                            <p>{entry.content}</p>
                         </li>
                      ))}
-               </ul> */}
+               </ul>
             </div>
          </div>
       </Wrapper>
