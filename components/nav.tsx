@@ -3,9 +3,9 @@ import Link from "next/link";
 const navItems = [
    { path: "/", name: "home" },
    { path: "/work", name: "work" },
-   // { path: "/guestbook", name: "guestbook" },
-   // { path: "/photos", name: "photos" },
-   // { path: "/blog", name: "blog" },
+   { path: "/guestbook", name: "guestbook" },
+   { path: "/photos", name: "photos" },
+   // { path: "/blog", name: "blog" }, # Blog is in beta.
    { path: "mailto:me@aram.sh", name: "email" },
 ];
 
