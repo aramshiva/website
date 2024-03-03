@@ -74,7 +74,9 @@ export async function getStaticProps({ params }: Params) {
       "ogImage",
       "coverImage",
    ]);
-   const content = await markdownToHtml(post?.content || "Error! Looks like the content couldn't load!"); // Add nullish coalescing operator
+   const content = await markdownToHtml(
+      post?.content || "Error! Looks like the content couldn't load!",
+   ); // Add nullish coalescing operator
 
    return {
       props: {

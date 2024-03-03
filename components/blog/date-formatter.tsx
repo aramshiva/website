@@ -7,7 +7,7 @@ type Props = {
 const DateFormatter = ({ dateString }: Props) => {
    const date = parseISO(dateString);
    const formattedDate = format(date, "MMM dd yyyy");
-   
+
    return <time dateTime={dateString}>{formattedDate}</time>;
 };
 

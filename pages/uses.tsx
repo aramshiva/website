@@ -4,7 +4,7 @@ export default function Uses() {
       <Wrapper>
          <div className="prose lg:prose-xl container mx-auto py-8">
             <h2 className="mb-4 font-bold">My Setup</h2>
-            <h4 className="mb-4 font-bold pt-5">Office</h4>
+            <h4 className="mb-4 pt-5 font-bold">Office</h4>
             <ul>
                <li>Macbook Pro M3 14{'"'}</li>
                <li>LG Monitor</li>
@@ -15,12 +15,12 @@ export default function Uses() {
                <li>Synology DS224+</li>
                <li>Branch Daily Chair</li>
             </ul>
-            <h4 className="mb-4 font-bold pt-5">Audio / Video</h4>
+            <h4 className="mb-4 pt-5 font-bold">Audio / Video</h4>
             <ul>
                <li>Jabra Speak 410</li>
                <li>Logitech C925-E</li>
             </ul>
-            <h4 className="mb-4 font-bold pt-5">Software</h4>
+            <h4 className="mb-4 pt-5 font-bold">Software</h4>
             <ul>
                <li>VS Code</li>
                <li>Figma</li>
@@ -30,9 +30,12 @@ export default function Uses() {
                <li>Fantastical</li>
                <li>Spotify</li>
             </ul>
-            <h4 className="mb-4 font-bold pt-5">Photography</h4>
+            <h4 className="mb-4 pt-5 font-bold">Photography</h4>
             <ul>
-               <li>Panasonic Lumix DMC-GX85 (Lumix DMC-GX80 / Lumix DMC-GX7 Mark II)</li>
+               <li>
+                  Panasonic Lumix DMC-GX85 (Lumix DMC-GX80 / Lumix DMC-GX7 Mark
+                  II)
+               </li>
                <li>Panasonic Lumix G Vario HD 12-32mm F3.5-5.6 Mega OIS</li>
                <li>Panasonic Lumix G 25mm F1.7 ASPH</li>
             </ul>

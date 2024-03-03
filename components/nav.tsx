@@ -15,7 +15,11 @@ const Navbar = () => (
          <nav className="fade relative flex scroll-pr-6 flex-row items-start md:relative md:overflow-auto">
             <div className="flex flex-row space-x-0 pr-10">
                {navItems.map(({ path, name }) => (
-                  <Link key={path} href={path} className="relative flex px-2 py-1 align-middle transition-all">
+                  <Link
+                     key={path}
+                     href={path}
+                     className="relative flex px-2 py-1 align-middle transition-all"
+                  >
                      {name}
                   </Link>
                ))}
