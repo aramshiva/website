@@ -28,9 +28,12 @@ This ones simple but fun, if you diddn't know I am in to [photography](https://w
 
 This one was complex. This blog is a heavily edited version of the [Vercel Next.js Blog](https://github.com/vercel/next.js/tree/canary/examples/blog-starter).
 
-arashshiva.com
-https://www.eliasruiz.com
-tobyb.dev
-mingjie.dev
-malted.dev
-sarthakmohanty.me
+## Inspiration
+
+I got inspiration from alot of websites, way too many to count. Here are some of the coolest:
+- arashshiva.com
+- https://www.eliasruiz.com
+- tobyb.dev
+- mingjie.dev
+- malted.dev
+- sarthakmohanty.me
