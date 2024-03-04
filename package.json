@@ -10,6 +10,7 @@
    "dependencies": {
       "@arcjet/next": "^1.0.0-alpha.8",
       "@heroicons/react": "^2.1.1",
+      "@mapbox/node-pre-gyp": "^1.0.11",
       "@material-tailwind/react": "^2.1.9",
       "@mdx-js/loader": "^3.0.1",
       "@mdx-js/react": "^3.0.1",
@@ -31,6 +32,7 @@
       "classnames": "^2.5.1",
       "clsx": "^2.1.0",
       "date-fns": "^3.3.1",
+      "debug": "^4.3.4",
       "devtools-detect": "^4.0.1",
       "dompurify": "^3.0.8",
       "eslint-config-next": "^14.1.0",
@@ -73,5 +75,13 @@
       "prettier": "^3.2.4",
       "prettier-plugin-tailwindcss": "^0.5.11",
       "tailwindcss": "^3.4.1"
-   }
+   },
+   "overrides": [
+      {
+         "dependencies": {
+            "semver": "7.6.0",
+            "debug": "4.3.4"
+         }
+      }
+   ]
 }
