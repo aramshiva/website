@@ -2798,7 +2798,7 @@
   dependencies:
     "@vercel/nft" "0.26.4"
     "@vercel/routing-utils" "3.1.0"
-    semver "7.6.0"
+    semver "6.3.1"
 
 "@vercel/remix-builder@2.1.0":
   version "2.1.0"
@@ -7387,13 +7387,6 @@ semver@6.3.1, semver@^6.0.0, semver@^6.3.1:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
-
-semver@7.3.5:
-  version "7.3.5"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.3.5.tgz#0b621c879348d8998e4b0e4be94b3f12e6018ef7"
-  integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
-  dependencies:
-    lru-cache "^6.0.0"
 
 semver@^7.3.5, semver@^7.5.4:
   version "7.6.0"
