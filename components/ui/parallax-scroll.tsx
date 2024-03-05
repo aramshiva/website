@@ -48,6 +48,7 @@ export const ParallaxScroll = ({
                         height="400"
                         width="400"
                         alt="thumbnail"
+                        loading="lazy"
                      />
                   </motion.div>
                ))}
