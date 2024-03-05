@@ -19,9 +19,7 @@ export default function Index({ allPosts }: Props) {
                   <title>{`Blog`}</title>
                </Head>
                <Container>
-                  <div className="block pb-20 text-xl font-semibold sm:text-3xl">
-                     <h1>Blog</h1>
-                  </div>
+                  <h1 className="mb-4 block text-xl font-bold sm:text-3xl">Blog</h1>
                   <Posts posts={allPosts} />
                </Container>
             </Layout>

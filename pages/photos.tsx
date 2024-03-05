@@ -47,7 +47,7 @@ export default function Photos() {
    return (
       <>
          <Wrapper>
-            <p className="pb-5 pl-9 text-4xl font-bold lg:pl-20">Photos</p>
+            <h1 className="mb-4 block text-xl font-bold sm:text-3xl">Photos</h1>
             <ParallaxScroll images={images.length ? images : staticImages} />
          </Wrapper>
       </>
