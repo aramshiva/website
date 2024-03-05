@@ -15,7 +15,7 @@ const SpotifyWidget: React.FC = () => {
 
    return (
       <div className="animate__animated animate__slideInUp fixed bottom-3 right-0 flex flex-col p-5 align-middle text-black">
-         <div className="rounded-xl border bg-white p-4">
+         <div className="rounded-xl border bg-white p-4 shadow-xl">
             <div className="pb-3">
                <p>Currently Listening to:</p>
             </div>
