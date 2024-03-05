@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { FormEvent, ChangeEvent } from "react";
-import Wrapper from "../components/page";
+import Wrapper from "../components/wrapper";
 
 interface InputProps {
    id: string;

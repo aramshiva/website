@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Textarea } from "../components/ui/textarea";
 import { Button } from "../components/ui/button";
 import { toast } from "sonner";
-import Wrapper from "../components/page";
+import Wrapper from "../components/wrapper";
 import { useSession, signIn } from "next-auth/react";
 import Filter from "bad-words";
 
@@ -64,7 +64,9 @@ export default function Guestbook() {
       <Wrapper>
          <div className="flex p-5">
             <div>
-               <h1 className="mb-4 text-2xl font-bold">Guestbook</h1>
+               <h1 className="mb-4 block text-xl font-bold sm:text-3xl">
+                  Guestbook
+               </h1>
                <h2 className="mt-4 text-lg font-bold">Sign the Guestbook</h2>
                {session ? ( // Check if the user is signed in
                   <form onSubmit={handleSubmit} className="mt-4">

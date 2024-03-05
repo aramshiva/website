@@ -2,7 +2,7 @@ import Link from "next/link";
 import Badge from "../components/badge";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
-import Wrapper from "../components/page";
+import Wrapper from "../components/wrapper";
 
 export default function Work() {
    const [isSongPlaying, setIsSongPlaying] = useState(false);
@@ -21,7 +21,7 @@ export default function Work() {
             <h1 className="mb-4 block text-xl font-bold sm:text-3xl">Work</h1>
             <div className="mb-4">
                <h3 className="text-md mb-4 block font-semibold sm:text-lg">
-                  Mentee at HCB
+                  Volunteer Engineer @ Hack Club
                </h3>
                <p className="sm:text-md text-sm text-black">
                   I am currently a mentee at{" "}

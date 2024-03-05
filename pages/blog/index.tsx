@@ -1,11 +1,10 @@
 import Container from "../../components/blog/container";
-import MoreStories from "../../components/blog/more-stories";
-import HeroPost from "../../components/blog/hero-post";
+import Posts from "../../components/blog/posts";
 import Layout from "../../components/blog/layout";
 import { getAllPosts } from "../../lib/api";
 import Head from "next/head";
 import Post from "../../blog/interfaces/post";
-import Alert from "../../components/alert";
+import Wrapper from "../../components/wrapper";
 
 type Props = {
    allPosts: Post[];
@@ -14,17 +13,19 @@ type Props = {
 export default function Index({ allPosts }: Props) {
    return (
       <>
-         <Layout>
-            <Head>
-               <title>{`Aram's Blog`}</title>
-            </Head>
-            <Container>
-               <div className="prose pb-9">
-                  <h1>Blog</h1>
-               </div>
-               <MoreStories posts={allPosts} />
-            </Container>
-         </Layout>
+         <Wrapper>
+            <Layout>
+               <Head>
+                  <title>{`Blog`}</title>
+               </Head>
+               <Container>
+                  <h1 className="mb-4 block text-xl font-bold sm:text-3xl">
+                     Blog
+                  </h1>
+                  <Posts posts={allPosts} />
+               </Container>
+            </Layout>
+         </Wrapper>
       </>
    );
 }

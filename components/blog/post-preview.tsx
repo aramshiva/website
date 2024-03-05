@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { parseISO, format } from "date-fns";
 
 type Props = {
    title: string;
@@ -9,7 +10,7 @@ type Props = {
 
 const PostPreview = ({ title, excerpt, slug, date }: Props) => {
    const encodedSlug = encodeURIComponent(slug);
-
+   const formattedDate = format(parseISO(date), "MMMM dd, yyyy"); // Format the date as a string
    return (
       <section>
          <Link
@@ -31,7 +32,7 @@ const PostPreview = ({ title, excerpt, slug, date }: Props) => {
                      {excerpt}
                   </p>
                   <p className="text-sm tracking-tight text-neutral-900">
-                     {date}
+                     <time dateTime={date}>{formattedDate}</time>
                   </p>
                </div>
             </div>
