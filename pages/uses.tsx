@@ -3,7 +3,9 @@ export default function Uses() {
    return (
       <Wrapper>
          <div className="prose lg:prose-xl container mx-auto py-8">
-         <h1 className="mb-4 block text-xl font-bold sm:text-3xl">My Setup</h1>
+            <h1 className="mb-4 block text-xl font-bold sm:text-3xl">
+               My Setup
+            </h1>
             <h4 className="mb-4 pt-5 font-bold">Office</h4>
             <ul>
                <li>Macbook Pro M3 14{'"'}</li>
