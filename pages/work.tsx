@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Badge from "../components/badge";
+import Badge from "../components/ui/badge";
 import Marquee from "react-fast-marquee";
 import { useState } from "react";
 import Wrapper from "../components/wrapper";
@@ -24,7 +24,7 @@ export default function Work() {
                   Volunteer Engineer @ Hack Club
                </h3>
                <p className="sm:text-md text-sm text-black">
-                  I am currently a mentee at{" "}
+                  I was a Volunteer Engineer at{" "}
                   <Link
                      href="https://hackclub.com/hcb"
                      className="underline decoration-yellow-300 decoration-4 underline-offset-1"
@@ -52,7 +52,7 @@ export default function Work() {
             </div>
             <div className="mb-4">
                <h3 className="text-md mb-4 block font-semibold sm:text-lg">
-                  Hackathon Organizer
+                  Organizer
                </h3>
                <p className="sm:text-md text-sm text-black">
                   I have previously helped organize{" "}
@@ -151,6 +151,20 @@ export default function Work() {
                      link="https://git-scm.com/"
                   >
                      Git
+                  </Badge>
+                  <Badge
+                     className="origin-center -rotate-1"
+                     color="#00FF00"
+                     link="https://www.pygame.org"
+                  >
+                     Pygame
+                  </Badge>
+                  <Badge
+                     className="rotate-4 origin-center"
+                     color="#00000"
+                     link="https://www.figma.com/"
+                  >
+                     Figma
                   </Badge>
                   <div className="w-2" />
                </div>

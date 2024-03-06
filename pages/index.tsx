@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import CommitHash from "../components/commitHash";
+import CommitHash from "../components/helpers/commitHash";
 import Wrapper from "../components/wrapper";
 
 export default function Index() {

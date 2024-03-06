@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function HeadObject({ children }) {
+export default function Meta({ children }) {
    const title = "👋 Aram Shiva";
    const description = "student. developer. designer.";
    const keywords =

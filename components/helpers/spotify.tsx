@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 import Image from "next/image";
 import "animate.css";
 
-const SpotifyWidget: React.FC = () => {
+export default function SpotifyWidget() {
    const fetcher = (url: string) => fetch(url).then((r) => r.json());
    const { data } = useSWR("/api/spotify", fetcher);
 
@@ -51,6 +51,4 @@ const SpotifyWidget: React.FC = () => {
          </div>
       </div>
    );
-};
-
-export default SpotifyWidget;
+}
