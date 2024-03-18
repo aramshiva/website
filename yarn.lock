@@ -3180,10 +3180,10 @@ react-is@^16.13.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-parallax-tilt@^1.7.214:
-  version "1.7.214"
-  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.214.tgz#7948d9cb0352143b5dd9906eb4f24d8091be8b44"
-  integrity sha512-eueRnnIq0YS4eXAzP1/5UV8O1+tEnwP+onhNa3P1ksosCB7yjR7b5op3Yctcslm7t21Rgb7ftePyRICJ28DTyQ==
+react-parallax-tilt@^1.7.215:
+  version "1.7.215"
+  resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.7.215.tgz#db50ef5fdcc60c2bc1de652063f5b53a47ac7131"
+  integrity sha512-uIIYccEHyaWjedqaYOETjhHHNej+O85cATUOXtMPgdk4rCYjfpFP9FSPfVc4ezD/qUkBD8bzbFH5BKsrbfLZYA==
 
 react@18.2.0, react@^18.2.0:
   version "18.2.0"
