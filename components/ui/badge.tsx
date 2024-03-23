@@ -15,8 +15,7 @@ export default function Badge({
    link,
 }: Props) {
    return (
-      <motion.div
-         initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
          <Link href={link || ""}>
             <span
                className={`inline-flex items-center gap-2 rounded-xl px-5 py-1 text-xs font-medium text-black ring-1 ring-inset ring-gray-200 ${className}`}
