@@ -68,8 +68,8 @@ export default function Guestbook() {
                   Guestbook
                </h1>
                <h2 className="mt-4 text-lg font-bold">Sign the Guestbook</h2>
-               {session ? ( // Check if the user is signed in
-                  <form onSubmit={handleSubmit} className="mt-4">
+               {session ? (
+                  <form onSubmit={handleSubmit} className="mt-4 w-48">
                      <Textarea
                         placeholder="Your message"
                         value={newEntry.content}

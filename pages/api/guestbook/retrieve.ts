@@ -13,7 +13,10 @@ export default async function retrieve(
          const entry = await kv.get(key);
          entries.push(entry);
       }
-
+      
+      for (const entry of entries) {
+         delete entry.email; // Remove the "email" property from each entry
+      }
       response.status(200).json(entries);
    } catch (error) {
       console.error("Failed to list entries:", error);
