@@ -13,7 +13,7 @@ export default async function retrieve(
          const entry = await kv.get(key);
          entries.push(entry);
       }
-      
+
       for (const entry of entries) {
          delete entry.email; // Remove the "email" property from each entry
       }
