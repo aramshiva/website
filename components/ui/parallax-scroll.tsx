@@ -41,6 +41,9 @@ export const ParallaxScroll = ({
                   <motion.div
                      style={{ y: translateFirst }} // Apply the translateY motion value here
                      key={"grid-1" + idx}
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     viewport={{ once: true }}
                   >
                      <Image
                         src={el}
@@ -58,6 +61,9 @@ export const ParallaxScroll = ({
                   <motion.div
                      style={{ y: translateSecond }}
                      key={"grid-2" + idx}
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     viewport={{ once: true }}
                   >
                      <Image
                         src={el}
@@ -74,6 +80,9 @@ export const ParallaxScroll = ({
                   <motion.div
                      style={{ y: translateThird }}
                      key={"grid-3" + idx}
+                     initial={{ opacity: 0 }}
+                     whileInView={{ opacity: 1 }}
+                     viewport={{ once: true }}
                   >
                      <Image
                         src={el}
