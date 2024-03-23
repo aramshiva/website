@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import Wrapper from "../components/wrapper";
 import { useSession, signIn } from "next-auth/react";
 import Filter from "bad-words";
+import { motion } from "framer-motion";
 
 export default function Guestbook() {
    const [entries, setEntries] = useState([]);
@@ -106,11 +107,20 @@ export default function Guestbook() {
                      )
                      .map((entry, index) => (
                         <li key={index} className="mb-4">
-                           <p>
-                              <strong>{entry.name}</strong> (
-                              {new Date(entry.timestamp).toLocaleDateString()}):
-                           </p>
-                           <p>{entry.content}</p>
+                           <motion.div
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              viewport={{ once: true }}
+                           >
+                              <p>
+                                 <strong>{entry.name}</strong> (
+                                 {new Date(
+                                    entry.timestamp,
+                                 ).toLocaleDateString()}
+                                 ):
+                              </p>
+                              <p>{entry.content}</p>
+                           </motion.div>
                         </li>
                      ))}
                </ul>
