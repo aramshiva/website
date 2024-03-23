@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from "react";
-import { ParallaxScroll } from "../components/ui/parallax-scroll";
+import { ParallaxScroll } from "../components/ui/photos";
 import Wrapper from "../components/wrapper";
 
 export default function Photos() {
