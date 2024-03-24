@@ -1,5 +1,6 @@
 import { AppProps } from "next/app";
 import "../styles/index.css";
+import "../styles/fonts.css"
 import { Toaster } from "../components/ui/sonner";
 import { SessionProvider } from "next-auth/react";
 import { Analytics } from "@vercel/analytics/react";
