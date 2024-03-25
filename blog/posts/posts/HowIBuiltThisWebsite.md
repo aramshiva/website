@@ -4,7 +4,7 @@ excerpt: ""
 coverImage: ""
 date: "2023-01-24"
 author:
-   name: Aram Shiva
+   name: Aram
    picture: "/assets/blog/authors/aram.jpeg"
 ogImage:
    url: ""
