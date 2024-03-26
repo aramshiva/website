@@ -1,6 +1,6 @@
 import React from "react";
-import SpotifyWidget from "./helpers/spotify";
-import Navbar from "./ui/nav";
+import SpotifyWidget from "../helpers/spotify";
+import Navbar from "../ui/nav";
 
 const Wrapper = ({ children }) => {
    return (

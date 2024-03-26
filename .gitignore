@@ -44,3 +44,4 @@ pages/index2.tsx
 /public/blog/rss.xml
 public/blog/rss.xml
 /public/blog
+*.xml
