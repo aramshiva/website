@@ -2,6 +2,7 @@ import Container from "../../components/blog/container";
 import Posts from "../../components/blog/posts";
 import Layout from "../../components/blog/layout";
 import { getAllPosts } from "../../lib/api";
+import generateRssFeed from "../../blog/utils/generateRSSFeed.js";
 import Head from "next/head";
 import Post from "../../blog/interfaces/post";
 import Wrapper from "../../components/wrapper";
@@ -31,6 +32,7 @@ export default function Index({ allPosts }: Props) {
 }
 
 export const getStaticProps = async () => {
+   await generateRssFeed();
    const allPosts = getAllPosts([
       "title",
       "date",

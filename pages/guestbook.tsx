@@ -80,12 +80,12 @@ export default function Guestbook() {
                         required
                         className="mb-2"
                      />
-                     <Button
+                     <button
                         type="submit"
-                        className="rounded-md px-4 py-2 text-white"
+                        className="rounded-md bg-stone-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-stone-700"
                      >
                         Submit
-                     </Button>
+                     </button>
                   </form>
                ) : (
                   <div>
