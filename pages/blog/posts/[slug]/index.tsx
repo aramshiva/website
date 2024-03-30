@@ -1,15 +1,15 @@
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import Container from "../../../components/blog/container";
-import PostBody from "../../../components/blog/post-body";
-import PostHeader from "../../../components/blog/post-header";
-import Layout from "../../../components/blog/layout";
+import Container from "../../../../components/blog/container";
+import PostBody from "../../../../components/blog/post-body";
+import PostHeader from "../../../../components/blog/post-header";
+import Layout from "../../../../components/blog/layout";
 import Head from "next/head";
-import PostTitle from "../../../components/blog/post-title";
-import { getPostBySlug, getAllPosts } from "../../../lib/api";
-import markdownToHtml from "../../../lib/markdownToHtml";
-import Wrapper from "../../../components/wrapper";
-import type PostType from "../../../blog/interfaces/post";
+import PostTitle from "../../../../components/blog/post-title";
+import { getPostBySlug, getAllPosts } from "../../../../lib/api";
+import markdownToHtml from "../../../../lib/markdownToHtml";
+import Wrapper from "../../../../components/wrapper";
+import type PostType from "../../../../blog/interfaces/post";
 
 type Props = {
    post: PostType;
@@ -19,7 +19,7 @@ type Props = {
 
 export default function Post({ post, preview }: Props) {
    const router = useRouter();
-   const title = `${post?.title ?? "Loading..."} | Aram's Blog`; // Add nullish coalescing operator
+   const title = `${post?.title ?? "Loading..."} | Aram's Blog`;
 
    if (!router.isFallback && !post?.slug) {
       return <ErrorPage statusCode={404} />;

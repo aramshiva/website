@@ -39,3 +39,9 @@ pages/index2.tsx
 
 # ide
 .idea
+
+# blog
+/public/blog/rss.xml
+public/blog/rss.xml
+/public/blog
+*.xml
