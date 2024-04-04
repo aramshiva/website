@@ -5,7 +5,7 @@ interface TwemojiProps {
    text: string;
 }
 
-const Twemoji: React.FC<TwemojiProps> = ({ text }) => {
+export default function Twemoji({ text }): JSX.Element {
    const [emojiContent, setEmojiContent] = useState<string>("");
 
    useEffect(() => {
@@ -26,6 +26,4 @@ const Twemoji: React.FC<TwemojiProps> = ({ text }) => {
          dangerouslySetInnerHTML={{ __html: emojiContent }}
       />
    );
-};
-
-export default Twemoji;
+}
