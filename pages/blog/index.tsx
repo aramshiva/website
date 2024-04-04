@@ -6,6 +6,8 @@ import generateRssFeed from "../../blog/utils/generateRSSFeed.js";
 import Head from "next/head";
 import Post from "../../blog/interfaces/post";
 import Wrapper from "../../components/wrapper";
+import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
    allPosts: Post[];
@@ -25,6 +27,16 @@ export default function Index({ allPosts }: Props) {
                   </h1>
                   <Posts posts={allPosts} />
                </Container>
+               <footer className="sticky bottom-0 p-20">
+                  <Link href="/blog/rss.xml">
+                     <Image
+                        src="/blog/rss.svg"
+                        width={24}
+                        height={24}
+                        alt="RSS"
+                     />
+                  </Link>
+               </footer>
             </Layout>
          </Wrapper>
       </>
