@@ -12,7 +12,7 @@ const aj = arcjet({
    // You can add other rules, such as rate limiting, here.
    rules: [
       detectBot({
-         mode: "DRY_RUN", // "LIVE" will block requests. Use "DRY_RUN" to log only
+         mode: "LIVE", // "LIVE" will block requests. Use "DRY_RUN" to log only
          // Change back to "LIVE" later on
          block: ["AUTOMATED"], // blocks all automated clients
       }),
