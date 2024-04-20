@@ -30,7 +30,7 @@ export default function Index({ allPosts }: Props) {
                <footer className="sticky bottom-0 p-20">
                   <Link href="/blog/rss.xml">
                      <Image
-                        src="/blog/rss.svg"
+                        src="/blog/rsslogo.svg"
                         width={24}
                         height={24}
                         alt="RSS"
