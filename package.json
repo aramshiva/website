@@ -40,7 +40,7 @@
       "tailwind-merge": "^2.2.2",
       "tailwindcss-animate": "^1.0.7",
       "twemoji": "^14.0.2",
-      "typescript": "^5.4.4"
+      "typescript": "^5.5.2"
    },
    "devDependencies": {
       "@types/bad-words": "^3.0.3",
