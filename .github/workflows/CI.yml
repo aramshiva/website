@@ -9,6 +9,7 @@ on:
 
 jobs:
    prettier:
+      if: github.actor != 'dependabot[bot]'
       runs-on: ubuntu-latest
       name: Prettier
       steps:
