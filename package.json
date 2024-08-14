@@ -15,7 +15,7 @@
       "@vercel/analytics": "^1.2.0",
       "@vercel/kv": "^1.0.1",
       "@vercel/speed-insights": "^1.0.9",
-      "axios": "^1.7.2",
+      "axios": "^1.7.4",
       "bad-words": "^3.0.4",
       "class-variance-authority": "^0.7.0",
       "classnames": "^2.5.1",
