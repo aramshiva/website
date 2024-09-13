@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
-import { useState, useEffect } from 'react';
+import useSWR from 'swr';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -9,37 +9,25 @@ import Tilt from 'react-parallax-tilt';
 
 interface SpotifyData {
   isPlaying: boolean;
-  title: string;
-  artist: { name: string; url: string }[];
-  album: {
+  title?: string;
+  artist?: { name: string; url: string }[];
+  album?: {
     name: string;
     url: string;
     images: { url: string; height: number; width: number }[];
   };
-  songUrl: string;
+  songUrl?: string;
 }
 
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 export default function Spotify() {
-  const [spotifyData, setSpotifyData] = useState<SpotifyData | null>(null);
+  const { data: spotifyData, error } = useSWR<SpotifyData>('/api/spotify', fetcher, {
+    refreshInterval: 30000, // Refresh every 30 seconds
+  });
 
-  useEffect(() => {
-    const fetchSpotifyData = async () => {
-      try {
-        const response = await fetch('/api/spotify');
-        const data = await response.json();
-        setSpotifyData(data);
-      } catch (error) {
-        console.error('Error fetching Spotify data:', error);
-      }
-    };
-
-    fetchSpotifyData();
-    const interval = setInterval(fetchSpotifyData, 30000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  if (!spotifyData?.isPlaying) return null;
+  if (error) return null;
+  if (!spotifyData) return null;
 
   const { title, artist, album, songUrl } = spotifyData;
 
@@ -67,8 +55,8 @@ export default function Spotify() {
             >
               <div className="w-16">
                 <Image
-                  src={spotifyData.album.images[0].url}
-                  alt={spotifyData.album.name}
+                  src={spotifyData.album?.images[0].url ?? '/path/to/fallback-image.jpg'}
+                  alt={spotifyData.album?.name ?? 'Album cover'}
                   className="rounded-xl"
                   width={64}
                   height={64}
@@ -77,7 +65,7 @@ export default function Spotify() {
 
               <div className="flex-1">
                 <p className="component font-bold">{spotifyData.title}</p>
-                <p className="font-dark text-xs">{spotifyData.artist[0].name}</p>
+                <p className="font-dark text-xs">{spotifyData.artist?.[0].name}</p>
               </div>
               <div className="absolute bottom-2 right-2">
                 <SiSpotify size={20} color={"#000000"} />
