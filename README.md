@@ -1,38 +1,36 @@
-![image](https://github.com/aramshiva/website/assets/79479940/56e046fe-cb36-49f7-ba0e-05d63b34560f)
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# 🏠 Website 🏠
+## Getting Started
 
-[![CodeQL](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql)
+First, run the development server:
 
-Welcome! This is my corner of the internet. It is published on [aram.sh](https://aram.sh) and [aramshiva.com](https://aramshiva.com).
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Stack
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This site is using [Next.js](https://nextjs.org/) as the web framework (built off of [React](https://react.dev/)). It uses [TypeScript](https://www.typescriptlang.org/) for the file format, [Tailwind CSS](https://tailwindcss.com) for CSS, and [ESLint](https://eslint.org/) for Linting. It is being deployed with [Vercel](https://vercel.com).
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Contributing
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Any contributions are helpful! To contribute, follow these steps:
+## Learn More
 
-### Prerequisites
+To learn more about Next.js, take a look at the following resources:
 
-Please make sure you have the following tools installed to help contribute
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
--  [ ] A package manager ([`yarn`](https://yarnpkg.com/) is a good one)!
--  [ ] [`npx`](https://www.npmjs.com/package/npx)
--  [ ] Knowledge of [Next.js](https://nextjs.org/)/[React](https://react.dev/)
--  [ ] (Optional) A code editor. ([Visual Studio Code](https://code.visualstudio.com/) is my recommendation!)
--  [ ] All env variables needed
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-### Contribute
+## Deploy on Vercel
 
-Now, the good stuff!
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
--  Install all necessary packages by running `yarn` in the terminal. (Make sure to have some space on your disk; this may be big.)
--  Go to terminal and change your directory to the folder
--  Setup the development server by running `yarn dev` or `npx next dev` in your terminal app of choice.
-   A message like
-   ` ▲ Next.js 14.0.4 - Local: http://localhost:3000 ...` will appear.
--  Go to the local link given by the message that ran in the last step. Yours will probably be `localhost:3000`.
--  Now, you can edit the code and push it to a fork of the website.
--  Once done, open a pull request, and I will review your code and merge it!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
