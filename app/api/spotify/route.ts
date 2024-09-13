@@ -14,7 +14,7 @@ async function getAccessToken() {
     if (!REFRESH_TOKEN) {
       throw new Error('No refresh token available');
     }
-  
+
     const response = await fetch(TOKEN_ENDPOINT, {
       method: 'POST',
       headers: {
@@ -26,14 +26,14 @@ async function getAccessToken() {
         refresh_token: REFRESH_TOKEN,
       }),
     });
-  
+
     const data = await response.json();
-  
+
     if (data.refresh_token) {
       REFRESH_TOKEN = data.refresh_token;
       console.log('New refresh token received');
     }
-  
+
     return data;
   }
 
