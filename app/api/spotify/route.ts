@@ -70,7 +70,7 @@ async function getRecentlyPlayed(accessToken: string) {
   return response.json();
 }
 
-function formatTrackData(track: any, isPlaying: boolean, playedAt?: string) {
+function formatTrackData(track: any, isPlaying: boolean, playedAt?: string, progressMs?: number) {
   return {
     isPlaying,
     title: track.name,
@@ -86,7 +86,10 @@ function formatTrackData(track: any, isPlaying: boolean, playedAt?: string) {
       totalTracks: track.album.total_tracks,
       images: track.album.images,
     },
-    duration: track.duration_ms,
+    durationMs: track.duration_ms,
+    durationSeconds: Math.floor(track.duration_ms / 1000),
+    progressMs,
+    progressSeconds: progressMs ? Math.floor(progressMs / 1000) : undefined,
     explicit: track.explicit,
     popularity: track.popularity,
     previewUrl: track.preview_url,
@@ -103,21 +106,18 @@ export async function GET(request: Request) {
     }
 
     const { access_token } = await getAccessToken();
-    console.log('Access token obtained');
 
     const nowPlaying = await getNowPlaying(access_token);
-    console.log('Now playing response:', nowPlaying);
+    // console.log('Now playing response:', nowPlaying);
 
     if (nowPlaying && nowPlaying.item) {
-      const track = formatTrackData(nowPlaying.item, nowPlaying.is_playing);
+      const track = formatTrackData(nowPlaying.item, nowPlaying.is_playing, undefined, nowPlaying.progress_ms);
       return NextResponse.json({
         ...track,
-        progressMs: nowPlaying.progress_ms,
         device: nowPlaying.device?.name || 'Unknown device',
       });
     } else {
       const recentlyPlayed = await getRecentlyPlayed(access_token);
-      console.log('Recently played response:', recentlyPlayed);
 
       if (recentlyPlayed && recentlyPlayed.items && recentlyPlayed.items.length > 0) {
         const lastPlayed = recentlyPlayed.items[0].track;
