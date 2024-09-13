@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import Spotify from '@/app/components/spotify';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import Spotify from "@/app/components/spotify";
 
 export const metadata: Metadata = {
-  title: "Aram Shiva"
+  title: "Aram Shiva",
 };
 
 export default function RootLayout({
@@ -14,8 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
+      <body>
         {children}
         <Spotify />
       </body>

@@ -1,4 +1,4 @@
-import createMDX from '@next/mdx';
+import createMDX from "@next/mdx";
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
@@ -18,12 +18,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'i.scdn.co',
+        protocol: "https",
+        hostname: "i.scdn.co",
       },
     ],
   },
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
 };
 
 export default withMDX(nextConfig);

@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-"use client"
-import useSWR from 'swr';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { SiSpotify } from 'react-icons/si';
-import Tilt from 'react-parallax-tilt';
+"use client";
+import useSWR from "swr";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { SiSpotify } from "react-icons/si";
+import Tilt from "react-parallax-tilt";
 
 interface SpotifyData {
   isPlaying: boolean;
@@ -22,9 +22,13 @@ interface SpotifyData {
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Spotify() {
-  const { data: spotifyData, error } = useSWR<SpotifyData>('/api/spotify', fetcher, {
-    refreshInterval: 30000, // Refresh every 30 seconds
-  });
+  const { data: spotifyData, error } = useSWR<SpotifyData>(
+    "/api/spotify",
+    fetcher,
+    {
+      refreshInterval: 30000, // Refresh every 30 seconds
+    },
+  );
 
   if (error) return null;
   if (!spotifyData) return null;
@@ -55,8 +59,11 @@ export default function Spotify() {
             >
               <div className="w-16">
                 <Image
-                  src={spotifyData.album?.images[0].url ?? '/path/to/fallback-image.jpg'}
-                  alt={spotifyData.album?.name ?? 'Album cover'}
+                  src={
+                    spotifyData.album?.images[0].url ??
+                    "/path/to/fallback-image.jpg"
+                  }
+                  alt={spotifyData.album?.name ?? "Album cover"}
                   className="rounded-xl"
                   width={64}
                   height={64}
@@ -65,7 +72,9 @@ export default function Spotify() {
 
               <div className="flex-1">
                 <p className="component font-bold">{spotifyData.title}</p>
-                <p className="font-dark text-xs">{spotifyData.artist?.[0].name}</p>
+                <p className="font-dark text-xs">
+                  {spotifyData.artist?.[0].name}
+                </p>
               </div>
               <div className="absolute bottom-2 right-2">
                 <SiSpotify size={20} color={"#000000"} />
