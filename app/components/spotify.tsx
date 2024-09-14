@@ -1,88 +1,119 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import useSWR from "swr";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import { SiSpotify } from "react-icons/si";
+import Image from "next/image";
 import Tilt from "react-parallax-tilt";
+import { motion, AnimatePresence } from "framer-motion";
+import { Card, CardContent } from "@/app/components/ui/card";
+import { useState, useEffect } from "react";
+import { Progress } from "@/app/components/ui/progress";
 
-interface SpotifyData {
-  isPlaying: boolean;
-  title?: string;
-  artist?: { name: string; url: string }[];
-  album?: {
-    name: string;
-    url: string;
-    images: { url: string; height: number; width: number }[];
-  };
-  songUrl?: string;
-}
+const fetcher = (url: string) =>
+  fetch(url, {
+    cache: "no-store",
+    headers: { "Cache-Control": "no-cache" },
+  }).then((r) => r.json());
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+export default function SpotifyWidget() {
+  const { data, mutate } = useSWR("/api/spotify", fetcher, {
+    refreshInterval: 15000,
+    revalidateOnFocus: true,
+    dedupingInterval: 15000,
+  });
+  const [progress, setProgress] = useState(0);
+  const [lastSongId, setLastSongId] = useState("");
 
-export default function Spotify() {
-  const { data: spotifyData, error } = useSWR<SpotifyData>(
-    "/api/spotify",
-    fetcher,
-    {
-      refreshInterval: 30000, // Refresh every 30 seconds
-    },
-  );
+  useEffect(() => {
+    if (data?.isPlaying) {
+      if (lastSongId !== data.songUrl) {
+        setLastSongId(data.songUrl);
+        setProgress(data.progressMs || 0);
+      }
 
-  if (error) return null;
-  if (!spotifyData) return null;
+      const interval = setInterval(() => {
+        setProgress((prevProgress) => {
+          const newProgress = prevProgress + 1000;
+          return newProgress >= data.durationMs ? data.durationMs : newProgress;
+        });
+      }, 1000);
 
-  const { title, artist, album, songUrl } = spotifyData;
+      return () => clearInterval(interval);
+    } else {
+      setProgress(0);
+      setLastSongId("");
+    }
+  }, [data, lastSongId]);
+
+  useEffect(() => {
+    if (data) {
+      setProgress(data.progressMs || 0);
+    }
+  }, [data]);
+
+  // Force refresh every 30 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      mutate();
+    }, 30000);
+
+    return () => clearInterval(interval);
+  }, [mutate]);
+
+  if (!data?.isPlaying) {
+    return null;
+  }
+
+  const progressPercentage = (progress / data.durationMs) * 100;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 30 }}
-      className="fixed bottom-3 right-0 flex flex-col p-5 align-middle text-black not-prose"
-    >
-      <div className="fixed bottom-3 right-0 flex flex-col p-5 align-middle text-black">
-        <div className="rounded-xl border bg-white p-4 shadow-xl">
-          <div className="pb-3">
-            <p>Currently Listening to:</p>
-          </div>
-          <Tilt glareEnable>
-            <Link
-              target="_blank"
-              rel="noopener noreferer"
-              href={
-                spotifyData.songUrl ||
-                "https://open.spotify.com/user/w0irmxmq6rkqvfpu5sznvym1u?si=7d100c9a0f7744a8"
-              }
-              className="relative flex w-72 items-center space-x-4 rounded-2xl p-4 transition-shadow hover:shadow-2xl sm:p-6"
-            >
-              <div className="w-16">
+    <AnimatePresence>
+      <motion.div
+        key={data.songUrl} // Add key prop to force re-render on song change
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 30 }}
+        className="fixed bottom-3 right-3"
+      >
+        <Card className="w-full max-w-md bg-white px-1 shadow-sm">
+          <CardContent className="px-8 py-6">
+            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6">
+              Now Playing
+            </div>
+            <Tilt glareEnable>
+              <div className="flex items-center space-x-5 w-72 shadow-xs">
                 <Image
-                  src={
-                    spotifyData.album?.images[0].url ??
-                    "/path/to/fallback-image.jpg"
-                  }
-                  alt={spotifyData.album?.name ?? "Album cover"}
-                  className="rounded-xl"
-                  width={64}
-                  height={64}
+                  src={data.album.images[0].url}
+                  alt={data.album.name}
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 rounded-lg shadow-sm object-cover"
                 />
-              </div>
-
-              <div className="flex-1">
-                <p className="component font-bold">{spotifyData.title}</p>
-                <p className="font-dark text-xs">
-                  {spotifyData.artist?.[0].name}
-                </p>
+                <div className="flex-1 min-w-0">
+                  <h2 className="text-base font-medium text-gray-900 truncate">
+                    {data.title}
+                  </h2>
+                  <p className="text-sm text-gray-600 truncate mb-3">
+                    {data.artist[0].name}
+                  </p>
+                  <Progress
+                    value={progressPercentage}
+                    className="w-[65%] h-1"
+                  />
+                  {/* <div className="w-[60%] bg-gray-200 rounded-full h-1">
+                    <div
+                      className="bg-gray-600 h-1 rounded-full"
+                      style={{ width: `${progressPercentage}%` }}
+                    ></div>
+                  </div> */}
+                </div>
               </div>
               <div className="absolute bottom-2 right-2">
                 <SiSpotify size={20} color={"#000000"} />
               </div>
-            </Link>
-          </Tilt>
-        </div>
-      </div>
-    </motion.div>
+            </Tilt>
+          </CardContent>
+        </Card>
+      </motion.div>
+    </AnimatePresence>
   );
 }

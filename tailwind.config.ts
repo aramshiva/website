@@ -16,9 +16,9 @@ const config: Config = {
       },
     },
     extend: {
-      fontFamily: {
-        monteral: ["Neue-Monteral", "Inter", "sans-serif"],
-      },
+      // fontFamily: {
+      //   monteral: ["Neue-Monteral", "Inter", "sans-serif"],
+      // },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

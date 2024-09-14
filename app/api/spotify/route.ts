@@ -52,7 +52,7 @@ async function getNowPlaying(accessToken: string) {
     console.error(
       "Error fetching now playing:",
       response.status,
-      await response.text(),
+      await response.text()
     );
     return null;
   }
@@ -78,7 +78,7 @@ function formatTrackData(
   track: any,
   isPlaying: boolean,
   playedAt?: string,
-  progressMs?: number,
+  progressMs?: number
 ) {
   return {
     isPlaying,
@@ -124,12 +124,17 @@ export async function GET(request: Request) {
         nowPlaying.item,
         nowPlaying.is_playing,
         undefined,
-        nowPlaying.progress_ms,
+        nowPlaying.progress_ms
       );
-      return NextResponse.json({
+      const response = NextResponse.json({
         ...track,
         device: nowPlaying.device?.name || "Unknown device",
       });
+
+      // Add cache control headers
+      response.headers.set("Cache-Control", "no-store, max-age=0");
+
+      return response;
     } else {
       const recentlyPlayed = await getRecentlyPlayed(access_token);
 
@@ -142,21 +147,43 @@ export async function GET(request: Request) {
         const track = formatTrackData(
           lastPlayed,
           false,
-          recentlyPlayed.items[0].played_at,
+          recentlyPlayed.items[0].played_at
         );
-        return NextResponse.json(track);
+        const response = NextResponse.json(track);
+
+        return response;
       }
     }
 
-    return NextResponse.json({
+    const response = NextResponse.json({
       isPlaying: false,
       error: "No track data available",
     });
+
+    // Add more strict cache control headers
+    response.headers.set(
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, proxy-revalidate"
+    );
+    response.headers.set("Pragma", "no-cache");
+    response.headers.set("Expires", "0");
+
+    return response;
   } catch (error) {
     console.error("Error in Spotify API route:", error);
-    return NextResponse.json(
+    const errorResponse = NextResponse.json(
       { isPlaying: false, error: "An error occurred" },
-      { status: 500 },
+      { status: 500 }
     );
+
+    // Add the same cache control headers to error response
+    errorResponse.headers.set(
+      "Cache-Control",
+      "no-store, no-cache, must-revalidate, proxy-revalidate"
+    );
+    errorResponse.headers.set("Pragma", "no-cache");
+    errorResponse.headers.set("Expires", "0");
+
+    return errorResponse;
   }
 }
