@@ -1,10 +1,14 @@
 import Site from "@/app/mdx-page/site.mdx";
+import Header from "@/app/components/nav";
 
 export default function Home() {
   return (
     <>
-      <div className="p-20 prose prose-slate">
-        <Site />
+      <div className="px-20 pb-20">
+        <Header />
+        <div className="prose prose-slate">
+          <Site />
+        </div>
       </div>
     </>
   );
