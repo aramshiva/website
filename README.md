@@ -1,38 +1,9 @@
-![image](https://github.com/aramshiva/website/assets/79479940/56e046fe-cb36-49f7-ba0e-05d63b34560f)
-
 # 🏠 Website 🏠
 
 [![CodeQL](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql)
 
-Welcome! This is my corner of the internet. It is published on [aram.sh](https://aram.sh) and [aramshiva.com](https://aramshiva.com).
+Welcome to my website! This is currently being remaked and the preview is visible on [dev.aram.sh](https:/dev.aram.sh).
 
-## Stack
+---
 
-This site is using [Next.js](https://nextjs.org/) as the web framework (built off of [React](https://react.dev/)). It uses [TypeScript](https://www.typescriptlang.org/) for the file format, [Tailwind CSS](https://tailwindcss.com) for CSS, and [ESLint](https://eslint.org/) for Linting. It is being deployed with [Vercel](https://vercel.com).
-
-## Contributing
-
-Any contributions are helpful! To contribute, follow these steps:
-
-### Prerequisites
-
-Please make sure you have the following tools installed to help contribute
-
--  [ ] A package manager ([`yarn`](https://yarnpkg.com/) is a good one)!
--  [ ] [`npx`](https://www.npmjs.com/package/npx)
--  [ ] Knowledge of [Next.js](https://nextjs.org/)/[React](https://react.dev/)
--  [ ] (Optional) A code editor. ([Visual Studio Code](https://code.visualstudio.com/) is my recommendation!)
--  [ ] All env variables needed
-
-### Contribute
-
-Now, the good stuff!
-
--  Install all necessary packages by running `yarn` in the terminal. (Make sure to have some space on your disk; this may be big.)
--  Go to terminal and change your directory to the folder
--  Setup the development server by running `yarn dev` or `npx next dev` in your terminal app of choice.
-   A message like
-   ` ▲ Next.js 14.0.4 - Local: http://localhost:3000 ...` will appear.
--  Go to the local link given by the message that ran in the last step. Yours will probably be `localhost:3000`.
--  Now, you can edit the code and push it to a fork of the website.
--  Once done, open a pull request, and I will review your code and merge it!
+This site is using [Next.js](https://nextjs.org/) as the framework (built off of [React](https://react.dev/)). I also use [TypeScript](https://www.typescriptlang.org/) for the file format as the replacement of JavaScript. [Tailwind CSS](https://tailwindcss.com) for CSS, and [ESLint](https://eslint.org/) for linting. It is being deployed with [Vercel](https://vercel.com), as it is super easy to deploy serverless.
