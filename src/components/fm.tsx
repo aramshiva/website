@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 interface BlurWrapperProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const BlurWrapper: React.FC<BlurWrapperProps> = ({ children }) => (
-    <>
+  <>
     {/*
     <motion.div
         initial={{ filter: 'blur(10px)' }}
@@ -15,11 +15,11 @@ const BlurWrapper: React.FC<BlurWrapperProps> = ({ children }) => (
     >
         // uncomment once framer-motion has react 19 support
     */}
-        {children}
+    {children}
     {/*
     </motion.div>
     */}
-    </>
+  </>
 );
 
 export default BlurWrapper;

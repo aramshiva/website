@@ -28,8 +28,8 @@ export default function RootLayout({
            "
         >
           <Fm>
-          <Nav />
-          {children}
+            <Nav />
+            {children}
           </Fm>
         </body>
       </html>

@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'PP Eiko';
+  font-family: "PP Eiko";
   src:
-      url('/fonts/PPEiko-Light.woff2') format('woff2'),
-      url('/fonts/PPEiko-Light.woff') format('woff');
+    url("/fonts/PPEiko-Light.woff2") format("woff2"),
+    url("/fonts/PPEiko-Light.woff") format("woff");
   font-weight: light;
   font-style: normal;
 }
