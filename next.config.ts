@@ -5,10 +5,10 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'live.staticflickr.com',
-        port: '',
-        pathname: '**',
+        protocol: "https",
+        hostname: "live.staticflickr.com",
+        port: "",
+        pathname: "**",
       },
     ],
   },
