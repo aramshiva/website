@@ -65,7 +65,6 @@ function Photos() {
                 alt={`Photo ${index + 1}`}
                 width={300}
                 height={300}
-                className="w-full mb-4 break-inside-avoid"
                 className="w-full mb-4 break-inside-avoid rounded-[0.1rem]"
               />
             ))}
