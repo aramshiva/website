@@ -29,7 +29,7 @@ function Photos() {
     "/photos/22.jpg",
     "/photos/23.jpg",
     "/photos/24.jpg",
-    "/photos/25.jpg"
+    "/photos/25.jpg",
   ]);
   const [loading, setLoading] = useState(true);
 
