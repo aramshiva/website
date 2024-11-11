@@ -21,7 +21,7 @@ export default function Nav() {
   }, [darkMode]);
 
   return (
-    <div className="flex justify-between items-center w-full">
+    <div className="flex justify-between items-center">
       <Link href="/" className="flex justify-start font-semibold">
         <p>aram</p>
       </Link>
