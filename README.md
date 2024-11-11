@@ -1,38 +1,14 @@
-![image](https://github.com/aramshiva/website/assets/79479940/56e046fe-cb36-49f7-ba0e-05d63b34560f)
+![image](https://github.com/user-attachments/assets/30112726-0179-453c-94e6-c65575c9a9c9)
 
-# 🏠 Website 🏠
+## aram.sh
 
-[![CodeQL](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/aramshiva/website/actions/workflows/github-code-scanning/codeql)
+this is my new website! I used to have an [overly](https://github.com/aramshiva/website/tree/v10) [complex](https://github.com/aramshiva/website/tree/v9.1) website, but now it's just a simple markdown file. 
 
-Welcome! This is my corner of the internet. It is published on [aram.sh](https://aram.sh) and [aramshiva.com](https://aramshiva.com).
+### Site Development
+It runs using [Next.js App Router](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com/), [Bun](https://bun.sh/) and [React](https://react.dev/)
 
-## Stack
-
-This site is using [Next.js](https://nextjs.org/) as the web framework (built off of [React](https://react.dev/)). It uses [TypeScript](https://www.typescriptlang.org/) for the file format, [Tailwind CSS](https://tailwindcss.com) for CSS, and [ESLint](https://eslint.org/) for Linting. It is being deployed with [Vercel](https://vercel.com).
-
-## Contributing
-
-Any contributions are helpful! To contribute, follow these steps:
-
-### Prerequisites
-
-Please make sure you have the following tools installed to help contribute
-
--  [ ] A package manager ([`yarn`](https://yarnpkg.com/) is a good one)!
--  [ ] [`npx`](https://www.npmjs.com/package/npx)
--  [ ] Knowledge of [Next.js](https://nextjs.org/)/[React](https://react.dev/)
--  [ ] (Optional) A code editor. ([Visual Studio Code](https://code.visualstudio.com/) is my recommendation!)
--  [ ] All env variables needed
-
-### Contribute
-
-Now, the good stuff!
-
--  Install all necessary packages by running `yarn` in the terminal. (Make sure to have some space on your disk; this may be big.)
--  Go to terminal and change your directory to the folder
--  Setup the development server by running `yarn dev` or `npx next dev` in your terminal app of choice.
-   A message like
-   ` ▲ Next.js 14.0.4 - Local: http://localhost:3000 ...` will appear.
--  Go to the local link given by the message that ran in the last step. Yours will probably be `localhost:3000`.
--  Now, you can edit the code and push it to a fork of the website.
--  Once done, open a pull request, and I will review your code and merge it!
+To run locally follow these steps:
+- Clone the repository locally
+- Create a `.env.local` file based on [`.example.env`](https://github.com/aramshiva/website/blob/dev/.example.env)
+- Run `bun install`
+- Run `bun run dev` to get a local copy working.

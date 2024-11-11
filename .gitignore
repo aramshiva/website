@@ -3,8 +3,12 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
-package-lock.json
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
 # testing
 /coverage
@@ -25,8 +29,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# env files (can opt-in for commiting if needed)
+.env*
 
 # vercel
 .vercel
@@ -34,14 +38,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.env
-pages/index2.tsx
-
-# ide
-.idea
-
-# blog
-/public/blog/rss.xml
-public/blog/rss.xml
-/public/blog
-*.xml
+.env*.local
