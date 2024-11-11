@@ -1,8 +1,11 @@
 import Index from "@/markdown/index.mdx";
+
 export default function Page() {
   return (
     <>
-      <Index />
+      <div className="prose prose-a:text-md">
+        <Index />
+      </div>
     </>
   );
 }

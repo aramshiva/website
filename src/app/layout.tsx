@@ -21,7 +21,7 @@ export default function RootLayout({
           className="
           antialiased bg-[#1f2422] dark:bg-white p-20 
           w-screen prose prose-p:text-white dark:prose-p:text-black 
-          prose-blockquote:font-eiko prose-a:text-sm prose-a:no-underline
+          prose-blockquote:font-eiko prose-a:text-md prose-a:no-underline
         prose-a:text-[#e6e9ff] dark:prose-a:text-[#1f2422] 
         prose-h1:text-white dark:prose-h1:text-black
         prose-h2:text-white dark:prose-h2:text-black

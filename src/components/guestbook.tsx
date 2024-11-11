@@ -6,6 +6,7 @@ import { toast } from "sonner";
 import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { Filter } from "bad-words";
+import { FaGithub } from "react-icons/fa";
 
 interface Entry {
   name: string;
@@ -93,6 +94,7 @@ export default function Guestbook() {
             onClick={handleSignIn}
             className="mt-4 rounded-md hover:bg-slate-200 bg-white dark:bg-white px-4 py-2 text-black dark:text-white"
           >
+            <FaGithub className="inline" />
             Sign in with GitHub
           </Button>
         </div>
