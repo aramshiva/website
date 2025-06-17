@@ -51,6 +51,12 @@ function Photos() {
   return (
     <>
       <meta property="og:image" content="/brand/photos.png" />
+      <meta property="og:title" content="photos by aram shiva" />
+      <meta
+        property="og:description"
+        content="A collection of photos taken by aram shiva, showcasing various moments and scenes."
+      />
+      <title>photos - aram shiva</title>
       <div className="font-satoshi text-[#374151] [&_a]:decoration-amber-500 [&_a]:hover:text-amber-800 [&_a]:underline [&_a]:font-medium">
         <div className="w-screen">
           <div className="pb-[5rem] px-[7.5rem]">
