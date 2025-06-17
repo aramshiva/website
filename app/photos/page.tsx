@@ -50,6 +50,7 @@ function Photos() {
 
   return (
     <>
+      <meta property="og:image" content="/brand/photos.png" />
       <div className="font-satoshi text-[#374151] [&_a]:decoration-amber-500 [&_a]:hover:text-amber-800 [&_a]:underline [&_a]:font-medium">
         <div className="w-screen">
           <div className="pb-[5rem] px-[7.5rem]">
@@ -80,7 +81,7 @@ function Photos() {
                 </nav>
               </div>
               <p>
-                pulled from my{" "}
+                photos pulled from my{" "}
                 <Link href="https://flickr.com/photos/191297914@N06/">
                   flickr
                 </Link>
