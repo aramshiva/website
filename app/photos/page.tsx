@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SiBluesky, SiGithub, SiReaddotcv } from "react-icons/si";
 
 function Photos() {
   const [photos, setPhotos] = useState<string[]>([
@@ -54,17 +55,27 @@ function Photos() {
           <div className="pb-[5rem] px-[7.5rem]">
             <div className="text-left text-wrap">
               <div className="pt-[5rem] pb-7 flex justify-between items-center">
-                <Link href="/">
-                  <Image
-                    src="/shapes/1.svg"
-                    alt="shape"
-                    width={25}
-                    height={25}
-                  />
-                </Link>
+                <div className="flex items-center gap-4">
+                  <Link href="/">
+                    <Image
+                      src="/shapes/1.svg"
+                      alt="shape"
+                      width={25}
+                      height={25}
+                    />
+                  </Link>
+                  <Link href="/photos">photos</Link>
+                  <Link href="/guestbook">guestbook</Link>
+                </div>
                 <nav className="flex gap-4">
-                  <Link href="/photos" className="hover:text-amber-500">
-                    photos
+                  <Link href="https://github.com/aramshiva">
+                    <SiGithub className="text-[#374151] text-xl" />
+                  </Link>
+                  <Link href="https://bsky.app/profile/aram.sh">
+                    <SiBluesky className="text-[#374151] text-xl" />
+                  </Link>
+                  <Link href="/resume.pdf">
+                    <SiReaddotcv className="text-[#374151] text-xl" />
                   </Link>
                 </nav>
               </div>
