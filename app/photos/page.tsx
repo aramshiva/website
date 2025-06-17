@@ -52,6 +52,13 @@ function Photos() {
     <>
       <meta property="og:image" content="/brand/photos.png" />
       <meta property="og:title" content="photos by aram shiva" />
+      <meta property="og:url" content="https://aram.sh/photos"/>
+      <meta property="og:site_name" content="aram.sh"/>
+      <meta property="description" content="an collection of photos taken by aram shiva, showcasing various moments and scenes." />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content="photos by aram shiva" />
+      <meta property="twitter:description" content="A collection of photos taken by aram shiva, showcasing various moments and scenes." />
+      <meta property="twitter:image" content="/brand/photos.png" />
       <meta
         property="og:description"
         content="A collection of photos taken by aram shiva, showcasing various moments and scenes."
