@@ -87,7 +87,8 @@ function Photos() {
                 , high quality photos can be found there.
               </p>
               <p className="pb-5">
-                i currently am using a lumix gx85 with a olympus m.zuiko 12-40mm f/2.8 pro lens.
+                i currently am using a lumix gx85 with a olympus m.zuiko 12-40mm
+                f/2.8 pro lens.
               </p>
 
               <div className="gap-4 columns-1 sm:columns-2 lg:columns-3">

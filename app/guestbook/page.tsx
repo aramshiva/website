@@ -133,12 +133,14 @@ export default function Guestbook() {
                 </form>
               )}
               <ul className="pt-9">
-                <p className="pb-5">here{"'"}s some of the last visitors logs:</p>
+                <p className="pb-5">
+                  here{"'"}s some of the last visitors logs:
+                </p>
                 {entries
                   .sort(
                     (a, b) =>
                       new Date(b.timestamp).getTime() -
-                      new Date(a.timestamp).getTime()
+                      new Date(a.timestamp).getTime(),
                   )
                   .map((entry, index) => (
                     <li key={index} className="mb-4 list-none">
