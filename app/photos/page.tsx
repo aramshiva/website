@@ -52,12 +52,18 @@ function Photos() {
     <>
       <meta property="og:image" content="/brand/photos.png" />
       <meta property="og:title" content="photos by aram shiva" />
-      <meta property="og:url" content="https://aram.sh/photos"/>
-      <meta property="og:site_name" content="aram.sh"/>
-      <meta property="description" content="an collection of photos taken by aram shiva, showcasing various moments and scenes." />
+      <meta property="og:url" content="https://aram.sh/photos" />
+      <meta property="og:site_name" content="aram.sh" />
+      <meta
+        property="description"
+        content="an collection of photos taken by aram shiva, showcasing various moments and scenes."
+      />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:title" content="photos by aram shiva" />
-      <meta property="twitter:description" content="A collection of photos taken by aram shiva, showcasing various moments and scenes." />
+      <meta
+        property="twitter:description"
+        content="A collection of photos taken by aram shiva, showcasing various moments and scenes."
+      />
       <meta property="twitter:image" content="/brand/photos.png" />
       <meta
         property="og:description"
@@ -78,8 +84,12 @@ function Photos() {
                       height={25}
                     />
                   </Link>
-                  <Link href="/photos">photos</Link>
-                  <Link href="/guestbook">guestbook</Link>
+                  <Link href="/photos" className="!no-underline">
+                    photos
+                  </Link>
+                  <Link href="/guestbook" className="!no-underline">
+                    guestbook
+                  </Link>
                 </div>
                 <nav className="flex gap-4">
                   <Link href="https://github.com/aramshiva">

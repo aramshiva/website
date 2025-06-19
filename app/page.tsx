@@ -23,7 +23,7 @@ export default function Page() {
         <div className="w-screen">
           <div className="sm:pb-[5rem] sm:px-[7.5rem] pb-[3rem] px-[2rem]">
             <div className="text-left text-wrap">
-              <div className="pt-[5rem] pb-[3rem] flex justify-between items-center">
+              <div className="pt-[5rem] pb-7 flex justify-between items-center">
                 <div className="flex items-center gap-4">
                   <Link href="/">
                     <Image
@@ -33,8 +33,12 @@ export default function Page() {
                       height={25}
                     />
                   </Link>
-                  <Link href="/photos">photos</Link>
-                  <Link href="/guestbook">guestbook</Link>
+                  <Link href="/photos" className="!no-underline">
+                    photos
+                  </Link>
+                  <Link href="/guestbook" className="!no-underline">
+                    guestbook
+                  </Link>
                 </div>
                 <nav className="flex gap-4">
                   <Link href="https://github.com/aramshiva">
@@ -80,8 +84,8 @@ export default function Page() {
                   <Image
                     src="/logos/hackclub/normal.png"
                     alt="Hack Club Logo"
-                    width={15}
-                    height={15}
+                    width={17.5}
+                    height={17.5 }
                     className="inline-block mr-1 -rotate-6 group-hover:rotate-0 transition-transform"
                   />
                   hack club
@@ -99,8 +103,8 @@ export default function Page() {
                   <Image
                     src="/logos/codeday.png"
                     alt="CodeDay Logo"
-                    width={15}
-                    height={15}
+                    width={17.5}
+                    height={17.5}
                     className="inline-block mr-1 rotate-6 group-hover:rotate-0 transition-transform"
                   />
                   codeday seattle
@@ -112,7 +116,7 @@ export default function Page() {
                 i take photos of people, places and things, you can see them{" "}
                 <Link href="/photos">[here]</Link>. i{"'"}m also into tech
                 theatre (and theatre in general!),{" "}
-                <Link href="/essay.pdf" className="no-underline">
+                <Link href="/essay.pdf" className="!no-underline !font-normal">
                   public transit
                 </Link>
                 , magic the gathering, genealogy, typography, design, economics,
