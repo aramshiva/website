@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { SiBluesky, SiGithub, SiReaddotcv } from "react-icons/si";
+import { SiBluesky, SiGithub, SiReaddotcv, SiInstagram } from "react-icons/si";
 
 function Photos() {
   const [photos, setPhotos] = useState<string[]>([
