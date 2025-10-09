@@ -3,7 +3,7 @@ import Email from "./components/email";
 import Link from "next/link";
 import Music from "./components/music";
 import Image from "next/image";
-import { SiBluesky, SiGithub, SiReaddotcv } from "react-icons/si";
+import { SiBluesky, SiGithub, SiReaddotcv, SiInstagram } from "react-icons/si";
 
 export default function Page() {
   const hour = new Date().getHours();
@@ -40,15 +40,18 @@ export default function Page() {
                     guestbook
                   </Link>
                 </div>
-                <nav className="flex gap-4">
+                <nav className="flex gap-4 text-[#374151] text-xl">
+                  <Link href="https://www.instagram.com/aramshva/">
+                    <SiInstagram />
+                  </Link>
                   <Link href="https://github.com/aramshiva">
-                    <SiGithub className="text-[#374151] text-xl" />
+                    <SiGithub />
                   </Link>
                   <Link href="https://bsky.app/profile/aram.sh">
-                    <SiBluesky className="text-[#374151] text-xl" />
+                    <SiBluesky />
                   </Link>
                   <Link href="/resume.pdf">
-                    <SiReaddotcv className="text-[#374151] text-xl" />
+                    <SiReaddotcv />
                   </Link>
                 </nav>
               </div>
@@ -85,7 +88,7 @@ export default function Page() {
                     src="/logos/hackclub/normal.png"
                     alt="Hack Club Logo"
                     width={17.5}
-                    height={17.5 }
+                    height={17.5}
                     className="inline-block mr-1 -rotate-6 group-hover:rotate-0 transition-transform"
                   />
                   hack club

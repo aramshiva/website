@@ -91,15 +91,18 @@ function Photos() {
                     guestbook
                   </Link>
                 </div>
-                <nav className="flex gap-4">
+                <nav className="flex gap-4 text-[#374151] text-xl">
+                  <Link href="https://www.instagram.com/aramshva/">
+                    <SiInstagram />
+                  </Link>
                   <Link href="https://github.com/aramshiva">
-                    <SiGithub className="text-[#374151] text-xl" />
+                    <SiGithub />
                   </Link>
                   <Link href="https://bsky.app/profile/aram.sh">
-                    <SiBluesky className="text-[#374151] text-xl" />
+                    <SiBluesky />
                   </Link>
                   <Link href="/resume.pdf">
-                    <SiReaddotcv className="text-[#374151] text-xl" />
+                    <SiReaddotcv />
                   </Link>
                 </nav>
               </div>
@@ -110,7 +113,7 @@ function Photos() {
                 </Link>
                 , high quality photos can be found there.
               </p>
-              <br/>
+              <br />
               <p className="pb-5">
                 i currently am using a lumix gx85 with a olympus m.zuiko 12-40mm
                 f/2.8 pro lens.
