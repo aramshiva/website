@@ -110,6 +110,7 @@ function Photos() {
                 </Link>
                 , high quality photos can be found there.
               </p>
+              <br/>
               <p className="pb-5">
                 i currently am using a lumix gx85 with a olympus m.zuiko 12-40mm
                 f/2.8 pro lens.
