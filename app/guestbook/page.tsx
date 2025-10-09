@@ -1,11 +1,10 @@
 "use client";
-import { signIn } from "@/auth";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import { SiBluesky, SiGithub, SiReaddotcv } from "react-icons/si";
 // import Filter from "bad-words";
 import { toast } from "sonner";
@@ -17,7 +16,6 @@ interface Entry {
 }
 
 export default function Guestbook() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [entries, setEntries] = useState<Entry[]>([]);
   const [newEntry, setNewEntry] = useState({ content: "" });
   const { data: session } = useSession();
@@ -65,8 +63,8 @@ export default function Guestbook() {
     }
   };
 
-  const handleSignIn = async () => {
-    await signIn("github", { callbackUrl: window.location.href });
+  const handleSignIn = () => {
+    signIn("github", { callbackUrl: window.location.href });
   };
   return (
     <>
@@ -126,15 +124,13 @@ export default function Guestbook() {
                   </Button>
                 </form>
               ) : (
-                <form action={handleSignIn}>
-                  <Button
-                    type="submit"
-                    className="mt-4 rounded-md bg-black px-4 py-2 text-white hover:bg-stone-700"
-                  >
-                    <SiGithub className="mr-2" />
-                    Sign in with GitHub
-                  </Button>
-                </form>
+                <Button
+                  onClick={handleSignIn}
+                  className="mt-4 rounded-md bg-black px-4 py-2 text-white hover:bg-stone-700"
+                >
+                  <SiGithub className="mr-2" />
+                  Sign in with GitHub
+                </Button>
               )}
               <ul className="pt-9">
                 <p className="pb-5">
