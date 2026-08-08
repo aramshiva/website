@@ -1,150 +1,68 @@
-"use client";
-
-import Image from "next/image";
+import PhotosPage from "./components/Photos";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import { SiBluesky, SiGithub, SiReaddotcv, SiInstagram } from "react-icons/si";
 
-function Photos() {
-  const [photos, setPhotos] = useState<string[]>([
-    "/photos/1.jpg",
-    "/photos/2.jpg",
-    "/photos/3.jpg",
-    "/photos/4.jpg",
-    "/photos/5.jpg",
-    "/photos/6.jpg",
-    "/photos/7.jpg",
-    "/photos/8.jpg",
-    "/photos/9.jpg",
-    "/photos/10.jpg",
-    "/photos/11.jpg",
-    "/photos/12.jpg",
-    "/photos/13.jpg",
-    "/photos/14.jpg",
-    "/photos/15.jpg",
-    "/photos/16.jpg",
-    "/photos/17.jpg",
-    "/photos/18.jpg",
-    "/photos/19.jpg",
-    "/photos/20.jpg",
-    "/photos/21.jpg",
-    "/photos/22.jpg",
-    "/photos/23.jpg",
-    "/photos/24.jpg",
-    "/photos/25.jpg",
-  ]);
-  const [loading, setLoading] = useState(true);
+export const metadata: Metadata = {
+  title: "Photos by Aram Shiva",
+  description: "A collection of photos by Aram Shiva",
+  openGraph: {
+    images: ["/og.png"],
+    siteName: "Photos by Aram Shiva",
+  },
+};
 
-  useEffect(() => {
-    fetch("/api/photos")
-      .then((response) => response.json())
-      .then((data) => {
-        setPhotos(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching photos:", error);
-        setLoading(false);
-      });
-  }, []);
-
+export default function Home() {
   return (
     <>
-      <meta property="og:image" content="/brand/photos.png" />
-      <meta property="og:title" content="photos by aram shiva" />
-      <meta property="og:url" content="https://aram.sh/photos" />
-      <meta property="og:site_name" content="aram.sh" />
-      <meta
-        property="description"
-        content="an collection of photos taken by aram shiva, showcasing various moments and scenes."
-      />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:title" content="photos by aram shiva" />
-      <meta
-        property="twitter:description"
-        content="A collection of photos taken by aram shiva, showcasing various moments and scenes."
-      />
-      <meta property="twitter:image" content="/brand/photos.png" />
-      <meta
-        property="og:description"
-        content="A collection of photos taken by aram shiva, showcasing various moments and scenes."
-      />
-      <title>photos - aram shiva</title>
+      <head>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Photos"
+          href="/feed.xml"
+        />
+      </head>
       <div className="font-satoshi text-[#374151] [&_a]:decoration-amber-500 [&_a]:hover:text-amber-800 [&_a]:underline [&_a]:font-medium">
         <div className="w-screen">
-          <div className="pb-[5rem] px-[7.5rem]">
-            <div className="text-left text-wrap">
-              <div className="pt-[5rem] pb-7 flex justify-between items-center">
-                <div className="flex items-center gap-4">
-                  <Link href="/">
-                    <Image
-                      src="/shapes/1.svg"
-                      alt="shape"
-                      width={25}
-                      height={25}
-                    />
-                  </Link>
-                  <Link href="/photos" className="!no-underline">
-                    photos
-                  </Link>
-                  <Link href="/guestbook" className="!no-underline">
-                    guestbook
-                  </Link>
-                </div>
-                <nav className="flex gap-4 text-[#374151] text-xl">
-                  <Link href="https://www.instagram.com/aramshva/">
-                    <SiInstagram />
-                  </Link>
-                  <Link href="https://github.com/aramshiva">
-                    <SiGithub />
-                  </Link>
-                  <Link href="https://bsky.app/profile/aram.sh">
-                    <SiBluesky />
-                  </Link>
-                  <Link href="/resume.pdf">
-                    <SiReaddotcv />
-                  </Link>
-                </nav>
-              </div>
-              <p>
-                photos pulled from my{" "}
-                <Link href="https://flickr.com/photos/191297914@N06/">
-                  flickr
+          <div className="sm:px-30 px-8">
+            <div className="pt-20 pb-7 flex justify-between items-center">
+              <div className="flex items-center gap-4">
+                <Link href="/">
+                  <Image
+                    src="/shapes/1.svg"
+                    alt="shape"
+                    width={25}
+                    height={25}
+                  />
                 </Link>
-                , high quality photos can be found there.
-              </p>
-              <br />
-              <p className="pb-5">
-                i currently am using a panasonic lumix s5iix
-              </p>
-
-              <div className="gap-4 columns-1 sm:columns-2 lg:columns-3">
-                {loading
-                  ? Array.from({ length: 20 }).map((_, index) => (
-                      <div
-                        key={index}
-                        className="w-full mb-4 break-inside-avoid bg-gray-200 animate-pulse rounded-lg"
-                        style={{ width: 300, height: 300 }}
-                      ></div>
-                    ))
-                  : photos.map((photo, index) => (
-                      <Image
-                        key={index}
-                        src={photo}
-                        loading="lazy"
-                        alt={`Photo ${index + 1}`}
-                        width={300}
-                        height={300}
-                        className="w-full mb-4 break-inside-avoid rounded-lg"
-                      />
-                    ))}
+                <Link href="/photos" className="!no-underline">
+                  photos
+                </Link>
+                <Link href="/guestbook" className="!no-underline">
+                  guestbook
+                </Link>
               </div>
+              <nav className="flex gap-4 text-[#374151] text-xl">
+                <Link href="https://www.instagram.com/aramshva/">
+                  <SiInstagram />
+                </Link>
+                <Link href="https://github.com/aramshiva">
+                  <SiGithub />
+                </Link>
+                <Link href="https://bsky.app/profile/aram.sh">
+                  <SiBluesky />
+                </Link>
+                <Link href="/resume.pdf">
+                  <SiReaddotcv />
+                </Link>
+              </nav>
             </div>
           </div>
         </div>
       </div>
+      <PhotosPage />
     </>
   );
 }
-
-export default Photos;

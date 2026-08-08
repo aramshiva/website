@@ -21,9 +21,9 @@ export default function Page() {
     <>
       <div className="font-satoshi text-[#374151] [&_a]:decoration-amber-500 [&_a]:hover:text-amber-800 [&_a]:underline [&_a]:font-medium">
         <div className="w-screen">
-          <div className="sm:pb-[5rem] sm:px-[7.5rem] pb-[3rem] px-[2rem]">
+          <div className="sm:pb-20 sm:px-30 pb-12 px-8">
             <div className="text-left text-wrap">
-              <div className="pt-[5rem] pb-7 flex justify-between items-center">
+              <div className="pt-20 pb-7 flex justify-between items-center">
                 <div className="flex items-center gap-4">
                   <Link href="/">
                     <Image

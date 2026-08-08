@@ -2,42 +2,55 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+    const extras = [
+      "description",
+      "license",
+      "date_upload",
+      "date_taken",
+      "owner_name",
+      "icon_server",
+      "original_format",
+      "last_update",
+      "geo",
+      "tags",
+      "machine_tags",
+      "o_dims",
+      "views",
+      "media",
+      "path_alias",
+      "url_sq",
+      "url_t",
+      "url_s",
+      "url_q",
+      "url_m",
+      "url_n",
+      "url_z",
+      "url_c",
+      "url_l",
+      "url_o",
+    ].join(",");
+
+    const params = new URLSearchParams({
+      method: "flickr.people.getPublicPhotos",
+      api_key: process.env.FLICKR_KEY!,
+      user_id: process.env.FLICKR_USER!,
+      extras,
+      per_page: "500",
+      format: "json",
+      nojsoncallback: "1",
+    });
+
     const response = await fetch(
-      `https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=${process.env.FLICKR_KEY}&user_id=${process.env.FLICKR_USER}&format=json&nojsoncallback=1`,
+      `https://api.flickr.com/services/rest/?${params}`,
     );
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
     const data = await response.json();
-    const photos = data.photos.photo;
-
-    const imageUrls = await Promise.all(
-      photos.map(async (photo: { id: string }) => {
-        try {
-          const sizesResponse = await fetch(
-            `https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=${process.env.FLICKR_KEY}&photo_id=${photo.id}&format=json&nojsoncallback=1`,
-          );
-          if (!sizesResponse.ok) {
-            console.error(
-              `Sizes response not ok for photo ${photo.id}:`,
-              sizesResponse.status,
-            );
-            return null;
-          }
-          const sizesData = await sizesResponse.json();
-          const originalSize = sizesData.sizes.size.find(
-            (size: { label: string }) => size.label === "Large",
-          );
-          return originalSize ? originalSize.source : null;
-        } catch (error) {
-          console.error(`Error fetching sizes for photo ${photo.id}:`, error);
-          return null;
-        }
-      }),
-    );
-
-    const validImageUrls = imageUrls.filter((url) => url !== null);
-    return NextResponse.json(validImageUrls);
+    if (data.stat !== "ok" || !data.photos) {
+      throw new Error(data.message ?? "Flickr API error");
+    }
+    return NextResponse.json(data.photos);
   } catch (error) {
     console.error("Error fetching images:", error);
     return NextResponse.json(
