@@ -1,12 +1,29 @@
 import { ImageResponse } from "next/og";
 
+function getSafeImageUrl(input: string): string | null {
+  try {
+    const parsed = new URL(input);
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return null;
+    }
+    return parsed.toString();
+  } catch {
+    return null;
+  }
+}
+
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const url = searchParams.get("url");
+  const rawUrl = searchParams.get("url");
   const title = searchParams.get("title");
 
-  if (!url) {
+  if (!rawUrl) {
     return new Response("Missing ?url= parameter", { status: 400 });
+  }
+
+  const safeUrl = getSafeImageUrl(rawUrl);
+  if (!safeUrl) {
+    return new Response("Invalid ?url= parameter", { status: 400 });
   }
 
   return new ImageResponse(
@@ -20,7 +37,7 @@ export async function GET(request: Request) {
         }}
       >
         <img
-          src={url}
+          src={safeUrl}
           style={{
             width: "100%",
             height: "100%",
