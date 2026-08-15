@@ -9,8 +9,11 @@ import {
 } from "@/components/ui/hover-card";
 import { Aperture, Camera, Copy, Check, Maximize2, Minimize2, Share } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { SiApple, SiX, SiThreads } from "react-icons/si";
+import { MdExposure, MdIso } from "react-icons/md";
+import { CgEditExposure } from "react-icons/cg";
 
 interface ExifTag {
   label: string;
@@ -191,23 +194,38 @@ const [fullscreen, setFullscreen] = useState(false);
                   </div>
                 )}
                 {exifMap.get("FNumber") && (
-                  <p>ƒ/{exifMap.get("FNumber")!.value.replace(/^f\//, "")}</p>
+                  <div className="flex items-center gap-1">
+                    <Aperture className="size-4" />
+                    <p>ƒ/{exifMap.get("FNumber")!.value.replace(/^f\//, "")}</p>
+                  </div>
                 )}
                 {exifMap.get("ExposureTime") && (
-                  <p>
-                    {exifMap
-                      .get("ExposureTime")!
-                      .value.replace(/^.*\((.+)\)$/, "$1")
-                      .replace(/\s*sec$/, "")}
-                    s
-                  </p>
+                  <div className="flex items-center gap-1">
+                    <MdExposure className="size-4" />
+                    <p>{exifMap.get("ExposureTime")!.value.replace(/^.*\((.+)\)$/, "$1").replace(/\s*sec$/, "")}s</p>
+                  </div>
                 )}
-                {exifMap.get("ISO") && <p>ISO {exifMap.get("ISO")!.value}</p>}
+                {exifMap.get("ISO") && (
+                  <div className="flex items-center gap-1">
+                    <MdIso className="size-4" />
+                    <p>ISO {exifMap.get("ISO")!.value}</p>
+                  </div>
+                )}
                 {exifMap.get("ExposureCompensation") && (
-                  <p>{exifMap.get("ExposureCompensation")!.value}</p>
+                  <div className="flex items-center gap-1">
+                    <CgEditExposure className="size-4" />
+                    <p>{exifMap.get("ExposureCompensation")!.value}</p>
+                  </div>
                 )}
               </div>
               <p className="mt-auto pt-4 pb-2">{details.views} views</p>
+              <div className="flex flex-wrap gap-2 items-center pb-3">
+                <Link href={`https://www.flickr.com/photos/${process.env.NEXT_PUBLIC_FLICKR_USER}/${details.id}`} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className="w-full">
+                    Open in <Image src="/logos/flickr.png" alt="Flickr" width={32} height={32} className="inline-block" />
+                  </Button>
+                </Link>
+              </div>
               <div className="flex flex-wrap gap-2 items-center">
                 <div className="flex min-w-0 w-full items-center gap-2 rounded-md border pl-3 text-sm md:w-auto md:flex-1">
                   <span className="truncate">{`${window.location.origin}/photos/p/${details.id}`}</span>

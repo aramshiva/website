@@ -18,7 +18,7 @@ export async function GET() {
     const params = new URLSearchParams({
       method: "flickr.people.getPublicPhotos",
       api_key: process.env.FLICKR_KEY!,
-      user_id: process.env.FLICKR_USER!,
+      user_id: process.env.NEXT_PUBLIC_FLICKR_USER!,
       extras,
       per_page: "20",
       format: "json",
@@ -71,7 +71,7 @@ export async function GET() {
   <channel>
     <title>Photos by Aram Shiva</title>
     <link>${siteUrl}</link>
-    <description>Photos I have taken across the years. Photos are pulled from my Flickr (flickr.com/photos/${process.env.FLICKR_USER})</description>
+    <description>Photos I have taken across the years. Photos are pulled from my Flickr (flickr.com/photos/${process.env.NEXT_PUBLIC_FLICKR_USER})</description>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />
 ${items}
   </channel>

@@ -10,7 +10,7 @@ export default function PhotosPage({ initialPhotoId }: { initialPhotoId?: string
           <p className="text-2xl">By Aram Shiva</p>
           <p className="text-zinc-800 text-lg pt-2">
             Photos I have taken across the years. Photos are pulled from my{" "}
-            <Link href={`https://www.flickr.com/photos/${process.env.FLICKR_USER}`} className="underline">Flickr</Link>
+            <Link href={`https://www.flickr.com/photos/${process.env.NEXT_PUBLIC_FLICKR_USER}`} className="underline">Flickr</Link>
           </p>
           <p className="pt-2">
             I currently use a Panasonic LUMIX S5IIX with a Sigma 28-70mm f/2.8 lens, and an iPhone 16 Pro.

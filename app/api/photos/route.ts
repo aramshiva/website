@@ -33,7 +33,7 @@ export async function GET() {
     const params = new URLSearchParams({
       method: "flickr.people.getPublicPhotos",
       api_key: process.env.FLICKR_KEY!,
-      user_id: process.env.FLICKR_USER!,
+      user_id: process.env.NEXT_PUBLIC_FLICKR_USER!,
       extras,
       per_page: "500",
       format: "json",
