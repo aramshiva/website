@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSession, signIn } from "next-auth/react";
-import { SiBluesky, SiGithub, SiReaddotcv, SiInstagram } from "react-icons/si";
+import { SiGithub, SiReaddotcv, SiInstagram, SiLinkedIn } from "react-icons/si";
 // import Filter from "bad-words";
 import { toast } from "sonner";
 
@@ -96,8 +96,8 @@ export default function Guestbook() {
                   <Link href="https://github.com/aramshiva">
                     <SiGithub />
                   </Link>
-                  <Link href="https://bsky.app/profile/aram.sh">
-                    <SiBluesky />
+                                    <Link href="https://www.linkedin.com/in/armsh/">
+                    <SiLinkedIn />
                   </Link>
                   <Link href="/resume.pdf">
                     <SiReaddotcv />

@@ -2,7 +2,7 @@ import PhotosPage from "./components/Photos";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { SiBluesky, SiGithub, SiReaddotcv, SiInstagram } from "react-icons/si";
+import { SiLinkedIn, SiGithub, SiReaddotcv, SiInstagram } from "react-icons/si";
 
 export const metadata: Metadata = {
   title: "Photos by Aram Shiva",
@@ -51,9 +51,9 @@ export default function Home() {
                 <Link href="https://github.com/aramshiva">
                   <SiGithub />
                 </Link>
-                <Link href="https://bsky.app/profile/aram.sh">
-                  <SiBluesky />
-                </Link>
+                <Link href="https://www.linkedin.com/in/armsh/">
+                    <SiLinkedIn />
+                  </Link>
                 <Link href="/resume.pdf">
                   <SiReaddotcv />
                 </Link>
